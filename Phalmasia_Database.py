@@ -51,6 +51,7 @@ import os
 # Spell Descriptions & Purposes
 # Rewrite Ryner Backstory for New Lore
 # Add Petalford to Mu'karr Locations
+# Add Humans to Races Core Command
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
@@ -60,7 +61,8 @@ import os
 # Make a GitHub Repository for Saving & Updates
 
 # Current Update Notes
-# 
+# Completed Establishment of St. Guardia's Academy in History Core Command
+# Completed Battle of Judgement in History Core Command
 
 # Introduction
 infoBarrier = input("Phalmasia Info Database. Press 'Enter' to continue.").lower()
@@ -1419,11 +1421,11 @@ while infoBarrier == "" or infoBarrier == "return":
 
     # History Input Commands
     while infoBarrier == "history":
-        historyBarrier = input("Time Periods of Phalmasia:\n| Before Divine's Gift (BDG)\n| Post Divine's Gift (PDG)\n| The Gifter's War\n| Nabuga's Banishment\n| The Arduos War\n| Day of Black Sun\n\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower()
+        historyBarrier = input("Historical Events of Phalmasia:\n| Before Divine's Gift (BDG)\n| Post Divine's Gift (PDG)\n| The Gifter's War\n| Nabuga's Banishment\n| The Arduos War\n| The Establishment of St. Guardia's\n| The Day of Black Sun\n\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower()
 
         while historyBarrier == "":
             historyBarrier = input("Please Re-enter your database restriction.\n").lower()
-        while historyBarrier != "before divine's gift" and historyBarrier != "bdg" and historyBarrier != "before divines gift" and historyBarrier != "post divine's gift" and historyBarrier != "pdg" and historyBarrier != "post divines gift" and historyBarrier != "the gifter's war" and historyBarrier != "the gifters war" and historyBarrier != "nabuga's banishment" and historyBarrier != "nabugas banishment" and historyBarrier != "the arduos war" and historyBarrier != "day of black sun" and historyBarrier != "the day of black sun" and historyBarrier != "back" and historyBarrier != "leave":
+        while historyBarrier != "before divine's gift" and historyBarrier != "bdg" and historyBarrier != "before divines gift" and historyBarrier != "post divine's gift" and historyBarrier != "pdg" and historyBarrier != "post divines gift" and historyBarrier != "the gifter's war" and historyBarrier != "the gifters war" and historyBarrier != "nabuga's banishment" and historyBarrier != "nabugas banishment" and historyBarrier != "the arduos war" and historyBarrier != "arduos war" and historyBarrier != "day of black sun" and historyBarrier != "the day of black sun" and historyBarrier != "establishment of st. guardias" and historyBarrier != "establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "st. guardias" and historyBarrier != "st. guardia's" and historyBarrier != "back" and historyBarrier != "leave":
             historyBarrier = input("Please Re-enter your database restriction.\n").lower()
 
         # Initialization
@@ -1472,7 +1474,7 @@ while infoBarrier == "" or infoBarrier == "return":
             nbapHistory = input(nbapHistory1 + nbapHistory2 + nbapHistory3 + nbapHistory4 + nbapHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower()
 
         # The Arduos War
-        if historyBarrier == "the arduos war" or nbapHistory == "next":
+        if historyBarrier == "the arduos war" or historyBarrier == "arduos war" or nbapHistory == "next":
             tawHistory1 = "The Arduos War\n| 3968 - 3971 PDG\n\nKing T'llas Arduos had been crowned as the ruler of Xhia. His family had peacefully ruled for hundreds of years up until he had been crowned. He was extremely powerful, wielding both earth and fire magics, but as a king he was tyrranical. He believed that the Majuu were the superior race due to them having the strongest magics, and the innate ability to smith powerful weapons. In 20 years, he had overtaken the entire continent, and ruled over it for another 30.\n\n"
             tawHistory2 = "Due to his extreme power, Arduos drove himself insane. Seeking more power, he wished to expand his land even further into the other continents. He waged war on the other continents and immidiately sent troops to overpower them. Innocent majuu who dissented against the war were put into slavery by their own kind; by soldiers of Arduos who believed that he was right. Altaria, Mu'karr and Halgeis quickly banded the little troops they had together to fight back.\n\n"
             tawHistory3 = "Arduos' troops first struck over the water, hoping to stop Altarian troops from reaching Mu'karr. However, majuu had no experience fighting on water, and they were easily defeated. Once the battle hit land, though, the tides changed. The allied army stood no chance against the majuu; their magic and weapon mastery was too great. The allies had to find a way to stop the majuu from advancing towards them. They only thought of one way.\n\n"
@@ -1483,12 +1485,16 @@ while infoBarrier == "" or infoBarrier == "return":
             tawHistory = input(tawHistory1 + tawHistory2 + tawHistory3 + tawHistory4 + tawHistory5 + tawHistory6 + tawHistory7 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower()
 
         # Establishment of St. Guardia's
-        if historyBarrier == "establishment of st. guardias" or historyBarrier == "establishment of st. guardia's" or historyBarrier == "the establishment of st. guardia's" or historyBarrier == "the establishment of st. guardia's" or historyBarrier == "st. guardias" or historyBarrier == "st. guardia's" or dbsHistory == "next":
-            esgHistory1 = "The Establishment of St. Guardia's Academy\n| 3972 PDG\n\n"
-            esgHistory = input("\nPress 'Enter' to return to history selection.\n").lower()
+        if historyBarrier == "establishment of st. guardias" or historyBarrier == "establishment of st. guardia's" or historyBarrier == "the establishment of st. guardia's" or historyBarrier == "the establishment of st. guardias" or historyBarrier == "st. guardias" or historyBarrier == "st. guardia's" or tawHistory == "next":
+            esgHistory1 = "The Establishment of St. Guardia's Academy\n| 3962 - 3968 PDG\n\nBecause of the Arduos War, the world began to understand the consequences of having only one person in a position of power. The impromptu king of Xhia (the general who ended the war) called a meeting with the king of the Terrians, the High Mage of the Argens, and the Head Crow of the Avats to have a talk about solutions that they could work together on to fix the past mistakes of his race, and to ensure it doesn't happen again.\n\n"
+            esgHistory2 = "Though skeptical of the request, all three leaders accepted the request and met in Xhia. The general apolosized on behalf of his people for the trouble that they had caused and asked that any prejudice held against the Majuu people be targeted towards him directly from that point on. This earned the respect of the king of the Terrians, and soon after the other leaders. This meeting was the start of the idea of guardianship. Over the next few years, the idea of guardians became more established.\n\n"
+            esgHistory3 = "Guardians started out as a militia of skilled magic users that would be directly led by the leaders of the continent. However, they saw this as no different than an army and quickly scrapped the idea. It then evolved into a group of tested individuals who proved themselves to be skilled enough to protect others. However, this limited the guardians to people who were naturally skilled, and offered no training system for them either.\n\n"
+            esgHistory4 = "The idea was fleshed out over many more meetings over the course of the next three years until the idea of guardians matches what it does today: graduates of a continent-funded school that teaches accepted students magic and other basic subjects. At this point, the four leaders had already picked the first hundred or so guardians for each continent; powerful people who would be teaching classes at their continent's branch of the new school.\n\n"
+            esgHistory5 = "From there, many graduates of the school began to make changes to what being a Guardian meant. A guardian could be stationed at a town for basic protection against common threats, or it could be a team who took on bounty missions on criminals, or even a lone ranger who preferred to use their abilities for espionage. Guardianship wasn't just a protection against the leaders having too much power anymore; it was the life-blood of most continent's protection force, and a dream for many young people across Phalmasia.\n\n"
+            esgHistory = input(esgHistory1 + esgHistory2 + esgHistory3 + esgHistory4 + esgHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower()
 
         # The Day of Black Sun
-        if historyBarrier == "day of black sun" or historyBarrier == "the day of black sun" or tawHistory == "next":
+        if historyBarrier == "day of black sun" or historyBarrier == "the day of black sun" or esgHistory == "next":
             dbsHistory1 = "The Day of Black Sun\n| 4030 PDG\n\nThings in the world returned to somewhat normalcy after the resolution of the Arduos war, albeit some new stigmas and biases towards the populace of the majuu race. However, in 4022, those in the Mu'karr began reporting strange weather patterns. Summers were hotter than the years before, and winters colder. Thunderstorms were much more common, and blizzards brought much more snow than expected. Most strangely, the aurora borealis was in the sky nearly every week.\n\n"
             dbsHistory2 = "The argens of Mu'karr couldn't understand why the weather had changed so drastically over such a short time, but they assumed it would pass after a year or two. The weather wasn't causing any major damage or problems, so life continued on as normal. However, one day, a large object shifted in front of the sun, causing a makeshift solar eclipse. Confusion was spread all throughout Mu'karr and Halgeis (as both of them shared the same time in the sun). Unlike the weather anomalies, this issue was prominent.\n\n"
             dbsHistory3 = "How had something so large that it could block out the sun entirely get so close to Phalmasia without anyone noticing? After seeing this, it was determined that the strange celestial object, a large meteor made of some sort of black stone, was the cause behind the abnormal weather. Many people theorized that it could be the divines, angry at the Arduos War, and wanted to scare them for their wrongdoings. The meteor came and went after a few minutes, and with it went the strange weather.\n\n"
