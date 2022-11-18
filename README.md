@@ -6,14 +6,15 @@ ___
 ***Launch Instructions***
 
 *You are going to need to download a compiler that can run python, as well as Git compatibility.* Clone the repository by copying the link given on
-the Github website (click the green 'Code' prompt on the repo in your browser). Create a new project using VCS and paste
+the GitHub website (click the green 'Code' prompt on the repo in your browser). Create a new project using VCS and paste
 the link. This will allow you to clone the repo and access the code.
 
 If you are a returning viewer, simply pull the most recent versions from Git upon opening your existing project. This
 will update your code to the most updated version.
 
 The code is still accessible via gists I will make (though they will be private) with the same methods, but they will only be updated when
-an update is completed. This repo is now the most efficient way to keep up-to-date with the database.
+an update is completed. In addition, the gist updates will be made available on the repo under the folder 'Archive: 
+Database Versions'. This repo is now the most efficient way to keep up-to-date with the database.
 ___
 ***Core Commands***
 
