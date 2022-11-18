@@ -1421,11 +1421,11 @@ while infoBarrier == "" or infoBarrier == "return":
 
     # History Input Commands
     while infoBarrier == "history":
-        historyBarrier = input("Historical Events of Phalmasia:\n| Before Divine's Gift (BDG)\n| Post Divine's Gift (PDG)\n| The Gifter's War\n| Nabuga's Banishment\n| The Arduos War\n| The Establishment of St. Guardia's\n| The Day of Black Sun\n\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower()
+        historyBarrier = input("Historical Events of Phalmasia:\n| Before Divine's Gift (BDG)\n| Post Divine's Gift (PDG)\n| The Gifter's War\n| Nabuga's Banishment\n| The Arduos War\n| The Establishment of St. Guardia's\n| The Day of Black Sun\n| The Battle of Judgement\n\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower()
 
         while historyBarrier == "":
             historyBarrier = input("Please Re-enter your database restriction.\n").lower()
-        while historyBarrier != "before divine's gift" and historyBarrier != "bdg" and historyBarrier != "before divines gift" and historyBarrier != "post divine's gift" and historyBarrier != "pdg" and historyBarrier != "post divines gift" and historyBarrier != "the gifter's war" and historyBarrier != "the gifters war" and historyBarrier != "nabuga's banishment" and historyBarrier != "nabugas banishment" and historyBarrier != "the arduos war" and historyBarrier != "arduos war" and historyBarrier != "day of black sun" and historyBarrier != "the day of black sun" and historyBarrier != "establishment of st. guardias" and historyBarrier != "establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "st. guardias" and historyBarrier != "st. guardia's" and historyBarrier != "back" and historyBarrier != "leave":
+        while historyBarrier != "before divine's gift" and historyBarrier != "bdg" and historyBarrier != "before divines gift" and historyBarrier != "post divine's gift" and historyBarrier != "pdg" and historyBarrier != "post divines gift" and historyBarrier != "the gifter's war" and historyBarrier != "the gifters war" and historyBarrier != "nabuga's banishment" and historyBarrier != "nabugas banishment" and historyBarrier != "the arduos war" and historyBarrier != "arduos war" and historyBarrier != "day of black sun" and historyBarrier != "the day of black sun" and historyBarrier != "establishment of st. guardias" and historyBarrier != "establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "the establishment of st. guardia's" and historyBarrier != "st. guardias" and historyBarrier != "st. guardia's" and historyBarrier != "battle of judgement" and historyBarrier != "the battle of judgement" and historyBarrier != "back" and historyBarrier != "leave":
             historyBarrier = input("Please Re-enter your database restriction.\n").lower()
 
         # Initialization
@@ -1436,6 +1436,7 @@ while infoBarrier == "" or infoBarrier == "return":
         tawHistory = ""
         esgHistory = ""
         dbsHistory = ""
+        bojHistory = ""
 
         # Before Divine's Gift
         if historyBarrier == "before divine's gift" or historyBarrier == "bdg" or historyBarrier == "before divines gift":
@@ -1504,6 +1505,11 @@ while infoBarrier == "" or infoBarrier == "return":
             dbsHistory7 = "The meteor was effectively responding to the newfound ray, and slowing down much faster. It was enough to drop the meteor slowly onto the ground, saving not only the lives of the fleeing villagers, but of all of Phalmasia. Those who saw it quickly ran to the village center to thank the mysterious being who saved their lives. But they were suprised to meet a small boy who lived in the village at the center, covering someone else. Instead of thanking him as planned, the people grew fearful.\n\n"
             dbsHistory8 = "How could a young boy hold enough power to stop a force the entire defense system couldn't? The people stepped back, and the village defenders chased him out of the village. The boy brought the one he was protecting away with him, and was never seen or heard from again. That day went down in history as the Day of Black Sun, and the boy became a legend; some feared him for his power, some revered him for his actions. No one saw his face, so no one knew who he was, but they began to call him by his unique magic: The Boy of Cosmic Wind.\n\n"
             dbsHistory = input(dbsHistory1 + dbsHistory2 + dbsHistory3 + dbsHistory4 + dbsHistory5 + dbsHistory6 + dbsHistory7 + dbsHistory8 + "\nPress 'Enter' to return to history selection.\n").lower()
+
+        # Battle of Judgement
+        if historyBarrier == "battle of judgement" or historyBarrier == "the battle of judgement" or dbsHistory == "next":
+            bojHistory1 = "The Battle of Judgement\n| 4042 PDG\n\n"
+            bojHistory = input(bojHistory1 + "\nPress 'Enter' to return to history selection.\n").lower()
 
         # History Exit Command
         if historyBarrier == "back":
