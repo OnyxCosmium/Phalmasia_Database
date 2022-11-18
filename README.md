@@ -7,7 +7,8 @@ ___
 
 *You are going to need to download a compiler that can run python, as well as Git compatibility.* Clone the repository by copying the link given on
 the GitHub website (click the green 'Code' prompt on the repo in your browser). Create a new project using VCS and paste
-the link. This will allow you to clone the repo and access the code.
+the link. This will allow you to clone the repo and access the code. Be sure to make a branch if you choose to make any 
+edits to the code, so you do not affect other user's experience.
 
 If you are a returning viewer, simply pull the most recent versions from Git upon opening your existing project. This
 will update your code to the most updated version.
