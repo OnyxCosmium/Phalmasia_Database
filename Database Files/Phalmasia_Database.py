@@ -1,36 +1,3 @@
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-# coding=utf-8
-
 # Import Commands
 # To use, select 'Emulate in Terminal' option in Run Settings.
 import os
