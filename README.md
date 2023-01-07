@@ -37,12 +37,12 @@ Majuu. This describes special traits about each race, and what magic is availabl
 present-day Phalmasia, as well as caused major shifts for the future of the world. It also hosts the info on the two
 time periods of Phalmasia (Before Divine's Gift & Post Divine's Gift) and the difference between them.
 ___
-Concept of content of this code is from the Webcomic Guardia: Tales of Halgeis by LemonyBeagle. Link to the webcomic can
+Concept of content of this code is from the Web-comic Guardia: Tales of Halgeis by LemonyBeagle. Link to the web-comic can
 be found below. Not all story and magic and its systems are kept as lore in this code, as changes were made based on my 
 preference of the story, as well as original characters to supplement the original cast.
 
 Thank you for your interest in my project! Please let me know of any suggestions you may have. The Update Log Documentation
-is given below so you know what was changed or added in each new or previous update.
+is given below, so you know what was changed or added in each new or previous update.
 
 **Guardia WebComic** -> https://guardia-tales-of-halgeis.thecomicseries.com/comics/first/#content-start
 **LemonyBeagle's Twitter** -> https://twitter.com/LemonyBeagle
