@@ -41,7 +41,10 @@ Concept of content of this code is from the Webcomic Guardia: Tales of Halgeis b
 be found below. Not all story and magic and its systems are kept as lore in this code, as changes were made based on my 
 preference of the story, as well as original characters to supplement the original cast.
 
-Thank you for your interest in my project! Please let me know of any suggestions you may have.
+Thank you for your interest in my project! Please let me know of any suggestions you may have. The Update Log Documentation
+is given below so you know what was changed or added in each new or previous update.
 
 **Guardia WebComic** -> https://guardia-tales-of-halgeis.thecomicseries.com/comics/first/#content-start
 **LemonyBeagle's Twitter** -> https://twitter.com/LemonyBeagle
+
+**Dev Notes & Update Log Documentation** -> https://docs.google.com/document/d/1uuPLo_76QqiygkzRufrUY4GkQ2VzL-PGM-Y0L0wCZLg/edit?usp=sharing
