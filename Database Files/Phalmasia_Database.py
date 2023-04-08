@@ -11,6 +11,9 @@ import os
 # Permafrost Ice: Snowlink Glacier, Altaria
 
 # To-Do List
+# IMPORTANT: New Continent -> Nohla
+    # Continent of Large Islands
+# Add Rebirth to Mythical Elements in Magic Core Command
 # Keep lookout for Mimi's Canon Last Name & Species - Change when revealed
 # Spell Descriptions & Purposes
 # Rewrite Ryner Backstory for New Lore
@@ -25,12 +28,14 @@ import os
 
 # Current Update Notes
 # Revamped All Inputs to Trim Inputs to allow for Whitespace Inputs
+# Updated Mirago's Bio and Backstory
+# Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
 
 # Introduction
 infoBarrier = input("Phalmasia Info Database. Press 'Enter' to continue.").lower().strip()
 while infoBarrier == "" or infoBarrier == "return":
-    infoBarrier = input("Contents:\n| Characters\n| Locations\n| Magic\n| Races\n| History\n\nLeave the database by "
-                        "entering 'Leave'.\n").lower().strip()
+    infoBarrier = input("To Enter a Content Chapter, Enter Its Name When Prompted.\nContents:\n| Characters\n| "
+                        "Locations\n| Magic\n| Races\n| History\n\nLeave the database by entering 'Leave'.\n").lower().strip()
 
     while infoBarrier == "":
         infoBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -290,7 +295,8 @@ while infoBarrier == "" or infoBarrier == "return":
         # Mirago Fynae Bio
         while characterBarrier == "mirago fynae" or characterBarrier == "mirago":
             # Mirago Bio Prompts
-            miragoProfile = "Mirago Fynae\n\nHometown: Meteora\nRace: Argen (Blue, Black)\nBirthday: June 15, " \
+            miragoProfile = "Mirago Fynae\n\nHometown: Meteora\nRace: Argen (White, Black), Pre-Death (Blue, Black)" \
+                            "\nBirthday: June 15, " \
                             "4023\nGender: Male\nPronunciation: ME-rah-goh FAI-nay\nMagic Affinities\n| Fire\n| Onyx " \
                             "Fire\n| Life\n\nItems\n| Psychal Grotto\n| Cloak of Shadows\n| Rune Bracelet\n\nSigil: " \
                             "Sectional, Circle\n| Fire, Bottom Left Section\n| Onyx Fire, Bottom Right Section\n| " \
@@ -447,7 +453,7 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "prison around him and throwing him out of his grave. Where was he? He tries to open " \
                                 "his eyes, but a scar over his right eye forces it closed. He uses his left eye to " \
                                 "look around his surroundings and immediately identifies where he is: Xaeyz's Hideaway. " \
-                                "Xaeyz must have brought him here and buried him, but why? He seems to hav forgotten " \
+                                "Xaeyz must have brought him here and buried him, but why? He seems to have forgotten " \
                                 "everything. Mirago walks back to Meteora to find Xaeyz. But seeing the meteor in the " \
                                 "center of town brings back everything. He rushes back to the grotto searching for " \
                                 "Xaeyz. \n\n"
@@ -459,7 +465,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "the cut. He screams in pain, but after the pain passes, he's able to open his eye " \
                                 "fully. Mirago realized something just then: Xaeyz and everyone he knew thought that " \
                                 "he was dead. He was not. \n\n"
-            miragoBackstory19 = "Mirago turned back to the grave and filled in the hole as best he could so Xaeyz " \
+            miragoBackstory19 = "But that wasn't everything. He was white now. His sapphire glimmering scales now shine " \
+                                "a bright white. But that didn't make any sense - argens couldn't have white scales. " \
+                                "He walked over to the pond and hesitantly gazed into the water, looking " \
+                                "at his new complexion. His eyes weren't lying to him. He really was a white argon now. " \
+                                "Not only that, his sclera were a deep black, and his corneas fiery red. What was " \
+                                "happening to him? He didn't look anything like himself anymore!"
+            miragoBackstory20 = "Mirago turned back to the grave and filled in the hole as best he could so Xaeyz " \
                                 "wouldn't know he was alive. Soon after, Mirago met the spirit of the black flames " \
                                 "who called himself 'Arc'. Arc explains that his magic is called Onyx Fire, " \
                                 "and that he was its sole user. Mirago asked why he only appeared now, " \
@@ -468,14 +480,19 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "that if he ever wanted to talk again to simply come and see him. Mirago was left " \
                                 "confused at his words. He had his own fire? Wasn't Onyx Fire his flames? After a few " \
                                 "minutes, he finally got it. Arc was saying he could use normal fire, too. \n\n"
-            miragoBackstory20 = "Mirago didn't understand how to use the normal fire, though; he'd never done it " \
-                                "before. He decided to ask Arc for what to do, and he advised that his magic would " \
+            miragoBackstory21 = "Mirago didn't understand how to use the normal fire, though; he'd never done it " \
+                                "before. Arc seemed to know how to teach him to use normal fire. Maybe he knew why his " \
+                                "scales and eyes looked so different, too. Finding Arc was difficult at first. Where would " \
+                                "he even start to look? Eventually, he just started meditating, clearing his head, and " \
+                                "that's when Arc first appeared. Arc told him it was because Mirago had died of magic " \
+                                "overexertion trying to stop the Black Sun, and Arc used magic to continue his body's " \
+                                "functions. Arc advised that his magic would " \
                                 "feel different than onyx flames, and that he should try to put his own feelings and " \
                                 "strength into it. It took a week or two, but Mirago had finally found a way to " \
                                 "reliably use his own fire. It was the most connected he'd ever felt to his magic " \
                                 "since using it. Mirago decided that he would train himself instead of going to St. " \
                                 "Guardia's with Xaeyz. \n\n"
-            miragoBackstory21 = "Mirago didn't have a way to seal away the meteor without the rune he and Xaeyz had " \
+            miragoBackstory22 = "Mirago didn't have a way to seal away the meteor without the rune he and Xaeyz had " \
                                 "made and didn't want to risk Xaeyz coming back and seeing him, so he knew he had to " \
                                 "leave to keep himself a secret. So he did. He left the grotto for northern Mu'karr " \
                                 "under the cover of the forests that grew all over the continent. Ever since then, " \
@@ -508,7 +525,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 if miragoChapterPrompt == "chapter 3" or miragoChapterPrompt == "chapter three" or miragoChapterPrompt == "a final stand" or miragoChapterTwo == "next":
                     miragoChapterThree = input("Chapter 3: A Final Stand\n\n" + miragoBackstory13 + "\n" + miragoBackstory14 + "\n" + miragoBackstory15 + "\n" + miragoBackstory16 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
                 if miragoChapterPrompt == "chapter 4" or miragoChapterPrompt == "chapter four" or miragoChapterPrompt == "rebirth & the sundrop valley" or miragoChapterPrompt == "rebirth and the sundrop valley" or miragoChapterThree == "next":
-                    miragoChapterFour = input("Chapter 4: Rebirth & The *Sundrop Valley*\n\n" + miragoBackstory17 + "\n" + miragoBackstory18 + "\n" + miragoBackstory19 + "\n" + miragoBackstory20 + "\n" + miragoBackstory21 + "\n\nThis is the end of Mirago's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+                    miragoChapterFour = input("Chapter 4: Rebirth & The *Sundrop Valley*\n\n" + miragoBackstory17 + "\n" + miragoBackstory18 + "\n" + miragoBackstory19 + "\n" + miragoBackstory20 + "\n" + miragoBackstory21 + "\n" + miragoBackstory22 + "\n\nThis is the end of Mirago's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
                 if miragoChapterOne == "" or miragoChapterTwo == "" or miragoChapterThree == "" or miragoChapterFour == "":
                     miragoChapterPrompt = "chapters"
                 if miragoChapterOne != "chapters" and miragoChapterOne != "" and miragoChapterTwo != "chapters" and miragoChapterTwo != "" and miragoChapterThree != "chapters" and miragoChapterThree != "" and miragoChapterFour != "chapters" and miragoChapterFour != "":
@@ -2276,12 +2293,13 @@ while infoBarrier == "" or infoBarrier == "return":
         while magicBarrier == "mythical elements" or magicBarrier == "mythical element" or magicBarrier == "mythical" or magicBarrier == "mythic":
             mythicBarrier = input("The secret powers of Phalmasia reveal themselves to you...\n\nMythical "
                                   "Elements:\n| Dynamic Water\n| Zenith Earth\n| Cosmic Wind\n| Onyx Fire\n| Electron "
-                                  "Lightning\n| Permafrost Ice\n\nLeave the database by entering 'Leave'. Go back to "
+                                  "Lightning\n| Permafrost Ice\n\nUnison Techniques:\n| Mythical Beasts\n| Rebirth"
+                                  "\n\nLeave the database by entering 'Leave'. Go back to "
                                   "magic selection prompt by entering 'Back'.\n").lower().strip()
 
             while mythicBarrier == "":
                 mythicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
-            while mythicBarrier != "dynamic water" and mythicBarrier != "zenith earth" and mythicBarrier != "cosmic wind" and mythicBarrier != "onyx fire" and mythicBarrier != "electron lightning" and mythicBarrier != "permafrost ice" and mythicBarrier != "back" and mythicBarrier != "leave":
+            while mythicBarrier != "dynamic water" and mythicBarrier != "zenith earth" and mythicBarrier != "cosmic wind" and mythicBarrier != "onyx fire" and mythicBarrier != "electron lightning" and mythicBarrier != "permafrost ice" and mythicBarrier != "mythical beasts" and mythicBarrier != "rebirth" and mythicBarrier != "back" and mythicBarrier != "leave":
                 mythicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
 
             # Dynamic Water Commands
@@ -2318,11 +2336,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                          "number of nutrients to the plant life in the area, increasing their life " \
                                          "force and allowing them to grow faster and into more beautiful plants, " \
                                          "acting as a pseudo-nature magic. It is, of course, inferior to the real " \
-                                         "thing since it cannot manipulate the plants it grows.\n\nHowever, " \
-                                         "it's main strength lies in the ability to manipulate the phase of the earth " \
+                                         "thing since it cannot manipulate the plants it grows, and cannot grow plants " \
+                                         "as fast due to only providing nutrients and not direct magic.\n\nHowever, " \
+                                         "his main strength lies in the ability to manipulate the phase of the earth " \
                                          "he uses, changing it into lava. He can then use this transmuted lava as if " \
-                                         "he was earth and attack his target with it, making his attacks extremely " \
-                                         "deadly."
+                                         "it was earth and attack his target with it, making his attacks extremely " \
+                                         "volatile."
                 zenithEarth = input(zenithEarthStats + "\n\n" + zenithEarthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Cosmic Wind Commands
@@ -2390,7 +2409,7 @@ while infoBarrier == "" or infoBarrier == "return":
                                                "electrons of air and burns them. This creates a section of " \
                                                "unbreathable air around the impact area. As a result of not " \
                                                "compressing but burning the air, the lightning does not create a " \
-                                               "thunder sound, causing silent attacks."
+                                               "thunder sound, causing silent attacks until the moment of impact."
                 electronLightning = input(electronLightningStats + "\n\n" + electronLightningDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Permafrost Ice Commands
@@ -2413,6 +2432,26 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "into contact with water, it freezes it starting from the point of contact " \
                                            "of the Permafrost Ice."
                 permafrostIce = input(permafrostIceStats + "\n\n" + permafrostIceDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+
+            # Mythical Beasts Commands
+            if mythicBarrier == "mythical beasts":
+                mythicalBeastStats = "Mythical Beast Manifestation\n\tMythical Tier Spell\n\n| Spell Style: " \
+                                     "Mode/Utility\n| Mastery: Extreme"
+                mythicalBeastDescription = "A unique type of magic manipulation only capable by mythical element users. " \
+                                           "The process of doing this is something that only the mythical elemental " \
+                                           "know, and the casting of which something only their users can handle due " \
+                                           "to their increased mana capacities and higher skill ceilings. The spell " \
+                                           "revolves around summoning the spirit of the mythical element's mythical " \
+                                           "beast around the user, giving the user the abilities of the beast, " \
+                                           "additional magical power, and specialized spells only usable in the beast " \
+                                           "form.\n\nThis spell has two forms. One is where the user transforms into a " \
+                                           "hybrid being, keeping their size but gaining magic appendages that resemble " \
+                                           "their mythical beasts, like wings, tails, and horns. The other is when the " \
+                                           "user transforms completely into their beast, constructing the body of their " \
+                                           "own mana and controlling them from within with their hybrid form. Both forms " \
+                                           "increase magic utility and damage to an incredible degree, making it an " \
+                                           "extremely useful part of any mythical elemental user's arsenal."
+                permafrostIce = input(mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Elements Exit Command
             if mythicBarrier == "back":
