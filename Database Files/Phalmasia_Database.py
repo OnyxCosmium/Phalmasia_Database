@@ -30,6 +30,7 @@ import os
 # Revamped All Inputs to Trim Inputs to allow for Whitespace Inputs
 # Updated Mirago's Bio and Backstory
 # Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
+# Added Mythical Tier Spell: Rebirth to Magic Core Command
 
 # Introduction
 infoBarrier = input("Phalmasia Info Database. Press 'Enter' to continue.").lower().strip()
@@ -2451,7 +2452,37 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "own mana and controlling them from within with their hybrid form. Both forms " \
                                            "increase magic utility and damage to an incredible degree, making it an " \
                                            "extremely useful part of any mythical elemental user's arsenal."
-                permafrostIce = input(mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                mythicalBeast = input(mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+
+            # Rebirth Commands
+            if mythicBarrier == "rebirth":
+                rebirthStats = "Rebirth\n\tMythical Tier Spell\n\n| Spell Style: Conditional/Medical\n| " \
+                               "Mastery: Impossible"
+                rebirthDescription = "Rebirth is an extremely powerful spell that no one but the mythical elementals " \
+                                     "themselves can cast. Being a conditional spell, there are several requirements " \
+                                     "that must be met before activation. The mythical elemental must be bonded to " \
+                                     "a living user for over a year, and the user must be on the brink of death or " \
+                                     "have died less than 10 minutes prior. If the spell is not cast during this " \
+                                     "time, the spell will fail. The mythical elemental must also want to revive " \
+                                     "their user, meaning that the user cannot cast this spell on themselves, both " \
+                                     "because they physically couldn't while on the brink of death, and the user " \
+                                     "requires consent from their elemental before the spell can be casted at all. " \
+                                     "Once Rebirth is casted, the end effect is that the " \
+                                     "previously vitally harmed host will return to a perfectly healthy state.\n\n" \
+                                     "This works by the mythical elemental using their own mana to pump energy " \
+                                     "through the host. This essentially means that the user now has mana running " \
+                                     "through their veins instead of blood, and their energy becomes more potent as " \
+                                     "a result. Their magic skyrockets in power upon waking up from rebirth, as " \
+                                     "well as changing the color of their fur, skin or scales (depending on the " \
+                                     "race of the mythical element user) to a pure white, as well as giving their " \
+                                     "eyes the color of their primary magic.\n\nThe drawbacks to this technique are " \
+                                     "severe, however. By using their power to keep their user alive, the mythical " \
+                                     "elemental is significantly weakened by the endeavor, causing the user to be " \
+                                     "unable to call upon the force of their mythical element as strongly as they " \
+                                     "could before. Because of the body's new reliance on mana, the user is also " \
+                                     "extremely vulnerable to shadow attacks, as temporarily shutting off their mana " \
+                                     "results in the user entering a severely weakened state similar to death."
+                rebirth = input(rebirthStats + "\n\n" + rebirthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Elements Exit Command
             if mythicBarrier == "back":
