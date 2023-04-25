@@ -32,6 +32,7 @@ import os
 # Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
 # Added Mythical Tier Spell: Rebirth to Magic Core Command
 
+
 # Introduction
 infoBarrier = input("Phalmasia Info Database. Press 'Enter' to continue.").lower().strip()
 while infoBarrier == "" or infoBarrier == "return":
