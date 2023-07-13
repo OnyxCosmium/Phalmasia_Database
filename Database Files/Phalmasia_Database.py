@@ -1112,13 +1112,13 @@ while infoBarrier == "" or infoBarrier == "return":
 
     # Location Input Commands
     while infoBarrier == "locations":
-        locationBarrier = input("Continents of Phalmasia:\n| Halgeis\n| Mu'karr\n| Altaria\n| Xhia\n\nLeave the "
-                                "database by entering 'Leave'. Go back to the home prompt by entering "
+        locationBarrier = input("Continents of Phalmasia:\n| Halgeis\n| Mu'karr\n| Altaria\n| Xhia\n| Nohla\n\nLeave "
+                                "the database by entering 'Leave'. Go back to the home prompt by entering "
                                 "'Back'.\n").lower().strip()
 
         while locationBarrier == "":
             locationBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
-        while locationBarrier != "halgeis" and locationBarrier != "mu'karr" and locationBarrier != "mukarr" and locationBarrier != "altaria" and locationBarrier != "xhia" and locationBarrier != "back" and locationBarrier != "leave":
+        while locationBarrier != "halgeis" and locationBarrier != "mu'karr" and locationBarrier != "mukarr" and locationBarrier != "altaria" and locationBarrier != "xhia" and locationBarrier != "nohla" and locationBarrier != "back" and locationBarrier != "leave":
             locationBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
 
         # Halgeis Info & City Selection
@@ -1920,6 +1920,58 @@ while infoBarrier == "" or infoBarrier == "return":
                 print("Thank you for using the Phalmasia Info Database. Have a nice day.")
                 quit()
 
+        # Nohla Info & City Selection
+        while locationBarrier == "nohla":
+            nohlaLocations = input("Nohla is unique compared to other continents, because it is composed of large "
+                                   "islands, each of which are home to all of the five races of the world. Because of the "
+                                   "diversity of the continent, there isn't a official leader over everything, as residents "
+                                   "think that would put one race above the other, something they strive to avoid. "
+                                   "Because the people here are so kind and welcoming to everyone, it makes it a great "
+                                   "place for people to visit and live in. Surrounded by ocean in all directions, Nohla "
+                                   "is Phalmasia's largest seafood and ocean product exporters. Many original residents "
+                                   "here usually originate from other continents and immigrate here.\n\nNohla Islands:\n|"
+                                   " Korfu\n| Hartledge\n| Eklyptil\n| Dullus\n| Cingrigh\n| Talen\n| Skyhaven"
+                                   "\n\nLeave the database by entering 'Leave'. Go back to the continent selection by "
+                                   "entering 'Back'.\n").lower().strip()
+
+            while nohlaLocations == "":
+                nohlaLocations = input("Please Re-enter your database restriction.\n").lower().strip()
+            while nohlaLocations != "korfu" and nohlaLocations != "hartledge" and nohlaLocations != "eklyptil" and nohlaLocations != "dullus" and nohlaLocations != "cingrigh" and nohlaLocations != "talen" and nohlaLocations != "skyhaven" and nohlaLocations != "leave" and nohlaLocations != "back":
+                nohlaLocations = input("Please Re-enter your database restriction.\n").lower().strip()
+
+            # Korfu Island Commands
+            if nohlaLocations == "korfu":
+                korfuStats = "Korfu, Nohla\n\nPrimary Resident Race: Terrian\nPronunciation: CORE-foo\nLocation: Western " \
+                            "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Tropics Grove\n\n"
+                korfuDescription = "Korfu is a short island on the western side of Nohla that lies close to sea level. " \
+                                   "This means that it is naturally surrounded by beaches, and has a very tropical climate. " \
+                                   "The seawater is also very clear near the shores, and many resorts line the beaches " \
+                                   "as travel locations to tourists and visiting people. Because of the summer-like " \
+                                   "climate and resorts, Korfu has become one of the most popular islands people visit " \
+                                   "when coming to Nohla.\n\nKorfu also houses Tropics Grove, a tropical valley that has " \
+                                   "several pine trees and bushes growing different tropical fruit, like pyreapples and " \
+                                   "cocomelons. Tropics Grove is open to the public on weekends, and a farmer's market " \
+                                   "is opened every Saturday. Tropics Grove also allows Korfu to export large amounts of " \
+                                   "fruit to the other islands of the continent, which gives it a steady source of income." \
+                                   "Korfu is big on protecting its environment, so the island takes many steps to prevent " \
+                                   "it's deterioration.\n\n"
+                nohlaLocation = input(korfuStats + korfuDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Hartledge Island Commands
+            if nohlaLocations == "hartledge":
+                korfuStats = "Hartledge, Nohla\n\nPrimary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: Northern " \
+                             "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
+                korfuDescription = "Hartledge is an island covered in trees similar to those in Mu'karr, which is why " \
+                                   "its population mainly consists of argens. \n\n"
+                nohlaLocation = input(korfuStats + korfuDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Nohla Exit Command
+            if nohlaLocations == "back":
+                break
+            if nohlaLocations == "leave":
+                print("Thank you for using the Phalmasia Info Database. Have a nice day.")
+                quit()
+
         # Locations Exit Command
         if locationBarrier == "back":
             infoBarrier = "back"
@@ -1933,9 +1985,7 @@ while infoBarrier == "" or infoBarrier == "return":
         magicBarrier = input("There is one additional magic classification that can only be accessed by those who are "
                              "strong enough to wield them. Hints have been littered throughout the database. May the "
                              "stars guide your way.\n\nMagic:\n| Elemental Magic\n| Lost Magic\n| Sigils\n\nLeave the "
-                             "database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower(
-
-        ).strip()
+                             "database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower().strip()
 
         while magicBarrier == "":
             magicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
