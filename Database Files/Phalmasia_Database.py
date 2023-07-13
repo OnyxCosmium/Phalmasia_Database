@@ -1959,11 +1959,23 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Hartledge Island Commands
             if nohlaLocations == "hartledge":
-                korfuStats = "Hartledge, Nohla\n\nPrimary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: Northern " \
-                             "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
-                korfuDescription = "Hartledge is an island covered in trees similar to those in Mu'karr, which is why " \
-                                   "its population mainly consists of argens. \n\n"
-                nohlaLocation = input(korfuStats + korfuDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                hartledgeStats = "Hartledge, Nohla\n\nPrimary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: Northern " \
+                             "Nohla\nVisitor Friendly: No\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
+                hartledgeDescription = "Hartledge is an island covered in trees similar to Mu'karr, which is why its population " \
+                                   "mainly consists of argens. Most of these argens, however, are archaeologists and " \
+                                   "proficient scholars in history and magic. This is because Hartledge hosts the Hornscale" \
+                                   "Caves, one of the oldest recorded cave systems in Phalmasia. Not much is known about " \
+                                   "the caves, however the walls give off a strange magical signature that is difficult " \
+                                   "to notice, but seems to have been there since its inception thousands of years ago. " \
+                                   "The caves go deep into the heart of the islands, and the researchers believe that " \
+                                   "discovering the secrets of the caves may lead to a deeper understanding of magic as " \
+                                   "a whole.\n\nDue to the caves being actively under research, the island isn't open " \
+                                   "for visitation. However, the Whispering Forest can be seen from other nearby islands " \
+                                   "of Nohla, as their pink leaves and silver trunks are very vibrant. The island is high " \
+                                   "enough that there is a breeze constantly flowing throughout the forest, and the trunks " \
+                                   "of these hardened sakura trees whistle in the wind, which is why the forest has been " \
+                                   "dubbed the 'Whispering Forest'. \n\n"
+                nohlaLocation = input(hartledgeStats + hartledgeDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
             if nohlaLocations == "back":
