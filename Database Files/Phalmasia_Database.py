@@ -1,6 +1,11 @@
 # Import Commands
 # To use, select 'Emulate in Terminal' option in Run Settings.
 import os
+import sys
+from os import system, name
+
+# Use this line to restart code from beginning (Does not update output if code is changed)
+    # os.execl(sys.executable, sys.executable, *sys.argv)
 
 # Notes
 # Dynamic Water: Crest Lake, Halgeis
@@ -11,9 +16,6 @@ import os
 # Permafrost Ice: Snowlink Glacier, Altaria
 
 # To-Do List
-# IMPORTANT: New Continent -> Nohla
-    # Continent of Large Islands
-# Add Rebirth to Mythical Elements in Magic Core Command
 # Keep lookout for Mimi's Canon Last Name & Species - Change when revealed
 # Spell Descriptions & Purposes
 # Rewrite Ryner Backstory for New Lore
@@ -22,16 +24,26 @@ import os
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
-# Correct All Spelling Errors & Long Line Errors
 # Backstories for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character option to Character Selection & Describe characters who don't get full pages
 
 # Current Update Notes
-# Revamped All Inputs to Trim Inputs to allow for Whitespace Inputs
+# Revamped All Inputs to Trim Inputs to allow for Whitespace
 # Updated Mirago's Bio and Backstory
 # Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
 # Added Mythical Tier Spell: Rebirth to Magic Core Command
+# QoL: Bolded all Location City Headers
 
+# Clear Command
+os.putenv('TERM', 'xterm')
+def clear():
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 # Introduction
 infoBarrier = input("Phalmasia Info Database. Press 'Enter' to continue.").lower().strip()
@@ -1142,7 +1154,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Volquöla City Commands
             if halgeisLocations == "volquola" or halgeisLocations == "volquöla":
-                volquolaStats = "Volquöla, Halgeis\n\nPrimary Resident Race: Majuu\nPronunciation: " \
+                volquolaStats = "Primary Resident Race: Majuu\nPronunciation: " \
                                 "vol-KWOH-lah\nLocation: Northwestern Halgeis\nVisitor Friendly: No\nTown Trade:\n| " \
                                 "Weapons\n| Armor\nSub-Locations:\n| Voltoru Canyon\n| Pyrevault Ridge\nNotable " \
                                 "Residents:\n| Aeiyou Drefael\n| Kinto Verali\n\n"
@@ -1158,11 +1170,11 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "in Halgeis, which makes it relatively respected in the country. However, " \
                                       "most of the villagers prefer to keep to themselves and their community, " \
                                       "so the town doesn't get many visitors.\n\n"
-                halgeisLocation = input(volquolaStats + volquolaDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n")
+                halgeisLocation = input("\033[1m" + "Volquöla, Halgeis\n\n" + "\033[0m" + volquolaStats + volquolaDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n")
 
             # Ashford City Commands
             if halgeisLocations == "ashford":
-                ashfordStats = "Ashford, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                ashfordStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                "ASH-ford\nLocation: Northern Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                "Kytegrove Forest\n| Frinrir's Grave\nNotable Residents:\n| Yggdrasil Aensyll\n\n"
                 ashfordDescription = "Ashford is a peaceful town on the northern side of Halgeis. The town itself is " \
@@ -1175,11 +1187,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "open place to train in solidarity. The town doesn't have any landmarks or " \
                                      "produce any products they trade commonly, so Ashford is mostly a quiet settling " \
                                      "place for terrians to live a peaceful life with their families.\n\n"
-                halgeisLocation = input(ashfordStats + ashfordDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Ashford, Halgeis\n\n" + "\033[0m" + ashfordStats + ashfordDescription + "Go "
+                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Oshborne City Commands
             if halgeisLocations == "oshborne":
-                oshborneStats = "Oshborne, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                oshborneStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                 "OSH-born\nLocation: Western Halgeis\nVisitor Friendly: Yes\nNotable Residents:\n| " \
                                 "Cidelli Reimora\n\n"
                 oshborneDescription = "Oshborne is a small town in Western Halgeis and one of the many places in " \
@@ -1189,11 +1202,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "extravagant in their own right.\n\nThe town doesn't act as a tourist " \
                                       "attraction since there aren't many things to do there, but the town will " \
                                       "openly accept any travelers who happen to be passing through.\n\n"
-                halgeisLocation = input(oshborneStats + oshborneDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Oshborne, Halgeis\n\n" + "\033[0m" + oshborneStats + oshborneDescription + "Go "
+                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Cilfier City Commands
             if halgeisLocations == "cilfier":
-                cilfierStats = "Cilfier, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                cilfierStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                "SIL-fire\nLocation: Eastern Halgeis\nVisitor Friendly: Yes\nTown Trade:\n| " \
                                "Fish\nSub-Locations:\n| Sapphire Lakes\nNotable Residents: Mimi Seiran\n\n"
                 cilfierDescription = "Cilfier is a city centered around the Sapphire Lakes, and is also where the " \
@@ -1205,11 +1219,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "the lakes. The lakes of Cilfier draw in travellers from across Halgeis to " \
                                      "admire them. The citizens of Cilfier don't allow anyone to take water out of or " \
                                      "polluting the lakes to both respect the lakes and nature.\n\n"
-                halgeisLocation = input(cilfierStats + cilfierDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Cilfier, Halgeis\n\n" + "\033[0m" + cilfierStats + cilfierDescription + "Go "
+                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Skykumo City Commands
             if halgeisLocations == "skykumo":
-                skykumoStats = "Skykumo, Halgeis\n\nPrimary Resident Race: Avian\nPronunciation: " \
+                skykumoStats = "Primary Resident Race: Avian\nPronunciation: " \
                                "SKY-coo-moh\nLocation: Northern Halgeis\nVisitor Friendly: No\nSub-Locations:\n| " \
                                "Tengou Mountain\nNotable Residents: Kimiko Quintai\n\n"
                 skykumoDescription = "Skykumo is a mountainside village so high that it is near cloud height, " \
@@ -1222,11 +1237,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "its proximity to the clouds. Most don't come to see this, however, because the " \
                                      "thin air in Skykumo makes breathing extremely labor-intensive and is dangerous " \
                                      "to most without protective gear or wind magic.\n\n"
-                halgeisLocation = input(skykumoStats + skykumoDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Skykumo, Halgeis\n\n" + "\033[0m" + skykumoStats + skykumoDescription + "Go "
+                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Swalubu City Commands
             if halgeisLocations == "swalubu":
-                swalubuStats = "Swalubu, Halgeis\n\nPrimary Resident Race: Human\nPronunciation: " \
+                swalubuStats = "Primary Resident Race: Human\nPronunciation: " \
                                "swa-LOO-boo\nLocation: Northeastern Halgeis\nVisitor Friendly: Yes\nTown Trade:\n| " \
                                "Seafood\nSub-Locations:\n| Soshi Dojo\n| Borderline Beach\n\n"
                 swalubuDescription = "Swalubu is a seaside city in Halgeis that borders Mu'karr. It hosts both a " \
@@ -1238,11 +1254,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "weaponry skills and fighting styles. It is extremely popular, and those without " \
                                      "magic often come here seeking mentorship if they still wish to help defend or " \
                                      "protect others (as guardians or not).\n\n"
-                halgeisLocation = input(swalubuStats + swalubuDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Swalubu, Halgeis\n\n" + "\033[0m" + swalubuStats + swalubuDescription + "Go "
+                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Nulvali City Commands
             if halgeisLocations == "nulvali":
-                nulvaliStats = "Nulvali, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                nulvaliStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                "null-VAH-lee\nLocation: Northern Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                "Nulvali Marketplace\n| Kytegrove Forest\n| Halgeian Flyers Department (HFD)\n\n"
                 nulvaliDescription = "Nulvali is a large town in northern Halgeis, and is the neighbor of Ashford. " \
@@ -1254,11 +1271,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "potential wind users for legalized flight, and give out Flyers Licenses. Though " \
                                      "there are other locations, due to Kytegrove Forest being in such a close " \
                                      "vicinity, it is the largest center in Halgeis.\n\n"
-                halgeisLocation = input(nulvaliStats + nulvaliDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Nulvali, Halgeis\n\n" + "\033[0m" + nulvaliStats + nulvaliDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Starkiepe City Commands
             if halgeisLocations == "starkiepe":
-                starkiepeStats = "Starkiepe, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                starkiepeStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                  "STAR-keep\nLocation: Central Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                  "Steelpaige Mountains\n* Briarfield Cliffs\n| Starkiepe Battle Frontier\n| Celeste " \
                                  "Mall\n\n"
@@ -1278,11 +1296,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "be attempted alone, or with a team, in which case the team name and members " \
                                        "must all be registered as such. It is a great place to go to watch some " \
                                        "action.\n\n"
-                halgeisLocation = input(starkiepeStats + starkiepeDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Starkiepe, Halgeis\n\n" + "\033[0m" + starkiepeStats + starkiepeDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Grand Elise City Commands
             if halgeisLocations == "grand elise":
-                grandEliseStats = "Grand Elise, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: Grand " \
+                grandEliseStats = "Primary Resident Race: Terrian\nPronunciation: Grand " \
                                   "El-LEASE\nLocation: Central Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| St. " \
                                   "Guardia's Academy\n| Enchanted Forest\n\n"
                 grandEliseDescription = "Grand Elise is the capital city of Halgeis, but is one of the continent's " \
@@ -1300,11 +1319,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "Forest, the largest forest in Halgeis, is also present withing walking " \
                                         "distance of the city's borders and is easily accessible to residents and " \
                                         "visitors.\n\n"
-                halgeisLocation = input(grandEliseStats + grandEliseDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Grand Elise, Halgeis\n\n" + "\033[0m" + grandEliseStats + grandEliseDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Drəklife City Commands
             if halgeisLocations == "dreklife":
-                dreklifeStats = "Drəklife, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                dreklifeStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                 "DREEK-life\nLocation: Western Halgeis\nVisitor Friendly: No\nSub-Locations:\n| " \
                                 "Enchanted Forest\n\n"
                 dreklifeDescription = "Drəklife is a small village on the easternmost side of the Enchanted Forest. " \
@@ -1318,11 +1338,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "down. Their work has done almost nothing to the health of the forest, " \
                                       "but their care has actually improved it. Those who live in Drəklife have " \
                                       "learned to care for the environment and others.\n\n"
-                halgeisLocation = input(dreklifeStats + dreklifeDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Drəklife, Halgeis\n\n" + "\033[0m" + dreklifeStats + dreklifeDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Mezolune City Commands
             if halgeisLocations == "mezolune":
-                mezoluneStats = "Mezolune, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                mezoluneStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                 "MEH-zo-loon\nLocation: Southeastern Halgeis\nVisitor Friendly: No\nTrade:\n| " \
                                 "Produce/Crops\nNotable Residents:\n| Amiru Soaren\n\n"
                 mezoluneDescription = "Mezolune is a village on the outskirts of Halgeis near the sea. The land there " \
@@ -1335,11 +1356,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "village. Small markets are found on most days, and many people call this place " \
                                       "their home. Those who live here have a great affinity for life and plants " \
                                       "alike.\n\n"
-                halgeisLocation = input(mezoluneStats + mezoluneDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Mezolune, Halgeis\n\n" + "\033[0m" + mezoluneStats + mezoluneDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Piquaron City Commands
             if halgeisLocations == "piquaron":
-                piquaronStats = "Piquaron, Halgeis\n\nPrimary Resident Race: Avian\nPronunciation: " \
+                piquaronStats = "Primary Resident Race: Avian\nPronunciation: " \
                                 "Pick-CWUAIR-ron\nLocation: Southwestern Halgeis\nVisitor Friendly: Yes\nNotable " \
                                 "Residents:\n| Turcobé Sentai\n\n"
                 piquaronDescription = "Piquaron is a small village in Halgeis inhabited by avians. There are few " \
@@ -1355,11 +1377,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "the students to figure out spells on their own which increases their " \
                                       "understanding of their magic, but it also teaches them to find ways to use " \
                                       "them more efficiently and in a way that is comfortable for them.\n\n"
-                halgeisLocation = input(piquaronStats + piquaronDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Piquaron, Halgeis\n\n" + "\033[0m" + piquaronStats + piquaronDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Elendraye City Commands
             if halgeisLocations == "elendraye":
-                elendrayeStats = "Elendraye, Halgeis\n\nPrimary Resident Race: Terrian\nPronunciation: " \
+                elendrayeStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                  "ELL-en-dray\nLocation: Southwestern Halgeis\nVisitor Friendly: No\nNotable " \
                                  "Residents:\n| Yumeizu Artilux\n\n"
                 elendrayeDescription = "Elendraye is a large town that sits in a valley in Southwestern Halgeis. " \
@@ -1374,7 +1397,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "known to: defensively. This influences the magic styles of many magic users " \
                                        "who live here. A common pastime for children is to practice their magics with " \
                                        "and against each other.\n\n"
-                halgeisLocation = input(elendrayeStats + elendrayeDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\033[1m" + "Elendraye, Halgeis\n\n" + "\033[0m" + elendrayeStats + elendrayeDescription +
+                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Halgeis Exit Command
             if halgeisLocations == "back":
@@ -1410,7 +1434,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Trefaeli City Commands
             if mukarrLocations == "trefaeli":
-                trefaeliStats = "Trefaeli, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                trefaeliStats = "Primary Resident Race: Argen\nPronunciation: " \
                                 "tree-FAIL-ee\nLocation: Southwestern Mu'karr\nVisitor Friendly: Yes\nTown Trade:\n| " \
                                 "Clothing\n\n"
                 trefaeliDescription = "Trefaeli is a peaceful village in Southeastern Mu'karr. Due to the hilly " \
@@ -1421,11 +1445,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "here, it is a producer of high-quality argenian clothing, though it isn't a " \
                                       "major producer. They do sell their products to all of Mu'karr, but due to the " \
                                       "size of Trefaeli, they can't afford to create high supplies.\n\n"
-                mukarrLocation = input(trefaeliStats + trefaeliDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Trefaeli, Mu'karr\n\n" + "\033[0m" + trefaeliStats + trefaeliDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Andromita City Commands
             if mukarrLocations == "andromita":
-                andromitaStats = "Andromita, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                andromitaStats = "Primary Resident Race: Argen\nPronunciation: " \
                                  "an-DROM-ita\nLocation: Western Mu'karr\nVisitor Friendly: Yes\n\n"
                 andromitaDescription = "Andromita is one of the few villages in Mu'karr that is in a clearing with " \
                                        "very little forestry. Though forests do surround the clearing, " \
@@ -1438,11 +1463,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "the small size of the grove), guardians don't need to have a post in the " \
                                        "town, and it rarely ever receives any problems. It is a nice place to visit, " \
                                        "even if you are just passing through.\n\n"
-                mukarrLocation = input(andromitaStats + andromitaDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Andromita, Mu'karr\n\n" + "\033[0m" + andromitaStats + andromitaDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dragolyne City Commands
             if mukarrLocations == "dragolyne":
-                dragolyneStats = "Dragolyne, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                dragolyneStats = "Primary Resident Race: Argen\nPronunciation: " \
                                  "DRA-go-line\nLocation: Eastern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                  "St. Guardia's Academy\n\n"
                 dragolyneDescription = "Dragolyne is one of the largest cities in Mu'karr. It is an integration of " \
@@ -1454,11 +1480,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "a sister academy of the one in Halgeis. Though they are the same academy, " \
                                        "their curriculums are tailored to argens. The school has made Dragolyne a " \
                                        "more lively place for residents, visitors, and their incoming students.\n\n"
-                mukarrLocation = input(dragolyneStats + dragolyneDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Dragolyne, Mu'karr\n\n" + "\033[0m" + dragolyneStats + dragolyneDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Meteora City Commands
             if mukarrLocations == "meteora":
-                meteoraStats = "Meteora, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                meteoraStats = "Primary Resident Race: Argen\nPronunciation: " \
                                "meet-ee-OR-ah\nLocation: Southeastern Mu'karr\nVisitor Friendly: Yes\nTown Trade:\n| " \
                                "Weapons\n| Armor\nSub-Locations:\n| Black Sun Impact Site\nNotable Residents:\n| " \
                                "Xaeyz Kai\n| Mirago Fynae\n\n"
@@ -1472,11 +1499,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "Though the impact of the meteor was cushioned, the Black Sun still caused a " \
                                      "large crater in the middle of the town. Many people visit the crater, " \
                                      "though the public isn't aware of whether or not the Cosmic Wind User existed.\n\n"
-                mukarrLocation = input(meteoraStats + meteoraDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Meteora, Mu'karr\n\n" + "\033[0m" + meteoraStats + meteoraDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Forécyør City Commands
             if mukarrLocations == "forecyor":
-                forecyorStats = "Forécyør, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                forecyorStats = "Primary Resident Race: Argen\nPronunciation: " \
                                 "FOR-eh-CYORE\nLocation: Central Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                 "Eden's Library\n| Dawndew Mall\n\n"
                 forecyorDescription = "Forécyør is the capitol city of Mu'karr, and happens to be the largest city in " \
@@ -1493,11 +1521,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "tree in the city, and even continues underground. Residents of Forécyør use " \
                                       "the library on a daily basis for a multitude of reasons, and everyone does " \
                                       "what they can to preserve the natural beauty of their city.\n\n"
-                mukarrLocation = input(forecyorStats + forecyorDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Forécyør, Mu'karr\n\n" + "\033[0m" + forecyorStats + forecyorDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dendraiye City Commands
             if mukarrLocations == "dendraiye":
-                dendraiyeStats = "Dendraiye, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                dendraiyeStats = "Primary Resident Race: Argen\nPronunciation: " \
                                  "DEN-dray\nLocation: Northern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                  "Cryonili Mountains\nNotable Residents:\n| Serena Fynae\n\n"
                 dendraiyeDescription = "Dendraiye is a small town in Northern Mu'karr. It rests directly outside the " \
@@ -1510,11 +1539,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "have ice affinities are usually stationed there to protect the towns below. " \
                                        "Serena Fynae has made her home deep into these mountains, using the dangerous " \
                                        "terrain as a training regimen for her own magic.\n\n"
-                mukarrLocation = input(dendraiyeStats + dendraiyeDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Dendraiye, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Petalford City Commands
             if mukarrLocations == "petalford":
-                dendraiyeStats = "Petalford, Mu'karr\n\nPrimary Resident Race: Argen\nPronunciation: " \
+                dendraiyeStats = "Primary Resident Race: Argen\nPronunciation: " \
                                  "PE-tal-ford\nLocation: Eastern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                  "Fewl Institute\nTown Trade:\n| Produce\n\n"
                 dendraiyeDescription = "Petalford is a large village in Eastern Mu'karr. It is mostly open fields " \
@@ -1531,12 +1561,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "doesn't rival the size or outreach of St. Guardia's, the training that it " \
                                        "provides is on par with the school, and many argens who don't get accepted " \
                                        "into St. Guardia's choose to apply here instead.\n\n"
-                mukarrLocation = input(dendraiyeStats + dendraiyeDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Petalford, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
+                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr: Mythic Location Commands
             # Aurora Grotto Commands
             if mukarrLocations == "aurora grotto":
-                auroraGrottoStats = "Mythic Location: Aurora Grotto, Mu'karr\n\nLocation: Southeastern " \
+                auroraGrottoStats = "Location: Southeastern " \
                                     "Mu'karr\nVisitor Friendly: N/A\nMythic Elemental: Aeon\nEnhanced Natural Event: " \
                                     "Aurora Borealis\n\n"
                 auroraGrottoDescription = "\"It's strange, being from the stars. Everyone down here looks so odd, " \
@@ -1558,11 +1589,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                           "actually experiences a higher rate of natural auroras that last longer " \
                                           "than the average. This makes it the ideal location for Xaeyz to train and " \
                                           "relax due to the boost that the auroras give to his Cosmic Wind.\n\n"
-                mukarrLocation = input(auroraGrottoStats + auroraGrottoDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Mythic Location: Aurora Grotto, Mu'karr\n\n" + "\033[0m" + auroraGrottoStats + \
+                                       auroraGrottoDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Sundrop Valley Commands
             if mukarrLocations == "sundrop valley":
-                sundropValleyStats = "Mythic Location: Sundrop Valley, Mu'karr\n\nLocation: Northwestern " \
+                sundropValleyStats = "Location: Northwestern " \
                                      "Mu'karr\nVisitor Friendly: N/A\nMythic Elemental: Arc\nEnhanced Natural Event: " \
                                      "Solar Storm\n\n"
                 sundropValleyDescription = "\"The sun is such a simple place. Just elements fusing with each other to " \
@@ -1592,7 +1624,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "quantities, mimicking the properties of a solar storm during times of " \
                                            "intense violence on the sun's surface. This happens to be Mirago's power " \
                                            "event, and makes his Onyx Fire stronger.\n\n"
-                mukarrLocation = input(sundropValleyStats + sundropValleyDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input("\033[1m" + "Mythic Location: Sundrop Valley, Mu'karr\n\n" + "\033[0m" + sundropValleyStats +
+                                       sundropValleyDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr Exit Command
             if mukarrLocations == "back":
@@ -1627,7 +1660,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Entrype City Commands
             if altariaLocations == "entrype":
-                entrypeStats = "Entrype, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: EN-tripe\nLocation: " \
+                entrypeStats = "Primary Resident Race: Avat\nPronunciation: EN-tripe\nLocation: " \
                                "Northern Altaria\nVisitor Friendly: No\nTown Trade: Technology & " \
                                "Research\nSub-Locations:\n| Boreal Crown\n| Moonlight Pond: Yin\nTown Trade:\n| " \
                                "Mana-based Technology\n\n"
@@ -1647,11 +1680,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "are mountain homes in the cliffs of nearby mountains. Though visitation is " \
                                      "limited due to the crown's presence, Entrype is still a beautiful village to " \
                                      "live in.\n\n"
-                altariaLocation = input(entrypeStats + entrypeDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + entrypeStats + entrypeDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Soraikai City Commands
             if altariaLocations == "soraikai":
-                soraikaiStats = "Soraikai, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                soraikaiStats = "Primary Resident Race: Avat\nPronunciation: " \
                                 "soar-EYE-KYE\nLocation: Western Altaria\nVisitor Friendly: Yes\nTown Trade:\n| " \
                                 "Altaria Mail Service (AMS)\n\n"
                 soraikaiDescription = "Soraikai is a mountaintop village that rests just below cloud level. Most " \
@@ -1671,11 +1705,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "Service (AMS); since mail deliverers have such a high starting point, " \
                                       "they can use wind magic to glide to other towns without using much mana to " \
                                       "gain altitude.\n\n"
-                altariaLocation = input(soraikaiStats + soraikaiDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + soraikaiStats + soraikaiDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Cerulaine City Commands
             if altariaLocations == "cerulaine":
-                cerulaineStats = "Cerulaine, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                cerulaineStats = "Primary Resident Race: Avat\nPronunciation: " \
                                  "SER-oo-lane\nLocation: Northeastern Altaria\nVisitor Friendly: Yes\n\n"
                 cerulaineDescription = "Cerulaine is the only city in Altaria that is primarily at sea level. Because " \
                                        "of this, residents share a distribution of magic affinities of wind, water, " \
@@ -1691,11 +1726,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "also popular due to the aquatic surroundings of the city. Because it is so " \
                                        "close to the ocean, it has the ability to host water-based events and " \
                                        "activities, which also adds to the tourist attraction of the city.\n\n"
-                altariaLocation = input(cerulaineStats + cerulaineDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Cerulaine, Altaria\n\n" + "\033[0m" + cerulaineStats + cerulaineDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Luminour City Commands
             if altariaLocations == "luminour":
-                luminourStats = "Luminour, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                luminourStats = "Primary Resident Race: Avat\nPronunciation: " \
                                 "LOOM-in-or\nLocation: Eastern Altaria\nVisitor Friendly: Yes\nSub-Locations:\n| True" \
                                 " North Pole\n\n"
                 luminourDescription = "Luminour is another mountain city that is in a very special place in terms of " \
@@ -1715,11 +1751,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "looking at where the sun is in the sky, they have a bell tower that rings on " \
                                       "the hour. They are also a big research town since the natural light hours are " \
                                       "so constant.\n\n"
-                altariaLocation = input(luminourStats + luminourDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Luminour, Altaria\n\n" + "\033[0m" + luminourStats + luminourDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Keravine City Commands
             if altariaLocations == "keravine":
-                keravineStats = "Keravine, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                keravineStats = "Primary Resident Race: Avat\nPronunciation: " \
                                 "CARE-ah-veen\nLocation: Northwestern Altaria\nVisitor Friendly: " \
                                 "Yes\nSub-Locations:\n| Mountain's Green\n\n"
                 keravineDescription = "Keravine is a mountain city like many others. However, it is special in the " \
@@ -1734,11 +1771,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "the height, the colors, or the unique sap the tree produces. All of these " \
                                       "natural elements liven up the area and make it a popular place for Avats to " \
                                       "live and for people to visit.\n\n"
-                altariaLocation = input(keravineStats + keravineDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Keravine, Altaria\n\n" + "\033[0m" + keravineStats + keravineDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Thornhaven City Commands
             if altariaLocations == "thornhaven":
-                thornhavenStats = "Thornhaven, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                thornhavenStats = "Primary Resident Race: Avat\nPronunciation: " \
                                   "THORN-hay-ven\nLocation: Central Altaria\nVisitor Friendly: Yes\nTown Trade: Fresh " \
                                   "Produce\nSub-Locations:\n| Cascade Gardens\n\n"
                 thornhavenDescription = "Thornhaven is a town in the center of Altaria. It is in a valley in between " \
@@ -1754,11 +1792,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "as well as a beautiful location for visitors to see. The gardens also help " \
                                         "support Thornhaven by growing fruits and vegetables that the locals are able " \
                                         "to help grow and pick for themselves.\n\n"
-                altariaLocation = input(thornhavenStats + thornhavenDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Thornhaven, Altaria\n\n" + "\033[0m" + thornhavenStats + thornhavenDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Manafield City Commands
             if altariaLocations == "manafield":
-                manafieldStats = "Manafield, Altaria\n\nPrimary Resident Race: Avat\nPronunciation: " \
+                manafieldStats = "Primary Resident Race: Avat\nPronunciation: " \
                                  "Mah-nah-field\nLocation: Southern Altaria\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                  "Port of New Worlds\n| St. Guardia's Academy\n| 9th Cloud\n\n"
                 manafieldDescription = "Manafield is the capital city of Altaria, and is the largest city in all of " \
@@ -1777,7 +1816,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "built on a mountainside. Because of the large size of Manafield, the amount " \
                                        "of land that Altaria's St. Guardia's has is far greater than those of the " \
                                        "other branches.\n\n"
-                altariaLocation = input(manafieldStats + manafieldDescription + "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input("\033[1m" + "Manafield, Altaria\n\n" + "\033[0m" + manafieldStats + manafieldDescription +
+                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Altaria Exit Command
             if altariaLocations == "back":
@@ -1809,7 +1849,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Puls City Commands
             if xhiaLocations == "puls":
-                pulsStats = "Puls, Xhia\n\nPrimary Resident Race: Majuu\nPronunciation: PULSE\nLocation: Northeastern " \
+                pulsStats = "Primary Resident Race: Majuu\nPronunciation: PULSE\nLocation: Northeastern " \
                             "Xhia\nVisitor Friendly: No\n\n"
                 pulsDescription = "Puls is a town in the burned section of Xhia. It doesn't have many residents. " \
                                   "Because of the poor soil quality, plant life isn't that big of a factor in the " \
@@ -1822,11 +1862,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                   "the town, it doesn't have a school for teaching magic any longer. Residents are " \
                                   "expected to either figure it out for themselves, or have their parents teach " \
                                   "them.\n\n"
-                xhiaLocation = input(pulsStats + pulsDescription + "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input("\033[1m" + "Puls, Xhia\n\n" + "\033[0m" + pulsStats + pulsDescription +
+                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Glouden City Commands
             if xhiaLocations == "glouden":
-                gloudenStats = "Glouden, Xhia\n\nPrimary Resident Race: Majuu\nPronunciation: GLOW-den\nLocation: " \
+                gloudenStats = "Primary Resident Race: Majuu\nPronunciation: GLOW-den\nLocation: " \
                                "Southern Xhia\nVisitor Friendly: Yes\nSub-Locations:\n| Luminous Vineyard\n| True " \
                                "South Pole\n\n"
                 gloudenDescription = "Glouden is in Southern Xhia, so it wasn't affected by the great fire, " \
@@ -1844,11 +1885,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "that welcome visitors from outside of Xhia, feeling as though this beauty " \
                                      "shouldn't be restricted to the eyes of only the Majuu, though some still avoid " \
                                      "the region altogether because of stigmas.\n\n"
-                xhiaLocation = input(gloudenStats + gloudenDescription + "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input("\033[1m" + "Glouden, Xhia\n\n" + "\033[0m" + gloudenStats + gloudenDescription +
+                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Clorohfyll City Commands
             if xhiaLocations == "clorohfyll":
-                clorohfyllStats = "Clorohfyll, Xhia\n\nPrimary Resident Race: Majuu\nPronunciation: " \
+                clorohfyllStats = "Primary Resident Race: Majuu\nPronunciation: " \
                                   "CLO-ruh-fill\nLocation: Northern Xhia\nVisitor Friendly: Yes\nSub-Locations:\n| " \
                                   "St. Guardia's Academy\n\n"
                 clorohfyllDescription = "Clorohfyll is the capital of Xhia. Being in the northern half of the " \
@@ -1871,11 +1913,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "and a far lower acceptance rate. However, this also leads to high dropout " \
                                         "rates, since many of those applying don't intend to become guardians and " \
                                         "simply want magic or combat training.\n\n"
-                xhiaLocation = input(clorohfyllStats + clorohfyllDescription + "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input("\033[1m" + "Clorohfyll, Xhia\n\n" + "\033[0m" + clorohfyllStats + clorohfyllDescription +
+                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Mengoro City Commands
             if xhiaLocations == "mengoro":
-                mengoroStats = "Mengoro, Xhia\n\nPrimary Resident Race: Majuu\nPronunciation: men-GO-row\nLocation: " \
+                mengoroStats = "Primary Resident Race: Majuu\nPronunciation: men-GO-row\nLocation: " \
                                "Western Xhia\nVisitor Friendly: No\nSub-Locations:\n| Echo's Chasm\n\n"
                 mengoroDescription = "Mengoro is a small village on the western outskirts of Xhia. It was one of the " \
                                      "southernmost cities to be affected by the fire, but thanks to the fast-acting " \
@@ -1888,11 +1931,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "from across the region have given it the name 'Guardian's Cove' due to the " \
                                      "Echo's Chasm, which separates the guardians in the town from the other towns in " \
                                      "Xhia.\n\n"
-                xhiaLocation = input(mengoroStats + mengoroDescription + "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input("\033[1m" + "Mengoro, Xhia\n\n" + "\033[0m" + mengoroStats + mengoroDescription +
+                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Zenorah City Commands
             if xhiaLocations == "zenorah":
-                zenorahStats = "Zenorah, Xhia\n\nPrimary Resident Race: Majuu\nPronunciation: zen-OH-rah\nLocation: " \
+                zenorahStats = "Primary Resident Race: Majuu\nPronunciation: zen-OH-rah\nLocation: " \
                                "Southeastern Xhia\nVisitor Friendly: No\nSub-Locations:\n| Austreal Crown\n| " \
                                "Moonlight Pond: Yang\nTown Trade:\n| Weaponry\n\n"
                 zenorahDescription = "Zenorah is a village on the southeastern coast of Xhia. The core of the city is " \
@@ -1911,7 +1955,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "that the Majuu use. It cannot be used outside of Zenorah, however; if the water " \
                                      "is to leave the village, it would lose its energy concentration and return to " \
                                      "being normal water.\n\n"
-                xhiaLocation = input(zenorahStats + zenorahDescription + "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input("\033[1m" + "Zenorah, Xhia\n\n" + "\033[0m" + zenorahStats + zenorahDescription +
+                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Xhia Exit Command
             if xhiaLocations == "back":
@@ -1941,7 +1986,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Korfu Island Commands
             if nohlaLocations == "korfu":
-                korfuStats = "Korfu, Nohla\n\nPrimary Resident Race: Terrian\nPronunciation: CORE-foo\nLocation: Western " \
+                korfuStats = "Primary Resident Race: Terrian\nPronunciation: CORE-foo\nLocation: Western " \
                             "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Tropics Grove\n\n"
                 korfuDescription = "Korfu is a short island on the western side of Nohla that lies close to sea level. " \
                                    "This means that it is naturally surrounded by beaches, and has a very tropical climate. " \
@@ -1955,12 +2000,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                    "fruit to the other islands of the continent, which gives it a steady source of income." \
                                    "Korfu is big on protecting its environment, so the island takes many steps to prevent " \
                                    "it's deterioration.\n\n"
-                nohlaLocation = input(korfuStats + korfuDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                nohlaLocation = input("\033[1m" + "Korfu, Nohla\n\n" + "\033[0m" + korfuStats + korfuDescription +
+                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Hartledge Island Commands
             if nohlaLocations == "hartledge":
-                hartledgeStats = "Hartledge, Nohla\n\nPrimary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: Northern " \
-                             "Nohla\nVisitor Friendly: No\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
+                hartledgeStats = "Primary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: " \
+                                 "Northern Nohla\nVisitor Friendly: No\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
                 hartledgeDescription = "Hartledge is an island covered in trees similar to Mu'karr, which is why its population " \
                                    "mainly consists of argens. Most of these argens, however, are archaeologists and " \
                                    "proficient scholars in history and magic. This is because Hartledge hosts the Hornscale" \
@@ -1974,8 +2020,46 @@ while infoBarrier == "" or infoBarrier == "return":
                                    "of Nohla, as their pink leaves and silver trunks are very vibrant. The island is high " \
                                    "enough that there is a breeze constantly flowing throughout the forest, and the trunks " \
                                    "of these hardened sakura trees whistle in the wind, which is why the forest has been " \
-                                   "dubbed the 'Whispering Forest'. \n\n"
-                nohlaLocation = input(hartledgeStats + hartledgeDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                                   "dubbed the 'Whispering Forest'.\n\n"
+                nohlaLocation = input("\033[1m" + "Hartledge, Nohla\n\n" + "\033[0m" + hartledgeStats + hartledgeDescription +
+                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Eklyptil Island Commands
+            if nohlaLocations == "eklyptil":
+                eklyptilStats = "Primary Resident Race: None (Balanced)\nPronunciation: eh-KLIP-til\n" \
+                                "Location: Central Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| St. Guardia's Academy" \
+                                "\n| Twilight Mall\n| Starrgem River\n\n"
+                eklyptilDescription = "Eklyptil is the capital of Nohla, and the only island to be made up of more than " \
+                                      "one island: Solaro and Lunaro, connected by sky bridges built at intervals " \
+                                      "throughout the islands. The two islands resemble the sun and a crescent moon, " \
+                                      "hence the name of the islands. The islands are aligned such that the sun is " \
+                                      "placed into the curve of the crescent moon, creating a unique island structure. " \
+                                      "The islands are separated by the Starrgem River. Because it is surrounded by the " \
+                                      "other islands, it sees very concentrated amounts of moonlight during the night, " \
+                                      "so the stones at the bottom of the river twinkle brightly causing the river to " \
+                                      "sparkle, reflecting the night sky. On both Lunaro and Solaro, there are viewing " \
+                                      "platforms and overhangs for people to sit and watch the river.\n\n"
+                solaroDescription = "Solaro, Nohla\nSolaro, also known as Dawn Isle, is the sun-shaped island in Eklyptil. " \
+                                    "St. Guardia's Academy is built on the edge of the island, and takes up almost a " \
+                                    "third of the island's space. Because of the nature of Nohla, it is the most inclusive " \
+                                    "branch of St. Guardia's since it doesn't lean towards tailoring its classes to one " \
+                                    "specific race. This St. Guardia's is built around the edge of the island, and utilizes" \
+                                    "the cliffside to build additional training ground terrains for students.The island " \
+                                    "itself has lots of open space and is about 250 feet above sea level, so the weather " \
+                                    "there is mostly warm, but very comfortable. A winding dirt road spirals the island " \
+                                    "to give a safe way to get resources and people from arriving ships to and from the " \
+                                    "city.\n\n"
+                lunaroDescription = "Lunaro, Nohla\nLunaro, also known as Dusk Isle, is the moon-shaped island in Eklyptil. " \
+                                    "It is the home of Twilight Mall, the biggest mall in the continent, and a hotspot " \
+                                    "for tourists and visitors since it hosts a variety of popular foods, clothing, and " \
+                                    "activities from different races. This gives visitors a true eye into other race's " \
+                                    "cultures and customs. It's also a fun day trip because it has several indoor " \
+                                    "activities, like an indoor theme park and movie theater. Bridges span across the " \
+                                    "Starrgem River to Solaro, and a dirt path also spans across the inner curve of the " \
+                                    "moon to sea level. It is much longer than the one in Solaro, however, due to Lunaro " \
+                                    "being closer to 550 feet above sea level.\n\n"
+                nohlaLocation = input("\033[1m" + "Eklyptil, Nohla\n\n" + "\033[0m" + eklyptilStats + eklyptilDescription +
+                                      solaroDescription + lunaroDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
             if nohlaLocations == "back":
