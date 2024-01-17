@@ -26,6 +26,7 @@ from os import system, name
 # QoL Output Clear Commands (If Possible)
 # Backstories for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character option to Character Selection & Describe characters who don't get full pages
+# Home Command that Clears Output Window & Restarts Program
 
 # Current Update Notes
 # Revamped All Inputs to Trim Inputs to allow for Whitespace
@@ -311,7 +312,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mirago Bio Prompts
             miragoProfile = "Mirago Fynae\n\nHometown: Meteora\nRace: Argen (White, Black), Pre-Death (Blue, Black)" \
                             "\nBirthday: June 15, " \
-                            "4023\nGender: Male\nPronunciation: ME-rah-goh FAI-nay\nMagic Affinities\n| Fire\n| Onyx " \
+                            "4020\nGender: Male\nPronunciation: ME-rah-goh FAI-nay\nMagic Affinities\n| Fire\n| Onyx " \
                             "Fire\n| Life\n\nItems\n| Psychal Grotto\n| Cloak of Shadows\n| Rune Bracelet\n\nSigil: " \
                             "Sectional, Circle\n| Fire, Bottom Left Section\n| Onyx Fire, Bottom Right Section\n| " \
                             "Life, Top Section\n\n"
@@ -482,9 +483,9 @@ while infoBarrier == "" or infoBarrier == "return":
             miragoBackstory19 = "But that wasn't everything. He was white now. His sapphire glimmering scales now shine " \
                                 "a bright white. But that didn't make any sense - argens couldn't have white scales. " \
                                 "He walked over to the pond and hesitantly gazed into the water, looking " \
-                                "at his new complexion. His eyes weren't lying to him. He really was a white argon now. " \
+                                "at his new complexion. His eyes weren't lying to him. He really was a white argen now. " \
                                 "Not only that, his sclera were a deep black, and his corneas fiery red. What was " \
-                                "happening to him? He didn't look anything like himself anymore!"
+                                "happening to him? He didn't look anything like himself anymore!\n\n"
             miragoBackstory20 = "Mirago turned back to the grave and filled in the hole as best he could so Xaeyz " \
                                 "wouldn't know he was alive. Soon after, Mirago met the spirit of the black flames " \
                                 "who called himself 'Arc'. Arc explains that his magic is called Onyx Fire, " \
@@ -2044,7 +2045,7 @@ while infoBarrier == "" or infoBarrier == "return":
                                     "third of the island's space. Because of the nature of Nohla, it is the most inclusive " \
                                     "branch of St. Guardia's since it doesn't lean towards tailoring its classes to one " \
                                     "specific race. This St. Guardia's is built around the edge of the island, and utilizes" \
-                                    "the cliffside to build additional training ground terrains for students.The island " \
+                                    "the cliff side to build additional training ground terrains for students. The island " \
                                     "itself has lots of open space and is about 250 feet above sea level, so the weather " \
                                     "there is mostly warm, but very comfortable. A winding dirt road spirals the island " \
                                     "to give a safe way to get resources and people from arriving ships to and from the " \
@@ -2060,6 +2061,29 @@ while infoBarrier == "" or infoBarrier == "return":
                                     "being closer to 550 feet above sea level.\n\n"
                 nohlaLocation = input("\033[1m" + "Eklyptil, Nohla\n\n" + "\033[0m" + eklyptilStats + eklyptilDescription +
                                       solaroDescription + lunaroDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Dullus Island Commands
+            if nohlaLocations == "dullus":
+                dullusStats = "Primary Resident Race: Majuu\nPronunciation: DULL-loos\nLocation: " \
+                                 "Southwestern Nohla\nVisitor Friendly: Yes\n\n"
+                dullusDescription = "Dullus is a small island separated from the rest of Nohla. Though it is still part " \
+                                    "of the continent, the island isn't part of the group of islands that make up the " \
+                                    "rest of Nohla. The populace is mostly made up of majuu who have been thrown from " \
+                                    "their homes in Xhia due to their crimes against their fellow majuu during The " \
+                                    "Arduos War, as well as those who couldn't find their place in the world after leaving " \
+                                    "Xhia because of prejudice. These majuu have grown kind due ot their time together, " \
+                                    "and are very friendly towards outsiders who happen to visit their island. However, " \
+                                    "due to who inhabits the island, many are afraid to go to Dullus, and have avoided " \
+                                    "it altogether.\n\nThough the island doesn't import or export anything, the majuu are " \
+                                    "able to sustain themselves through livestock and agriculture. Since they are so far " \
+                                    "from the rest of Nohla, they used what little land they had to build themselves a " \
+                                    "natural paradise. However, the population of Dullus drops nearly every generation " \
+                                    "since the younger majuu often choose to leave for the mainland of Nohla or another " \
+                                    "continent altogether. Because of this, the majuu have made a plan to be reliant on " \
+                                    "nature, up to the point where if they all left, then the island would easily be reclaimed " \
+                                    "by nature.\n\n"
+                nohlaLocation = input("\033[1m" + "Dullus, Nohla\n\n" + "\033[0m" + dullusStats + dullusDescription +
+                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
             if nohlaLocations == "back":
@@ -2664,8 +2688,8 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Terrian Commands
         if raceBarrier == "terrians" or raceBarrier == "terrian":
-            terrianRace = input("Terrians\n\nRace Ability: Increased stamina. If born with magic, increased mana "
-                                "reserves.\n\nCommon Magic Affinities: Fire, Water, Earth, Lightning, Wind, "
+            terrianRace = input("Terrians\n\nRace Ability: Increased stamina. \n\nCommon Magic Affinities: Fire, Water, "
+                                "Earth, Lightning, Wind, "
                                 "Ice\nNative Continent: Halgeis\n\nA peaceful race that highly populates the Halgeis "
                                 "Region. Many terrians work as farmers, and have a long standing relationship with "
                                 "other races. They can be found living almost everywhere and can easily adapt to new "
@@ -2692,7 +2716,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Avat Commands
         if raceBarrier == "avats" or raceBarrier == "avat":
-            avatRace = input("Avats\n\nRace Ability: Silent footsteps & Increased speed\n\nCommon Magic Affinities: "
+            avatRace = input("Avats\n\nRace Ability: Magic Proficiency & Increased speed\n\nCommon Magic Affinities: "
                              "Wind, Lightning, Ice, Water\nNative Continent: Altaria\n\nAnother intelligent race, "
                              "avats are theorists, and have just as much as a thirst for knowledge as argens do. They "
                              "are highly respected philosophers. Along with other researchers, avats study the "
