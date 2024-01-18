@@ -1279,7 +1279,7 @@ while infoBarrier == "" or infoBarrier == "return":
             if halgeisLocations == "starkiepe":
                 starkiepeStats = "Primary Resident Race: Terrian\nPronunciation: " \
                                  "STAR-keep\nLocation: Central Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                 "Steelpaige Mountains\n* Briarfield Cliffs\n| Starkiepe Battle Frontier\n| Celeste " \
+                                 "Steelpaige Mountains\n  * Briarfield Cliffs\n| Starkiepe Battle Frontier\n| Celeste " \
                                  "Mall\n\n"
                 starkiepeDescription = "Starkiepe is a large city in the center of Halgeis. Starkiepe is a tourist " \
                                        "attraction for all those in Halgeis. It is one of the core cities of the " \
@@ -2083,6 +2083,30 @@ while infoBarrier == "" or infoBarrier == "return":
                                     "nature, up to the point where if they all left, then the island would easily be reclaimed " \
                                     "by nature.\n\n"
                 nohlaLocation = input("\033[1m" + "Dullus, Nohla\n\n" + "\033[0m" + dullusStats + dullusDescription +
+                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Cingrigh Island Commands
+            if nohlaLocations == "cingrigh":
+                cingrighStats = "Primary Resident Race: Majuu\nPronunciation: CIN-gree\nLocation: " \
+                              "Northeastern Nohla\nVisitor Friendly: Yes\n\nTown Trade:\n| Weapons\n| Armor\n" \
+                              "Sub-Locations:\n| Magmatic Cavern\n  * Hellheat Forge\n\n"
+                cingrighDescription = "Cingrigh is a mountainous island with a deep magmatic cavern in the center. " \
+                                      "This, in addition to Nohla's tropical location, causes the climate to be " \
+                                      "extremely hot nearly all the time. Majuu who originate from warmer climates " \
+                                      "and therefore have lighter fur colors are more suited to live here. The island " \
+                                      "itself isn't entirely hot, though, as the mountaintops are quite cool since " \
+                                      "they are so high up. However, because of its altitude and low amounts of oxygen, " \
+                                      "only avats make their homes that high up. Visitors to Cingrigh unless a majuu " \
+                                      "or have a fire magic affinity must wear a form or heat resistance in order to " \
+                                      "prevent overheating.\n\nInside the magmatic cavern lies the Hellheat Forge, the " \
+                                      "largest forge in all of Phalmasia that's outside of Xhia. The natural flow of lava " \
+                                      "throughout the cavern makes the weapons able to be forged and quenched at much " \
+                                      "higher temperature differences, causing weapons and armor with increased durability. " \
+                                      "This forge, however, is completely inaccessible to anyone but heat-resistant majuu " \
+                                      "with fire affinities because of the insane temperatures within the forge. Only the " \
+                                      "best blacksmiths may use it to prevent any fatal accidents, which serves to increase " \
+                                      "the average quality of anything leaving the forge as well.\n\n"
+                nohlaLocation = input("\033[1m" + "Cingrigh, Nohla\n\n" + "\033[0m" + cingrighStats + cingrighDescription +
                     "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
