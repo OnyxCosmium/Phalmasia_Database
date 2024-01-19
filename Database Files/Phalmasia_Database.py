@@ -29,7 +29,7 @@ from os import system, name
 # Home Command that Clears Output Window & Restarts Program
 
 # Current Update Notes
-# Revamped All Inputs to Trim Inputs to allow for Whitespace
+# Revamped All Inputs to Stripped Inputs to allow for Whitespace
 # Updated Mirago's Bio and Backstory
 # Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
 # Added Mythical Tier Spell: Rebirth to Magic Core Command
@@ -391,14 +391,16 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "before. He decided to investigate the sound. After a few minutes of walking toward " \
                                 "the origin of the wind (which was getting stronger and stronger as he got closer) " \
                                 "and soon found himself in a field surrounded by trees with a waterfall that cascaded " \
-                                "into a river and over a cliff into the ocean hundreds of feet below. \n\n"
+                                "into a river and over a cliff into the ocean hundreds of feet below. And in the center " \
+                                "of the field was another argen boy, using wind magic.\n\n"
             miragoBackstory08 = "The two boys didn't move for a few seconds, just staring at each other. The boy " \
                                 "walks over to Mirago to which he explains how he got here and hurriedly apologizes, " \
                                 "throwing his arms up in defense. The boy, however, noticed that something was wrong " \
                                 "and asked if Mirago was okay. Mirago didn't understand this at first until he " \
                                 "realised he had started crying. So he told the boy everything: who he was, " \
                                 "what he'd done and about his magic. The boy listened intently and after he finished " \
-                                "retelling he stated a simple response: 'Then they know it's not your fault.' \n\n"
+                                "retelling he stated a simple response: 'Then they know it's not your fault. So why don't " \
+                                "you?' \n\n"
             miragoBackstory09 = "Hearing this response from a total stranger, Mirago smiled and thanked the boy. He " \
                                 "introduced himself and the boy said his name was Xaeyz. Xaeyz helped Mirago up to " \
                                 "his feet and showed him around his secret grotto. Xaeyz told Mirago his story, " \
@@ -410,7 +412,7 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "and returned home. He sat on his bed that night thinking over Xaeyz's proposition. " \
                                 "It's not like he didn't want to use his magic again, he was just afraid of hurting " \
                                 "people with it. But if Xaeyz could somehow help him control this power any better " \
-                                "than he could on his own, then at leas trying it out couldn't hurt. Tomorrow, " \
+                                "than he could on his own, then at least trying it out couldn't hurt. Tomorrow, " \
                                 "he would go back into the woods to meet up with Xaeyz again and ask for his help " \
                                 "with his magic comfortability. Tomorrow was going to be the first step back into " \
                                 "magic. \n\n"
@@ -1139,7 +1141,7 @@ while infoBarrier == "" or infoBarrier == "return":
             halgeisLocations = input("Halgeis is the first, and currently only, continent where humans inhabit. "
                                      "Terrians are the primary inhabitants of Halgeis, and are also the ones in power "
                                      "in the continent. The humans and the terrians came together in piece relatively "
-                                     "quickly, but the argens, avians and majuu weren't so trustworthy. To help along "
+                                     "quickly, but the argens, avats and majuu weren't so trustworthy. To help along "
                                      "their relations, the terrians and humans constructed the city capital, "
                                      "Grand Elise, the peace capital of the world. With time, all of the races now "
                                      "reside in Grand Elise, and though relations are not perfect, they are still in "
@@ -1225,14 +1227,14 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Skykumo City Commands
             if halgeisLocations == "skykumo":
-                skykumoStats = "Primary Resident Race: Avian\nPronunciation: " \
+                skykumoStats = "Primary Resident Race: Avat\nPronunciation: " \
                                "SKY-coo-moh\nLocation: Northern Halgeis\nVisitor Friendly: No\nSub-Locations:\n| " \
                                "Tengou Mountain\nNotable Residents: Kimiko Quintai\n\n"
                 skykumoDescription = "Skykumo is a mountainside village so high that it is near cloud height, " \
                                      "which is how the town got its name. It is on Tengou Mountain, one of the " \
-                                     "tallest mountains in Halgeis. It is a village of avians, since only they can " \
-                                     "breathe clearly in such thin air. Despite avian's natural acceptance of all " \
-                                     "people, Skykumo is rather closed to visitors. It isn't the fact that avians do " \
+                                     "tallest mountains in Halgeis. It is a village of avats, since only they can " \
+                                     "breathe clearly in such thin air. Despite avat's natural acceptance of all " \
+                                     "people, Skykumo is rather closed to visitors. It isn't the fact that avats do " \
                                      "not welcome visitors, it is that many visitors simply do not come to " \
                                      "Skykumo.\n\nIt is a simple town with the only attraction being its height and " \
                                      "its proximity to the clouds. Most don't come to see this, however, because the " \
@@ -1362,14 +1364,14 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Piquaron City Commands
             if halgeisLocations == "piquaron":
-                piquaronStats = "Primary Resident Race: Avian\nPronunciation: " \
+                piquaronStats = "Primary Resident Race: Avat\nPronunciation: " \
                                 "Pick-CWUAIR-ron\nLocation: Southwestern Halgeis\nVisitor Friendly: Yes\nNotable " \
                                 "Residents:\n| Turcobé Sentai\n\n"
-                piquaronDescription = "Piquaron is a small village in Halgeis inhabited by avians. There are few " \
-                                      "avian towns that are built at ground level, and Piquaron is one of those few. " \
+                piquaronDescription = "Piquaron is a small village in Halgeis inhabited by avats. There are few " \
+                                      "avat towns that are built at ground level, and Piquaron is one of those few. " \
                                       "Piquaron is an average town that takes great pride in its village's magic " \
-                                      "ability. Usually, avians are born with ice or wind magics suitable for their " \
-                                      "usual home heights, but because of the low altitude, most avians here actually " \
+                                      "ability. Usually, avats are born with ice or wind magics suitable for their " \
+                                      "usual home heights, but because of the low altitude, most avats here actually " \
                                       "have a greater affinity for earth magic than ice.\n\nMagic affinity is taken " \
                                       "very seriously, and all citizens here view magic as an extension of " \
                                       "themselves, giving them faster mana regeneration and larger mana reserves than " \
@@ -2107,6 +2109,25 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "best blacksmiths may use it to prevent any fatal accidents, which serves to increase " \
                                       "the average quality of anything leaving the forge as well.\n\n"
                 nohlaLocation = input("\033[1m" + "Cingrigh, Nohla\n\n" + "\033[0m" + cingrighStats + cingrighDescription +
+                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
+            # Talen Island Commands
+            if nohlaLocations == "talen":
+                talenStats = "Primary Resident Race: Majuu\nPronunciation: TAL-en\nLocation: " \
+                                "Eastern Nohla\nVisitor Friendly: Yes\n\nSub-Locations:\n| Eagle's Beach\n| Skyward " \
+                             "Tower\n\n"
+                talenDescription = "Talen is a flat island that somewhat resembles the talon of an eagle. The island rests " \
+                                   "at sea level, and constantly has a cool sea breeze blowing across its landscape. " \
+                                   "The resident avats love this because many of them have wind affinities that make them " \
+                                   "feel more in tune with their magic. However, avats to generally like to live in high " \
+                                   "places, and so they have build a tall tower on the tip of the island's talon. At the " \
+                                   "top of the tower, there is a small grassy park that many avats with flyers license " \
+                                   "jump off of it and glide down for a rush. Since the island is at sea level, it is " \
+                                   "surrounded by a beach. The beach has naturally white sand because Talen makes an " \
+                                   "effort to keep the beach clean. Eagle's Beach, as it is called, and the Skyward Tower " \
+                                   "attract many tourists to Talen to spend time at the beautiful beaches and admire the " \
+                                   "continent from above.\n\n"
+                nohlaLocation = input("\033[1m" + "Talen, Nohla\n\n" + "\033[0m" + talenStats + talenDescription +
                     "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
