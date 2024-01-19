@@ -19,7 +19,6 @@ from os import system, name
 # Keep lookout for Mimi's Canon Last Name & Species - Change when revealed
 # Spell Descriptions & Purposes
 # Rewrite Ryner Backstory for New Lore
-# Add Humans to Races Core Command
 # Add Secret Locations for Mythic Elemental Spots
 
 # Long-Term Projects
@@ -33,6 +32,7 @@ from os import system, name
 # Updated Mirago's Bio and Backstory
 # Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
 # Added Mythical Tier Spell: Rebirth to Magic Core Command
+# Completed the Islands of Nohla in Location Core Command
 # QoL: Bolded all Location City Headers
 
 # Clear Command
@@ -2130,6 +2130,24 @@ while infoBarrier == "" or infoBarrier == "return":
                 nohlaLocation = input("\033[1m" + "Talen, Nohla\n\n" + "\033[0m" + talenStats + talenDescription +
                     "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
+            # Talen Island Commands
+            if nohlaLocations == "skyhaven":
+                skyhavenStats = "Primary Resident Race: Human\nPronunciation: SKY-hay-ven\nLocation: " \
+                             "Southeastern Nohla\nVisitor Friendly: Yes\n\n"
+                skyhavenDescription = "Skyhaven is the highest island in Nohla, but despite this, mostly humans made " \
+                                      "their homes here. Despite not having magic and thereby not having any natural " \
+                                      "resistances to the cold weather, they have made do by building heavily insulated " \
+                                      "homes and having heat crystals littered throughout the town, being careful not to " \
+                                      "have too many in one place in case they melted the snow to cause avalanches. " \
+                                      "Humans here are commonly scientists and astronomers since they are closer to the " \
+                                      "stars than anywhere else in Nohla. People who visit Skyhaven who don't have wind " \
+                                      "affinities usually need an air pack because of the lack of oxygen due to the height. " \
+                                      "Being so close to the stars makes for a beautiful view of the night sky, and " \
+                                      "visitors commonly gather on the undeveloped edge of the island where light " \
+                                      "pollution is lowest to view space.\n\n"
+                nohlaLocation = input("\033[1m" + "Skyhaven, Nohla\n\n" + "\033[0m" + skyhavenStats + skyhavenDescription +
+                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+
             # Nohla Exit Command
             if nohlaLocations == "back":
                 break
@@ -2493,7 +2511,7 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "boost it did before. However, this only lasts for the chosen magic, " \
                                        "meaning that the magic not associated with the activated sigil will get the " \
                                        "normal power boost. Additionally, if both sides of the Sectional Sigil are " \
-                                       "used simultaneously, then the streams take on a striped pattern made up of " \
+                                       "used simultaneously, then the streams take on either one magic color of " \
                                        "the two magic colors of the user, and the power boost given is quadrupled for " \
                                        "both magics."
                 sectionalSigil = input("Sectional Sigils\n\n" + sectionalExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
@@ -2672,7 +2690,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Rebirth Commands
             if mythicBarrier == "rebirth":
-                rebirthStats = "Rebirth\n\tMythical Tier Spell\n\n| Spell Style: Conditional/Medical\n| " \
+                rebirthStats = "Rebirth\n\tMythical Tier Spell\n\n| Spell Style: Conditional/Medicinal\n| " \
                                "Mastery: Impossible"
                 rebirthDescription = "Rebirth is an extremely powerful spell that no one but the mythical elementals " \
                                      "themselves can cast. Being a conditional spell, there are several requirements " \
@@ -2690,7 +2708,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "through their veins instead of blood, and their energy becomes more potent as " \
                                      "a result. Their magic skyrockets in power upon waking up from rebirth, as " \
                                      "well as changing the color of their fur, skin or scales (depending on the " \
-                                     "race of the mythical element user) to a pure white, as well as giving their " \
+                                     "race of the mythical element user) to a pure white, pitch-black sclera, and well " \
+                                     "as giving their " \
                                      "eyes the color of their primary magic.\n\nThe drawbacks to this technique are " \
                                      "severe, however. By using their power to keep their user alive, the mythical " \
                                      "elemental is significantly weakened by the endeavor, causing the user to be " \
