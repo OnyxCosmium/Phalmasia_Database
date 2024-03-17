@@ -5,7 +5,7 @@ import sys
 from os import system, name
 
 # Use this line to restart code from beginning (Does not update output if code is changed)
-    # os.execl(sys.executable, sys.executable, *sys.argv)
+# os.execl(sys.executable, sys.executable, *sys.argv)
 
 # Notes
 # Dynamic Water: Crest Lake, Halgeis
@@ -18,25 +18,26 @@ from os import system, name
 # To-Do List
 # Keep lookout for Mimi's Canon Last Name & Species - Change when revealed
 # Spell Descriptions & Purposes
-# Rewrite Ryner Backstory for New Lore
 # Add Secret Locations for Mythic Elemental Spots
+# Add Mt. Moonlight to Eklyptil's City Description in Locations Command
+    # Quill's College (before Guardianship)
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
 # Backstories for all main characters (those without tragedy, tell story of how they got magic)
-# Add Side Character option to Character Selection & Describe characters who don't get full pages
+# Add Side Character Option to Character Selection & Describe characters who don't get full pages
+# Add Side Locations Options to Each Continent for Locations Not in Any Town
+    # Nabuga's Garden, Halgeis
 # Home Command that Clears Output Window & Restarts Program
 
 # Current Update Notes
-# Revamped All Inputs to Stripped Inputs to allow for Whitespace
-# Updated Mirago's Bio and Backstory
-# Added Mythical Tier Spell: Mythical Beast Manifestation to Magic Core Command
-# Added Mythical Tier Spell: Rebirth to Magic Core Command
-# Completed the Islands of Nohla in Location Core Command
-# QoL: Bolded all Command Intro Headers
+    # Updated Ryner's Backstory to Fit New Lore
+    # Corrected Dates in History for Correct Plot Timing
 
 # Clear Command
 os.putenv('TERM', 'xterm')
+
+
 def clear():
     # for windows
     if name == 'nt':
@@ -45,6 +46,7 @@ def clear():
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
+
 
 # Introduction
 infoBarrier = input("\033[1m" + "Phalmasia Info Database" + "\033[0m. Press 'Enter' to continue.").lower().strip()
@@ -74,10 +76,10 @@ while infoBarrier == "" or infoBarrier == "return":
         while characterBarrier == "xaeyz kai" or characterBarrier == "xaeyz":
             # Xaeyz Bio Prompts
             xaeyzProfile = "\033[1m" + "Xaeyz Kai" + "\033[0m\n\nHometown: Meteora\nRace: Argen (Black, Gray)\nBirthday: July 7th, " \
-                           "4023\nGender: Male\nPronunciation: Ex-AYZ KAI\nMagic Affinities\n| Wind\n| Gravity\n| " \
-                           "Cosmic Wind\n\nItems\n| Aurora Staff\n| eMap\n| SoundCube\n| Gale Shard\n| PockUnity " \
-                           "Orb\n| Psychal Library\n| Flyers License\n\nSigil: Sectional, Triangle\n| Gravity, " \
-                           "Bottom Section\n| Wind, Top Right Section\n| Cosmic Wind, Top Left Section\n\n"
+                                                     "4023\nGender: Male\nPronunciation: Ex-AYZ KAI\nMagic Affinities\n| Wind\n| Gravity\n| " \
+                                                     "Cosmic Wind\n\nItems\n| Aurora Staff\n| eMap\n| SoundCube\n| Gale Shard\n| PockUnity " \
+                                                     "Orb\n| Psychal Library\n| Flyers License\n\nSigil: Sectional, Triangle\n| Gravity, " \
+                                                     "Bottom Section\n| Wind, Top Right Section\n| Cosmic Wind, Top Left Section\n\n"
             xaeyzWindSpells = "Spells: Wind\n| Cyclone Slice\n| Gale Vacuum\n| Pact: Aurora Scythe\n| Rising " \
                               "Wyrmwind\n* Rising Wyrmwind: Zephyr Flurry\n* Rising Wyrmwind: Tunneling Spear\n| " \
                               "Zephyr's Eye\n| Hurricane Fist\n| Phoenix\n| Phoenix Hybrid\n* Phoenix Hybrid: Feather " \
@@ -271,7 +273,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                "and at age 14, he passed, and the rest is history...\n\nEnd of Chapter 4\n"
 
             # Xaeyz Bio Output Commands
-            xaeyzChapterPrompt = input(xaeyzProfile + "\n" + xaeyzWindSpells + "\n" + xaeyzGravitySpells + "\n" + xaeyzCosmicWindSpells + "\nEnter 'Chapters' to view the chapters of Xaeyz's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
+            xaeyzChapterPrompt = input(
+                xaeyzProfile + "\n" + xaeyzWindSpells + "\n" + xaeyzGravitySpells + "\n" + xaeyzCosmicWindSpells + "\nEnter 'Chapters' to view the chapters of Xaeyz's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
             while xaeyzChapterPrompt == "chapters":
                 xaeyzChapterPrompt = input("Xaeyz's Backstory\n\n| Chapter 1: The Day of Black Sun\n| Chapter 2: The "
                                            "Aurora Scythe\n| Chapter 3: The Forest's Shadow\n| Chapter 4: Hozura the "
@@ -288,13 +291,18 @@ while infoBarrier == "" or infoBarrier == "return":
                 xaeyzChapterThree = ""
                 xaeyzChapterFour = ""
                 if xaeyzChapterPrompt == "chapter 1" or xaeyzChapterPrompt == "chapter one" or xaeyzChapterPrompt == "the day of black sun":
-                    xaeyzChapterOne = input("\033[1m" + "Chapter 1: The Day of Black Sun" + "\033[0m\n\n" + xaeyzBackstory01 + "\n" + xaeyzBackstory02 + "\n" + xaeyzBackstory03 + "\n" + xaeyzBackstory04 + "\n" + xaeyzBackstory05 + "\n" + xaeyzBackstory06 + "\n" + xaeyzBackstory07 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
+                    xaeyzChapterOne = input(
+                        "\033[1m" + "Chapter 1: The Day of Black Sun" + "\033[0m\n\n" + xaeyzBackstory01 + "\n" + xaeyzBackstory02 + "\n" + xaeyzBackstory03 + "\n" + xaeyzBackstory04 + "\n" + xaeyzBackstory05 + "\n" + xaeyzBackstory06 + "\n" + xaeyzBackstory07 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
                 if xaeyzChapterPrompt == "chapter 2" or xaeyzChapterPrompt == "chapter two" or xaeyzChapterPrompt == "the aurora scythe" or xaeyzChapterOne == "next":
-                    xaeyzChapterTwo = input("\033[1m" + "Chapter 2: The Aurora Scythe" + "\033[0m\n\n" + xaeyzBackstory08 + "\n" + xaeyzBackstory09 + "\n" + xaeyzBackstory10 + "\n" + xaeyzBackstory11 + "\n" + xaeyzBackstory12 + "\n" + xaeyzBackstory13 + "\n" + xaeyzBackstory14 + "\n" + xaeyzBackstory15 + "\n" + xaeyzBackstory16 + "\n" + xaeyzBackstory17 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
+                    xaeyzChapterTwo = input(
+                        "\033[1m" + "Chapter 2: The Aurora Scythe" + "\033[0m\n\n" + xaeyzBackstory08 + "\n" + xaeyzBackstory09 + "\n" + xaeyzBackstory10 + "\n" + xaeyzBackstory11 + "\n" + xaeyzBackstory12 + "\n" + xaeyzBackstory13 + "\n" + xaeyzBackstory14 + "\n" + xaeyzBackstory15 + "\n" + xaeyzBackstory16 + "\n" + xaeyzBackstory17 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
                 if xaeyzChapterPrompt == "chapter 3" or xaeyzChapterPrompt == "chapter three" or xaeyzChapterPrompt == "the forest's shadow" or xaeyzChapterPrompt == "the forests shadow" or xaeyzChapterTwo == "next":
-                    xaeyzChapterThree = input("\033[1m" + "Chapter 3: The Forest's Shadow" + "\033[0m\n\n" + xaeyzBackstory18 + "\n" + xaeyzBackstory19 + "\n" + xaeyzBackstory20 + "\n" + xaeyzBackstory21 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
+                    xaeyzChapterThree = input(
+                        "\033[1m" + "Chapter 3: The Forest's Shadow" + "\033[0m\n\n" + xaeyzBackstory18 + "\n" + xaeyzBackstory19 + "\n" + xaeyzBackstory20 + "\n" + xaeyzBackstory21 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
                 if xaeyzChapterPrompt == "chapter 4" or xaeyzChapterPrompt == "chapter four" or xaeyzChapterPrompt == "hozura the flame" or xaeyzChapterThree == "next":
-                    xaeyzChapterFour = input("\033[1m" + "Chapter 4: Hozura the Flame" + "\033[0m\n\n" + xaeyzBackstory22 + "\n" + xaeyzBackstory23 + "\n" + xaeyzBackstory24 + "\n" + xaeyzBackstory25 + "\n" + xaeyzBackstory26 + "\n" + xaeyzBackstory27 + "\n" + xaeyzBackstory28 + "\n" + xaeyzBackstory29 + "\n\nThis is the end of Xaeyz's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+                    xaeyzChapterFour = input(
+                        "\033[1m" + "Chapter 4: Hozura the Flame" + "\033[0m\n\n" + xaeyzBackstory22 + "\n" + xaeyzBackstory23 + "\n" + xaeyzBackstory24 + "\n" + xaeyzBackstory25 + "\n" + xaeyzBackstory26 + "\n" + xaeyzBackstory27 + "\n" + xaeyzBackstory28 + "\n" + xaeyzBackstory29 + "\n\nThis is the end of Xaeyz's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+
                 if xaeyzChapterOne == "" or xaeyzChapterTwo == "" or xaeyzChapterThree == "" or xaeyzChapterFour == "":
                     xaeyzChapterPrompt = "chapters"
                 if xaeyzChapterOne != "chapters" and xaeyzChapterOne != "" and xaeyzChapterTwo != "chapters" and xaeyzChapterTwo != "" and xaeyzChapterThree != "chapters" and xaeyzChapterThree != "" and xaeyzChapterFour != "chapters" and xaeyzChapterFour != "":
@@ -311,11 +319,11 @@ while infoBarrier == "" or infoBarrier == "return":
         while characterBarrier == "mirago fynae" or characterBarrier == "mirago":
             # Mirago Bio Prompts
             miragoProfile = "\033[1m" + "Mirago Fynae" + "\033[0m\n\nHometown: Meteora\nRace: Argen (White, Black), Pre-Death (Blue, Black)" \
-                            "\nBirthday: June 15, " \
-                            "4020\nGender: Male\nPronunciation: ME-rah-goh FAI-nay\nMagic Affinities\n| Fire\n| Onyx " \
-                            "Fire\n| Life\n\nItems\n| Psychal Grotto\n| Cloak of Shadows\n| Rune Bracelet\n\nSigil: " \
-                            "Sectional, Circle\n| Fire, Bottom Left Section\n| Onyx Fire, Bottom Right Section\n| " \
-                            "Life, Top Section\n\n"
+                                                         "\nBirthday: June 15, " \
+                                                         "4020\nGender: Male\nPronunciation: ME-rah-goh FAI-nay\nMagic Affinities\n| Fire\n| Onyx " \
+                                                         "Fire\n| Life\n\nItems\n| Psychal Grotto\n| Cloak of Shadows\n| Rune Bracelet\n\nSigil: " \
+                                                         "Sectional, Circle\n| Fire, Bottom Left Section\n| Onyx Fire, Bottom Right Section\n| " \
+                                                         "Life, Top Section\n\n"
             miragoFireSpells = "Spells: Fire\n| Dragon Flame Bombs\n| Flash Palm\n| Flame Heatwave\n| Pact: Pyre " \
                                "Bow\n| Inferno\n* Inferno: Drive\n| Ember Downpour\n| Combustion Stars\n| " \
                                "Dracunity\n| Dracunity Half-Life\n* Dracunity Half-Life: Scale Shot\n* Dracunity " \
@@ -517,7 +525,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "and waiting for the perfect moment to re-emerge. . .\n\nEnd of Chapter 4\n "
 
             # Mirago Bio Search Commands
-            miragoChapterPrompt = input(miragoProfile + "\n" + miragoFireSpells + "\n" + miragoLifeSpells + "\n" + miragoOnyxFireSpells + "\nEnter 'Chapters' to view the chapters of Mirago's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
+            miragoChapterPrompt = input(
+                miragoProfile + "\n" + miragoFireSpells + "\n" + miragoLifeSpells + "\n" + miragoOnyxFireSpells + "\nEnter 'Chapters' to view the chapters of Mirago's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
             while miragoChapterPrompt == "chapters":
                 miragoChapterPrompt = input("Mirago's Backstory\n\n| Chapter 1: Onyx Fire\n| Chapter 2: Meeting "
                                             "Xaeyz\n| Chapter 3: A Final Stand\n| Chapter 4: Rebirth & The *Sundrop "
@@ -536,13 +545,18 @@ while infoBarrier == "" or infoBarrier == "return":
                 miragoChapterThree = ""
                 miragoChapterFour = ""
                 if miragoChapterPrompt == "chapter 1" or miragoChapterPrompt == "chapter one" or miragoChapterPrompt == "onyx fire":
-                    miragoChapterOne = input("\033[1m" + "Chapter 1: Onyx Fire" + "\033[0m\n\n" + miragoBackstory01 + "\n" + miragoBackstory02 + "\n" + miragoBackstory03 + "\n" + miragoBackstory04 + "\n" + miragoBackstory05 + "\n" + miragoBackstory06 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
+                    miragoChapterOne = input(
+                        "\033[1m" + "Chapter 1: Onyx Fire" + "\033[0m\n\n" + miragoBackstory01 + "\n" + miragoBackstory02 + "\n" + miragoBackstory03 + "\n" + miragoBackstory04 + "\n" + miragoBackstory05 + "\n" + miragoBackstory06 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
                 if miragoChapterPrompt == "chapter 2" or miragoChapterPrompt == "chapter two" or miragoChapterPrompt == "meeting xaeyz" or miragoChapterOne == "next":
-                    miragoChapterTwo = input("\033[1m" + "Chapter 2: Meeting Xaeyz" + "\033[0m\n\n" + miragoBackstory07 + "\n" + miragoBackstory08 + "\n" + miragoBackstory09 + "\n" + miragoBackstory10 + "\n" + miragoBackstory11 + "\n" + miragoBackstory12 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
+                    miragoChapterTwo = input(
+                        "\033[1m" + "Chapter 2: Meeting Xaeyz" + "\033[0m\n\n" + miragoBackstory07 + "\n" + miragoBackstory08 + "\n" + miragoBackstory09 + "\n" + miragoBackstory10 + "\n" + miragoBackstory11 + "\n" + miragoBackstory12 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
                 if miragoChapterPrompt == "chapter 3" or miragoChapterPrompt == "chapter three" or miragoChapterPrompt == "a final stand" or miragoChapterTwo == "next":
-                    miragoChapterThree = input("\033[1m" + "Chapter 3: A Final Stand" + "\033[0m\n\n" + miragoBackstory13 + "\n" + miragoBackstory14 + "\n" + miragoBackstory15 + "\n" + miragoBackstory16 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
+                    miragoChapterThree = input(
+                        "\033[1m" + "Chapter 3: A Final Stand" + "\033[0m\n\n" + miragoBackstory13 + "\n" + miragoBackstory14 + "\n" + miragoBackstory15 + "\n" + miragoBackstory16 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
                 if miragoChapterPrompt == "chapter 4" or miragoChapterPrompt == "chapter four" or miragoChapterPrompt == "rebirth & the sundrop valley" or miragoChapterPrompt == "rebirth and the sundrop valley" or miragoChapterThree == "next":
-                    miragoChapterFour = input("\033[1m" + "Chapter 4: Rebirth & The *Sundrop Valley*" + "\033[0m\n\n" + miragoBackstory17 + "\n" + miragoBackstory18 + "\n" + miragoBackstory19 + "\n" + miragoBackstory20 + "\n" + miragoBackstory21 + "\n" + miragoBackstory22 + "\n\nThis is the end of Mirago's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+                    miragoChapterFour = input(
+                        "\033[1m" + "Chapter 4: Rebirth & The *Sundrop Valley*" + "\033[0m\n\n" + miragoBackstory17 + "\n" + miragoBackstory18 + "\n" + miragoBackstory19 + "\n" + miragoBackstory20 + "\n" + miragoBackstory21 + "\n" + miragoBackstory22 + "\n\nThis is the end of Mirago's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+
                 if miragoChapterOne == "" or miragoChapterTwo == "" or miragoChapterThree == "" or miragoChapterFour == "":
                     miragoChapterPrompt = "chapters"
                 if miragoChapterOne != "chapters" and miragoChapterOne != "" and miragoChapterTwo != "chapters" and miragoChapterTwo != "" and miragoChapterThree != "chapters" and miragoChapterThree != "" and miragoChapterFour != "chapters" and miragoChapterFour != "":
@@ -559,9 +573,9 @@ while infoBarrier == "" or infoBarrier == "return":
         while characterBarrier == "yggdrasil aensyll" or characterBarrier == "yggdra" or characterBarrier == "yggdrasil":
             # Yggdra Bio Prompts
             yggdraProfile = "\033[1m" + "Yggdrasil (Yggdra) Aensyll" + "\033[0m\n\nHometown: Ashford\nRace: Terrian (Fox)\nBirthday: December " \
-                            "17, 4023\nGender: Female\nPronunciation: EEG-dra-seel AYN-seel\nMagic Affinities\n| " \
-                            "Wind\n\nItems\n| Gale Shard\n| PockUnity Orb\n| Frinrir's Hat\n| Frinrir's Jacket\n| " \
-                            "Flyers License\n\n"
+                                                                       "17, 4023\nGender: Female\nPronunciation: EEG-dra-seel AYN-seel\nMagic Affinities\n| " \
+                                                                       "Wind\n\nItems\n| Gale Shard\n| PockUnity Orb\n| Frinrir's Hat\n| Frinrir's Jacket\n| " \
+                                                                       "Flyers License\n\n"
             yggdraWindSpells = "Spells: Wind\n| Gale Impact\n| Cutting Spiral\n| Pact: Zephyr\n* Zephyr: Shield\n* " \
                                "Zephyr: Barrier\n* Zephyr: Reflection\n* Zephyr: Tag-Team\n| Breeze Gems\n* Breeze " \
                                "Gems: Darts\n* Breeze Gems: Ring\n* Breeze Gems: Emblem\n\nZephyr: Spirit Pact\n| " \
@@ -706,7 +720,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "mail, and from there, the rest is history... \n\nEnd of Chapter 4\n"
 
             # Yggdra Bio Search Commands
-            yggdraChapterPrompt = input(yggdraProfile + "\n" + yggdraWindSpells + "\nEnter 'Chapters' to view the chapters of Yggdra's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
+            yggdraChapterPrompt = input(
+                yggdraProfile + "\n" + yggdraWindSpells + "\nEnter 'Chapters' to view the chapters of Yggdra's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
             while yggdraChapterPrompt == "chapters":
                 yggdraChapterPrompt = input("Yggdra's Backstory\nPlease enter the chapter number to see a chapter ("
                                             "Chapter 1)\n\n| Chapter 1: A Time for Firsts & Lasts\n| Chapter 2: A "
@@ -724,13 +739,18 @@ while infoBarrier == "" or infoBarrier == "return":
                 yggdraChapterThree = ""
                 yggdraChapterFour = ""
                 if yggdraChapterPrompt == "chapter 1" or yggdraChapterPrompt == "chapter one" or yggdraChapterPrompt == "a time for firsts and lasts":
-                    yggdraChapterOne = input("\033[1m" + "Chapter 1: A Time for Firsts & Lasts" + "\033[0m\n\n" + yggdraBackstory01 + "\n" + yggdraBackstory02 + "\n" + yggdraBackstory03 + "\n" + yggdraBackstory04 + "\n" + yggdraBackstory05 + "\n" + yggdraBackstory06 + "\n" + yggdraBackstory07 + "\n" + yggdraBackstory08 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
+                    yggdraChapterOne = input(
+                        "\033[1m" + "Chapter 1: A Time for Firsts & Lasts" + "\033[0m\n\n" + yggdraBackstory01 + "\n" + yggdraBackstory02 + "\n" + yggdraBackstory03 + "\n" + yggdraBackstory04 + "\n" + yggdraBackstory05 + "\n" + yggdraBackstory06 + "\n" + yggdraBackstory07 + "\n" + yggdraBackstory08 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
                 if yggdraChapterPrompt == "chapter 2" or yggdraChapterPrompt == "chapter two" or yggdraChapterPrompt == "a goodbye" or yggdraChapterOne == "next":
-                    yggdraChapterTwo = input("\033[1m" + "Chapter 2: A Goodbye" + "\033[0m\n\n" + yggdraBackstory09 + "\n" + yggdraBackstory10 + "\n" + yggdraBackstory11 + "\n" + yggdraBackstory12 + "\n" + yggdraBackstory13 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
+                    yggdraChapterTwo = input(
+                        "\033[1m" + "Chapter 2: A Goodbye" + "\033[0m\n\n" + yggdraBackstory09 + "\n" + yggdraBackstory10 + "\n" + yggdraBackstory11 + "\n" + yggdraBackstory12 + "\n" + yggdraBackstory13 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
                 if yggdraChapterPrompt == "chapter 3" or yggdraChapterPrompt == "chapter three" or yggdraChapterPrompt == "a darkened mind" or yggdraChapterTwo == "next":
-                    yggdraChapterThree = input("\033[1m" + "Chapter 3: A Darkened Mind" + "\033[0m\n\n" + yggdraBackstory14 + "\n" + yggdraBackstory15 + "\n" + yggdraBackstory16 + "\n" + yggdraBackstory17 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
+                    yggdraChapterThree = input(
+                        "\033[1m" + "Chapter 3: A Darkened Mind" + "\033[0m\n\n" + yggdraBackstory14 + "\n" + yggdraBackstory15 + "\n" + yggdraBackstory16 + "\n" + yggdraBackstory17 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
                 if yggdraChapterPrompt == "chapter 4" or yggdraChapterPrompt == "chapter four" or yggdraChapterPrompt == "new dreams" or yggdraChapterThree == "next":
-                    yggdraChapterFour = input("\033[1m" + "Chapter 4: New Dreams" + "\033[0m\n\n" + yggdraBackstory18 + "\n" + yggdraBackstory19 + "\n" + yggdraBackstory20 + "\n" + yggdraBackstory21 + "\n\nThis is the end of Yggdra's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+                    yggdraChapterFour = input(
+                        "\033[1m" + "Chapter 4: New Dreams" + "\033[0m\n\n" + yggdraBackstory18 + "\n" + yggdraBackstory19 + "\n" + yggdraBackstory20 + "\n" + yggdraBackstory21 + "\n\nThis is the end of Yggdra's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+
                 if yggdraChapterOne == "" or yggdraChapterTwo == "" or yggdraChapterThree == "" or yggdraChapterFour == "":
                     yggdraChapterPrompt = "chapters"
                 if yggdraChapterOne != "chapters" and yggdraChapterOne != "" and yggdraChapterTwo != "chapters" and yggdraChapterTwo != "" and yggdraChapterThree != "chapters" and yggdraChapterThree != "" and yggdraChapterFour != "chapters" and yggdraChapterFour != "":
@@ -747,46 +767,52 @@ while infoBarrier == "" or infoBarrier == "return":
         while characterBarrier == "cidelli reimora" or characterBarrier == "cid" or characterBarrier == "cidelli":
             # Cid Bio Prompts
             cidProfile = "\033[1m" + "Cidelli (Cid) Reimora" + "\033[0m\n\nHometown: Oshborne\nRace: Terrian, Sheep (Black " \
-                         "Fur/Skin)\nBirthday: October 2, 4023\nGender: Female\nPronunciation: Cid-EL-ee " \
-                         "Ray-MORE-ah\nMagic Affinities\n| Lightning\n\nItems\n| Bolt Shard\n| Mom's Pendant\n\n"
+                                                               "Fur/Skin)\nBirthday: October 2, 4023\nGender: Female\nPronunciation: Cid-EL-ee " \
+                                                               "Ray-MORE-ah\nMagic Affinities\n| Lightning\n\nItems\n| Bolt Shard\n| Mom's Pendant\n\n"
             cidLightningSpells = "Spells: Lightning\n| Shock Orbs\n| Shock Step\n* Shock Step: Trail\n* Shock Step: " \
                                  "Dash\n| Bolt Strike\n| Thunder's Arrow\n| Bolt Charge\n| Lightning Discharge\n| " \
                                  "Storm Cloak\n* Storm Cloak: Teleport\n* Storm Cloak: Orb Control\n* Storm Cloak: " \
                                  "Reflux\n| Magnetize\n| Precision Bolt\n\n"
 
             # Cid Bio Search Commands
-            cidChapterPrompt = input(cidProfile + "\n" + cidLightningSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
+            cidChapterPrompt = input(
+                cidProfile + "\n" + cidLightningSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
             if cidChapterPrompt == "back":
                 break
             if cidChapterPrompt == "":
-                cidChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                cidChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if cidChapterPrompt != "continue" and cidChapterPrompt != "back":
-                cidChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                cidChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Mimi Seiran Bio
         while characterBarrier == "mimi seiran" or characterBarrier == "mimi":
             # Mimi Bio Prompts
             mimiProfile = "\033[1m" + "Mimi Seiran" + "\033[0m\n\nHometown: Cilfier\nRace: Terrian, Tanuki(Light Brown with Brown " \
-                          "Spots)\nBirthday: March 25, 4020\nGender: Female\nPronunciation: ME-me Say-ren\nMagic " \
-                          "Affinities\n| Water\n\nItems\n| Aqua Shard\n| PockUnity Orb\n\n"
+                                                      "Spots)\nBirthday: March 25, 4020\nGender: Female\nPronunciation: ME-me Say-ren\nMagic " \
+                                                      "Affinities\n| Water\n\nItems\n| Aqua Shard\n| PockUnity Orb\n\n"
             mimiWaterSpells = "Spells: Water\n| Swamp Trap\n| Morning Dew\n| Water Wave\n| Aqua Ring\n| Flood Jet\n| " \
                               "Water Tentacles\n| Ocean's Seal\n\n"
 
             # Mimi Bio Search Commands
-            mimiChapterPrompt = input(mimiProfile + "\n" + mimiWaterSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
+            mimiChapterPrompt = input(
+                mimiProfile + "\n" + mimiWaterSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
             if mimiChapterPrompt == "back":
                 break
             if mimiChapterPrompt == "":
-                mimiChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                mimiChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if mimiChapterPrompt != "continue" and mimiChapterPrompt != "back":
-                mimiChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                mimiChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Kimiko Quintai Bio
         while characterBarrier == "kimiko quintai" or characterBarrier == "kimiko":
             # Kimiko Bio Prompts
             kimikoProfile = "\033[1m" + "Kimiko Quintai" + "\033[0m\n\nHometown: Skykumo\nRace: Avat (Blue, Black)\nBirthday: June 16, " \
-                            "4023\nGender: Male\nPronunciation: KI-me-koh KWIN-tie\nMagic Affinities\n| " \
-                            "Fire\n\nItems\n| Flame Shard\n| Feather band\n| PockUnity Orb\n\n"
+                                                           "4023\nGender: Male\nPronunciation: KI-me-koh KWIN-tie\nMagic Affinities\n| " \
+                                                           "Fire\n\nItems\n| Flame Shard\n| Feather band\n| PockUnity Orb\n\n"
             kimikoFireSpells = "Spells: Fire\n| Fire Bolt\n| Flame Bakudan\n| Ryuuken\n* Ryuuken: Combat\n* Ryuuken: " \
                                "Embers\n* Ryuuken: Combust\n| Flashfire Stars\n| Burning Pillar\n| Fire Burst\n| " \
                                "Ember Mines\n\n"
@@ -795,20 +821,23 @@ while infoBarrier == "" or infoBarrier == "return":
             kimikoBackstory01 = ""
 
             # Kimiko Bio Search Commands
-            kimikoChapterPrompt = input(kimikoProfile + "\n" + kimikoFireSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
+            kimikoChapterPrompt = input(
+                kimikoProfile + "\n" + kimikoFireSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
             if kimikoChapterPrompt == "back":
                 break
             if kimikoChapterPrompt == "":
-                kimikoChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                kimikoChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if kimikoChapterPrompt != "continue" and kimikoChapterPrompt != "back":
-                kimikoChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                kimikoChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Aeiyou Drefael Bio
         while characterBarrier == "aeiyou drefael" or characterBarrier == "aeiyou":
             # Aeiyou Bio Prompts
             aeiyouProfile = "\033[1m" + "Aeiyou Drefael" + "\033[0m\n\nHometown: Volquöla\nRace: Majuu (Ocean Blue)\nBirthday: March 9, " \
-                            "4023\nGender: Male\nPronunciation: AY-you DREE-fail\nMagic Affinities\n| Earth\n| " \
-                            "Ice\n\nItems\n| Terra Shard\n| Trial Armband\n| Broadsword\n\nSigil: Unity, Diamond\n\n"
+                                                           "4023\nGender: Male\nPronunciation: AY-you DREE-fail\nMagic Affinities\n| Earth\n| " \
+                                                           "Ice\n\nItems\n| Terra Shard\n| Trial Armband\n| Broadsword\n\nSigil: Unity, Diamond\n\n"
             aeiyouEarthSpells = "Spells: Earth\n| Earth Wave\n| Stone Barrier\n| Terra Pillar\n| Pact: Terra Sabre\n* " \
                                 "Terra Sabre: Omni-Wave\n* Terra Sabre: Mountain Chain\n* Terra Sabre: Combat\n* " \
                                 "Terra Sabre: Strike Charge\n| Earth Sink\n\nTerra Sabre: Magic Pact\n| Using his " \
@@ -830,20 +859,23 @@ while infoBarrier == "" or infoBarrier == "return":
             aeiyouBackstory01 = ""
 
             # Aeiyou Bio Search Commands
-            aeiyouChapterPrompt = input(aeiyouProfile + "\n" + aeiyouEarthSpells + "\n" + aeiyouIceSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
+            aeiyouChapterPrompt = input(
+                aeiyouProfile + "\n" + aeiyouEarthSpells + "\n" + aeiyouIceSpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
             if aeiyouChapterPrompt == "back":
                 break
             if aeiyouChapterPrompt == "":
-                aeiyouChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                aeiyouChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if aeiyouChapterPrompt != "continue" and aeiyouChapterPrompt != "back":
-                aeiyouChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                aeiyouChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Kinto Vareli Bio
         while characterBarrier == "kinto verali" or characterBarrier == "kinto":
             # Kinto Bio Prompts
             kintoProfile = "\033[1m" + "Kinto Verali" + "\033[0m\n\nHometown: Volquöla\nRace: Majuu (Gray)\nBirthday: January 19, " \
-                           "4017\nGender: Male\nPronunciation: KEEN-toe var-EL-ee\nMagic Affinities\n| Earth\n| " \
-                           "Fire\n\nItems\n| Trial Armband\n| Terra Shard\n| PockUnity Orb\n\n"
+                                                        "4017\nGender: Male\nPronunciation: KEEN-toe var-EL-ee\nMagic Affinities\n| Earth\n| " \
+                                                        "Fire\n\nItems\n| Trial Armband\n| Terra Shard\n| PockUnity Orb\n\n"
             kintoEarthSpells = "Spells: Earth\n| Quicksand Pit\n| Stalactite Forest\n| Precision Spike\n| Terra " \
                                "Rocket\n| Pact: Earth Hammer\n* Earth Hammer: Quake\n* Earth Hammer: Field Control\n* " \
                                "Earth Hammer: Combat\n* Earth Hammer: Mountain\n* Earth Hammer: Fist Combat\n| Terra " \
@@ -865,39 +897,45 @@ while infoBarrier == "" or infoBarrier == "return":
                               "capabilities.\n\n"
 
             # Kinto Bio Search Commands
-            kintoChapterPrompt = input(kintoProfile + "\n" + kintoEarthSpells + "\n" + kintoFireSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
+            kintoChapterPrompt = input(
+                kintoProfile + "\n" + kintoEarthSpells + "\n" + kintoFireSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
             if kintoChapterPrompt == "back":
                 break
             if kintoChapterPrompt == "":
-                kintoChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                kintoChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if kintoChapterPrompt != "continue" and kintoChapterPrompt != "back":
-                kintoChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                kintoChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Amiru Soaren Bio
         while characterBarrier == "amiru soaren" or characterBarrier == "amiru":
             # Amiru Bio Prompts
             amiruProfile = "\033[1m" + "Amiru Soaren" + "\033[0m\n\nHometown: Mezolune\nRace: Terrian, Rabbit (Light Yellow, " \
-                           "White)\nBirthday: March 8, 4018\nGender: Female\nPronunciation: AM-i-roo soar-en\nMagic " \
-                           "Affinities\n| Water\n\nItems\n| Promise Band\n| Aqua Shard\n| PockUnity Orb\n\n"
+                                                        "White)\nBirthday: March 8, 4018\nGender: Female\nPronunciation: AM-i-roo soar-en\nMagic " \
+                                                        "Affinities\n| Water\n\nItems\n| Promise Band\n| Aqua Shard\n| PockUnity Orb\n\n"
             amiruWaterSpells = "Spells: Water\n| Aqua Wave\n| Rainwater's Grace\n| Pressure Bolt\n| Water Dragon\n| " \
                                "Rising Geyser\n| Ocean's Flow\n* Ocean's Flow: Rising Geyser\n* Ocean's Flow: " \
                                "Tentacles\n* Ocean's Flow: Twin Dragons\n* Ocean's Flow: Whirlpool\n| Ocean Orbs\n\n"
 
             # Amiru Bio Search Commands
-            amiruChapterPrompt = input(amiruProfile + "\n" + amiruWaterSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
+            amiruChapterPrompt = input(
+                amiruProfile + "\n" + amiruWaterSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
             if amiruChapterPrompt == "back":
                 break
             if amiruChapterPrompt == "":
-                amiruChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                amiruChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if amiruChapterPrompt != "continue" and amiruChapterPrompt != "back":
-                amiruChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                amiruChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Turcobé Sentai Bio
         while characterBarrier == "turcobe sentai" or characterBarrier == "turcobe" or characterBarrier == "turcobé sentai" or characterBarrier == "turcobé":
             # Turcobé Bio Prompts
             turcobeProfile = "\033[1m" + "Turcobé Sentai" + "\033[0m\n\nHometown: Piquaron\nRace: Avat (Black, White)\nBirthday: September 9, " \
-                             "4018\nGender: Male\nPronunciation: tur-CO-bay sen-tie\nMagic Affinities\n| " \
-                             "Earth\n\nItems\n| Father's Runebook\n| PockUnity Orb\n| Terra Shard\n\n"
+                                                            "4018\nGender: Male\nPronunciation: tur-CO-bay sen-tie\nMagic Affinities\n| " \
+                                                            "Earth\n\nItems\n| Father's Runebook\n| PockUnity Orb\n| Terra Shard\n\n"
             turcobeEarthSpells = "Spells: Earth\n| Soft Sand\n| Terra Gauntlets\n* Terra Gauntlets: Force Palm\n* " \
                                  "Terra Gauntlets: Combat\n| Earth Control\n* Earth Control: Sky Island\n* Earth " \
                                  "Control: Pillar\n* Earth Control: Gauntlet Control\n| Terra Dome\n\nTurcobé's " \
@@ -911,40 +949,46 @@ while infoBarrier == "" or infoBarrier == "return":
                                  "from his book he can circumvent the mana cost.\n\n"
 
             # Turcobé Bio Search Commands
-            turcobeChapterPrompt = input(turcobeProfile + "\n" + turcobeEarthSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
+            turcobeChapterPrompt = input(
+                turcobeProfile + "\n" + turcobeEarthSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
             if turcobeChapterPrompt == "back":
                 break
             if turcobeChapterPrompt == "":
-                turcobeChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                turcobeChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if turcobeChapterPrompt != "continue" and turcobeChapterPrompt != "back":
-                turcobeChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                turcobeChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Yumeizu Artilux Bio
         while characterBarrier == "yumeizu artilux" or characterBarrier == "yumeizu":
             # Yumeizu Bio Prompts
             yumeizuProfile = "\033[1m" + "Yumeizu Artilux" + "\033[0m\n\nHometown: Elendraye\nRace: Terrian, Wolf (White, " \
-                             "Sky Blue)\nBirthday: January 21, 4017\nGender: Female\nPronunciation: you-MAY-zoo " \
-                             "ART-ill-ux\nMagic Affinities\n| Wind\n\nItems\n| PockUnity Orb\n\n"
+                                                             "Sky Blue)\nBirthday: January 21, 4017\nGender: Female\nPronunciation: you-MAY-zoo " \
+                                                             "ART-ill-ux\nMagic Affinities\n| Wind\n\nItems\n| PockUnity Orb\n\n"
             yumeizuWindSpells = "Spells: Wind\n| Gale Palm\n| Updraft\n| Scissor Ring\n| Air Body\n* Air Body: " \
                                 "Lift\n* Air Body: Pressure Counter\n* Air Body: Shockwave\n* Air Body: Lightfist " \
                                 "Combat\n| Zephyr Mines\n| Wind Spear\n| Gale Pretense\n\n"
 
             # Yumeizu Bio Search Commands
-            yumeizuChapterPrompt = input(yumeizuProfile + "\n" + yumeizuWindSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
+            yumeizuChapterPrompt = input(
+                yumeizuProfile + "\n" + yumeizuWindSpells + "\nEnter 'Back' to return to Character Selection.\n").lower().strip()
             if yumeizuChapterPrompt == "back":
                 break
             if yumeizuChapterPrompt == "":
-                yumeizuChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                yumeizuChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
             if yumeizuChapterPrompt != "continue" and yumeizuChapterPrompt != "back":
-                yumeizuChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                yumeizuChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Ryner Khabunago Bio
         while characterBarrier == "ryner khabunago" or characterBarrier == "ryner":
             # Ryner Bio Prompts
-            rynerProfile = "\033[1m" + "Ryner Khabunago" + "\033[0m\n\nHometown: ???\nRace: ???\nBirthday: October 13, 3442\nGender: " \
-                           "Male\nPronunciation: RYE-ner ka-bun-AH-goh\nMagic Affinities\n| Lightning\n| Shadow\n| " \
-                           "Electron Lightning\n\nItems\n| Pendant of the Gatekeeper's Shadow\n\nSigil: Unity, " \
-                           "Square\n\n"
+            rynerProfile = "\033[1m" + "Ryner Khabunago" + "\033[0m\n\nHometown: ???\nRace: ???\nEpoch: October 13, 3442\nGender: " \
+                                                           "Male\nPronunciation: RYE-ner ka-boon-AH-goh\nMagic Affinities\n| Lightning\n| Shadow\n| " \
+                                                           "Electron Lightning\n\nItems\n| Pendant of the Gatekeeper's Shadow\n\nSigil: Unity, " \
+                                                           "Square\n\n"
             rynerLightningSpells = "Spells: Lightning\n| Stun Clap\n| Electro Fence\n| Lightning Slice\n| Pact: " \
                                    "Voltaic Falchion\n| Lightning Strike\n| Electro Dash\n| Raijū\n| Raijū Cloak\n* " \
                                    "Raijū Cloak: Eye of the Mythics\n* Raijū Cloak: Tail Guard\n* Raijū Cloak: Storm " \
@@ -974,139 +1018,225 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Ryner Backstory Prompts
             # Chapter 1
-            rynerBackstory01 = "Ryner grew up a normal childhood as a Khabunago; a family of " \
-                               "grave-watchers that oversaw graveyards across Phalmasia. The duty of the " \
-                               "Khabunago at these graveyards was to protect the bodies of the magic users kept " \
-                               "there. They didn't watch over all graves; just the ones where the exceptionally " \
-                               "powerful were buried so that anyone who wanted to try to take their strength weren't " \
-                               "successful. They believed these powers are owned by those who grew, evolved, " \
-                               "and originally wielded them, dead or alive.\n\n "
-            rynerBackstory02 = "The head of the family is decided by a rare trait that only Khabunago have access " \
-                               "to: shadow magic. Throughout their time guarding the dead, their ancestors learned " \
-                               "how to use the power of the dark to their advantage, and those who wield it are " \
-                               "thought to have a stronger connection to them than others. Both Ryner's mother and " \
-                               "father had the ability, and it was strongly believed that Ryner would possess the " \
-                               "power as well. Ryner spent years practicing his lightning magic with his father when " \
-                               "he had the time.\n\n "
-            rynerBackstory03 = "Ryner grew up happy with his family. He trained day and night, honing his skill in " \
-                               "his magic with other children in his family and awaiting the day that he could begin " \
-                               "guarding the graves like his parents. He quickly became the strongest of his friends, " \
-                               "and was respected throughout the family. When he was ten, a day came that turned his " \
-                               "whole life upside down, and gave him the moment that ended up defining his future: " \
-                               "the day the Guardians came.\n\n "
-            rynerBackstory04 = "Ryner was out training with his dad, Larein, helping him master a spell he had been " \
-                               "practicing. During this, guardians approached Ryner's father and asked if they could " \
-                               "speak in private. He said it ws alright and send Ryner back to the house. But of " \
-                               "course, Ryner wanted to know what they were talking about, so he hid out of sight and " \
-                               "listened in. The guardians told his father that he was under arrest for killing an " \
-                               "intruder in the graveyard. Larein said that he didn't hurt anyone, and that no one had " \
-                               "broken in recently, but the guardians didn't believe him.\n\n "
-            rynerBackstory05 = "The guardians said that someone had died from injuries sustained after a Khabunago " \
-                               "attacked them while they visited their grandparent's grave to pay them respects. " \
-                               "Again, Larein denies that he or his wife have seen anyone intruding on the graveyard " \
-                               "in the past month. The guardians became increasingly annoyed, and soon, they began to " \
-                               "try to take him by force. Larein used his shadow magic to paralyze the guardians, " \
-                               "insisting that he didn't want to fight. They didn't seem to care, though, " \
-                               "and when Larein released them, they continued their attack.\n\n "
-            rynerBackstory06 = "The ice magic user had whittled down his armor very quickly. The problem was that " \
-                               "Larein couldn't fight back. He couldn't hurt the guardians since he knew he didn't " \
-                               "hurt anyone, and didn't want to give them a reason to send him away from his family. " \
-                               "He was dodging and blocking attacks well, but the lightning guardian landed a blow, " \
-                               "stunning him and sending him to the ground. It wasn't a powerful blast, but the stun " \
-                               "kept him on the ground long enough for the wind user to place a powerful slice " \
-                               "through his neck.\n\n "
-            rynerBackstory07 = "Ryner gasped, tears beginning to flow from his eyes, and ran back to his house to " \
-                               "check on his mom. If they came after his dad, then his mom was in danger, " \
-                               "too. He raced home using his magic and burst through the door. He found his mother on " \
-                               "the floor, the light lost from her eyes. She was dead. The guardians who had killed " \
-                               "her emerged and attacked him. Ryner exploded with a mana he had never felt before, " \
-                               "and struck at his assailant so quickly it was as if he'd never moved. This is when " \
-                               "Ryner gained Electron Lightning.\n\nEnd of Chapter 1\n "
+            rynerBackstory01 = ("Ryner was always a special Khabunago from the day he he manifested. He had inherited the "
+                                "trademark magic of the clan: Shadow Magic and began manifesting it from the very young "
+                                "age of 7, only 2 years after his base magic, lightning, had been manifested. The "
+                                "Khabunago clan was the pinnacle of the spirits in Phalmasia, and the only family that "
+                                "could use Shadow, one of the four lost magics. Those who had the ability to wield the "
+                                "shadows were known as Keepers, and were given the responsibility of watching over the "
+                                "graveyards of Phalmasia, driving away any who wish to disturb the dead.\n\n")
+            rynerBackstory02 = ("Though very young, Ryner trained day after day to build up his strength. Practicing "
+                                "lightning magic along with honing his shadow magic, he soon became far stronger than "
+                                "any spirit his age. Eventually, he was able to manifest a physical body in the form of "
+                                "a fox terrian. He was soon granted a graveyard to keep watch over; a small one in "
+                                "Dullus, Nohla at the age of 12. Many of the resident Majuu were very respectful of the "
+                                "deceased, and only came to the graveyard to pay their respects to lost loved ones or "
+                                "to keep Ryner company.\n\n")
+            rynerBackstory03 = ("One of the young majuu, a silvery furred girl named Quill, came by one day to speak "
+                                "with her recently deceased mother. Ryner, not wanting to disturb something so private, "
+                                "watched nearby in his spirit form. Quill, however, was able to notice him. Taking note "
+                                "of a spirit without their interference was nearly impossible. No one had ever noticed "
+                                "him as a spirit, so this took Ryner aback as he appeared in his fox form to talk to her. "
+                                "Quill and Ryner became friends very closely afterwards, as Ryner helped Quinn come to "
+                                "terms with her mother's passing. When Quinn turned 14, she started taking the entry "
+                                "exams at Eklyptil's university, though it took her three times to pass since she didn't "
+                                "have any magic affinities.\n\n")
+            rynerBackstory04 = ("Once she passed her entry exams and had gotten accepted, she had to leave Dullus to live "
+                                "on campus, which meant Ryner couldn't see her anymore. Just before Quill left for Mt. "
+                                "Moonlight, she hugged Ryner one last time and gave him a kiss, expressing her feelings. "
+                                "She promised to come back every break she could to catch up, and Ryner promised to wait "
+                                "for her there. For her first two years, they did just that. But eventually, Quill stopped "
+                                "coming back to Dullus, and Ryner didn't see her for another two years.\n\n")
+            rynerBackstory05 = ("Soon, the head Khabunagos, a group of the most wise and ancient spirits with shadow "
+                                "affinities, recognized Ryner's great work of keeping his graveyard safe, and had issued "
+                                "a promotion to guard Nabuga's Garden, the largest and most important graveyard in all "
+                                "of Phalmasia, and the highest honor a keeper could receive. But Ryner was hesitant to "
+                                "accept. If he chose to guard Nabuga's Garden, he would have to go to Halgeis, which "
+                                "would mean he'd never see Quill again. But he knew that Quill would want him to accept, "
+                                "lest he put his soul in her hands at the cost of his happiness, so he did.\n\n")
+            rynerBackstory06 = ("Before Ryner left Dullus for Halgeis, he wrote a note for Quill explaining where he had "
+                                "gone. However, when he left to put the note on her mother's grave, the only place he "
+                                "could think to leave it where she would see it, he wondered if he should. Quinn hadn't "
+                                "come back for years. What if she had forgotten about him? Shaking off the thought, he "
+                                "placed the note on the ground wrapping it in lightning magic, which would repel any "
+                                "water and keep it in good shape, and left for Nabuga's Garden.\n\nEnd of Chapter 1\n")
 
             # Chapter 2
-            rynerBackstory08 = "Ryner, seething with anger, went back to the guardians who had killed " \
-                               "his father and as fast as he had the first time, took their lives. Once he had done " \
-                               "it, he calmed down and realized what he had done. Ryner never meant to take their " \
-                               "lives; he just wanted to scare them and make them feel what he felt. He was paralyzed " \
-                               "for a few minutes. What would others think of him? What would they do to him once he " \
-                               "found out? Deciding not to think about it for the time being, he solemnly collected " \
-                               "his parents and buried them in the graveyard they once protected.\n\n "
-            rynerBackstory09 = "That day became the darkest day of his life, and one that changed it forever. His " \
-                               "deep emotion had not only sparked the awakening of Electron Wind, but another power " \
-                               "as well: his shadow magic. But by this point, Ryner had decided to never use Electron " \
-                               "Lightning ever again. It made him hurt people, not to mention everyone who had heard " \
-                               "of his crime had shunned him and feared him. No one wanted to be near a boy who " \
-                               "couldn't control his own power, especially one who had killed because of it.\n\n "
-            rynerBackstory10 = "Ryner decided that he had to leave town. He wanted to be sure he would remember his " \
-                               "parents, so he went back to their graves one last time and took something that " \
-                               "represented them from his father and a keepsake of the Khabunago: The Pendent of the " \
-                               "Gatekeeper's Shadow. It was said to increase the power of shadow magic, " \
-                               "and was a gift from Nabuga herself to the family long ago. With it now in his hands, " \
-                               "Ryner left town with nothing but his feelings to weigh him down.\n\n "
-            rynerBackstory11 = "Ryner travelled for 15 years after that, constantly training his magic. He grew " \
-                               "angrier and angrier at the world and its injustice. Guardians were meant to help " \
-                               "people, but instead they took his family from him without so much as a viable reason. " \
-                               "These thoughts corrupted him, and leaked into his magic. His spells became more " \
-                               "powerful, and he was able to control more of it than he could before. Ryner realized " \
-                               "that he was stronger than most everyone in Xhia, which led him to his grandest " \
-                               "plan.\n\n "
-            rynerBackstory12 = "Ryner decided to use his power to destroy the guardians. Not just the ones that " \
-                               "wronged him, not even just the ones in Xhia. All of them, all across Phalmasia. He " \
-                               "knew that this wouldn't be an easy task, so in need of more power, he tried to use " \
-                               "electron lightning again, despite still despising Nova for being the cause of his " \
-                               "problems in the first place. However, it turned out that he couldn't anymore; the " \
-                               "spirit of Electron Lightning, Nova, wouldn't allow him to use his power if he was " \
-                               "going to use it to hurt people. Ryner threatened him to reconsider, but Nova didn't " \
-                               "budge. Ryner, as a result, locked Nova away in his mind, and stole his power.\n\n "
-            rynerBackstory13 = "Using Electron Lightning hurt Nova, since he was fighting letting Ryner use it at " \
-                               "all. As a result, the magic came out weaker than it would have, and it took more mana " \
-                               "to cast any spell than normal. Despite these setbacks, it was still extremely " \
-                               "powerful, and using this power along with his normal lightning and shadow magics, " \
-                               "he travelled to Halgeis where the strongest guardians were known to live. . .\n\nEnd " \
-                               "of Chapter 2\n "
+            rynerBackstory07 = ("Ryner arrived at Nabuga's Garden, and for the first time in his life, he was not the only "
+                                "Khabunago keeping a graveyard. He was, however, the youngest keeper who had ever guarded "
+                                "the garden in all of history. Unlike the graveyard in Dullus, people were constantly "
+                                "coming and going in and out. It wasn't the largest graveyard in the world for nothing, "
+                                "and Ryner had a lot more work than he ever had. But he made friends with many of the "
+                                "other Khabunago keepers, and he began to become attached to the cemetery. Of course, "
+                                "there were points where Ryner had to scare off people looking to deface gravestones and "
+                                "the cemetery, but most of the time, Ryner just peacefully watched over the cemetery, and "
+                                "that was his life for the next six years.\n\n")
+            rynerBackstory08 = ("The reason that Nabuga's Garden was the most important cemetery in the world was because "
+                                "of the people who were placed to rest there. Some of the strongest magic users who ever "
+                                "lived were buried there, as well as the past royalty of Halgeis. Heroes from across "
+                                "Phalmasia, martyrs and inventors, would be buried in Nabuga's Garden. The magic users, "
+                                "if they had one while they were alive, would be buried with their pacts or artifacts both "
+                                "to pay respect to them as well as to seal them away. This made it a target for those who "
+                                "wanted that power, and why the strongest Khabunagos were stationed there.\n\n")
+            rynerBackstory09 = ("On his 27th Epoch (a birthday to spirits), he went his favorite spot in the "
+                                "entire cemetery: a small hill with a large cherry blossom tree on it to watch the sunset. "
+                                "During a Khabunago's Epoch, it is customary for them to remain in their spirit forms "
+                                "throughout the day to pay respects to their original form. Which is why it surprised him "
+                                "when a voice called out his name from behind. It couldn't be another Keeper, they knew "
+                                "not to disturb someone on their Epoch. But when he turned to see who could have seen him, "
+                                "he stood in shock. It was Quill. Much older and taller, as all Majuu usually were, but "
+                                "she was truly here!\n\n")
+            rynerBackstory10 = ("They spent time catching up, and Quill expressed her apologies for not returning back "
+                                "home for so long. Quill was here because after she graduated, she went back to find Ryner, "
+                                "but only found his note instead. She had gotten a job as an arcanarchaeologist, someone "
+                                "who studies the history of magic and its impact on Phalmasia and its history. But because "
+                                "she was new, she wasn't able to ask for a transfer to Halgeis. So she built up experience "
+                                "and asked if she could transfer to a project in Volquöla to study the magma in the "
+                                "volcano five years later, which got accepted. She had a lot of work to do before she was "
+                                "able to come visit him, but she finally found the time.\n\n")
+            rynerBackstory11 = ("Once midnight had passed, Ryner entered his human form and they kissed underneath the "
+                                "Sakura tree, and they spoke throughout the rest of the night, until Quill fell asleep on "
+                                "Ryner's lap. Ryner had everything he wanted: a keeper of Nabuga's Garden, magical prowess that "
+                                "nearly topped every other keeper there, and a lifelong friend and lover had finally returned "
+                                "to him after so many years. The next two months of his life were absolute bliss. But only "
+                                "those next two months. For two months later and for the first time in history, the Keepers "
+                                "would face a war to protect Nabuga's Garden.\n\nEnd of Chapter 2\n")
+
+            # Chapter 3
+            rynerBackstory12 = ("Quill came to Nabuga's Garden six weeks later, frantically searching for Ryner. Eventually, "
+                                "she found him sparring with the other Khabunagos just outside the cemetery. She had "
+                                "received a new project from her bosses: after her research in Volquöla was completed, "
+                                "she was to lead a group of 5 other arcanarchaeologists to study the soil composition of "
+                                "the ground near those buried in Nabuga's Garden. It would involve them desecrating several "
+                                "grave sites, and in some extreme cases, disturbing the bodies. She had, of course, tried "
+                                "to fight this, but the higher-ups didn't care to listen. She reminded them about the Keepers "
+                                "standing guard the Gardens, but they said that they would fight them off if it came to "
+                                "that. After hearing that, she quit on the spot.\n\n")
+            rynerBackstory13 = ("The other Khabunagos retched in disgust at the thought of someone willingly disturbing "
+                                "the dead at this scale for information. Ryner said nothing, clenching his fist into a "
+                                "tight ball, drawing a stream of silvery blood from his corporeal fox form. He thanked "
+                                "her for doing what she did for the cemetery, but said she had to go. They would stand to "
+                                "listen to her in their offices, but out in teh field, they would take more extreme measures. "
+                                "She couldn't be at the gates when they got here, or they might take more than her job. "
+                                "Though Quill tried to fight it, she eventually agreed.\n\n")
+            rynerBackstory14 = ("Throughout the next three weeks, the keepers prepared for the assault on Nabuga's Garden. "
+                                "Ryner set traps across the entrance of the graveyard using his shadow and lightning magic. "
+                                "With all of their preparations, they were sure they were ready. But when the other "
+                                "arcanarchaeologists arrived, there were far more than the five they were expecting. Tens "
+                                "of terrians wielding fire affinities showed up, a vital weakness to the Khabunagos, as "
+                                "shadow magic would essentially be off the table. Ryner told the entourage that they were "
+                                "trespassing on sacred ground, and that they needed to leave immediately. None of them "
+                                "backed down, however, saying that they got paid to do a job, and they weren't leaving "
+                                "until it was over.\n\n")
+            rynerBackstory15 = ("Ryner explained that doing this would disturb the graves of the deceased. It wasn't right, "
+                                "and he was sure they knew it. One of them, a bull terrian, the largest Ryner had "
+                                "ever seen, pushed his way to the front. What he said next shook him to his core:\n\n \"Hey, "
+                                "isn't that what that majuu girl said a while ago?\"\n\nShocked and concerned, he asked "
+                                "them what had happened, and the bull explained that a silver coated majuu girl tried to "
+                                "stop them on their way over here, even trying to get them to stop by force, so they killed "
+                                "her and moved on, laughing at how someone without magic had tried to stop them. Ryner's "
+                                "eyes went wide. A silver coated majuu girl without an affinity. That was Quill. He was "
+                                "sure of it. His mind started spinning, racing with thoughts. He should have known that "
+                                "she would try to stop them. Why wasn't he there to protect her? She didn't even have magic! "
+                                "When he said to not show up here when it was happening, this isn't what he had meant! "
+                                "How could they do this to someone like her? Someone so defenseless? How could they take "
+                                "her from him?!\n\n")
+            rynerBackstory16 = ("Ryner's eyes went dark, as he started kicking up lightning and shadows around him. He "
+                                "couldn't control his emotions at all. So in a very calm and commanding tone, he said two "
+                                "things: that the gang had better start running, and that the other Keepers had better stay "
+                                "out of his way. At that point, tears streaming down his face, and pitch black eyes, Ryner's "
+                                "lightning shifted to a reddish hue, causing the other Khabunagos to back away. One second, "
+                                "he was standing with the other keepers. The next, his arm was through the bull's chest. "
+                                "He had just killed someone. He was all about keeping death and its processes sacred, and "
+                                "yet now, he didn't care. He just wanted revenge. Red lightning surged from his body, "
+                                "electrocuting the bull and atomizing his body in a matter of moments. Ryner turned to face "
+                                "the others, coldness breezing over him. \n\n\"Run.\"\n\n")
+            rynerBackstory17 = ("Those farthest away from him began to run away, but those closest fell to the ground, "
+                                "clutching their throats, gasping for air. They couldn't breathe. Ryner in a fit of rage, "
+                                "dispatched what must have been 20 of them instantly, and killed the rest of them soon "
+                                "after. After he had taken the last life, he fell to his knees an sobbed, screaming Quill's "
+                                "name into the sky. He would never see her again. The other keepers came to comfort him "
+                                "and questioned him about that red lightning. He didn't know how to answer, but told them "
+                                "that he was leaving Nabuga's Garden. He didn't feel as though the head Khabunagos would "
+                                "approve of the gruesome display of power Ryner had put on and would banish him anyway. "
+                                "So, he left the graveyard, found Quill's body and gave her a proper burial back in Dullus."
+                                "\n\nEnd of Chapter 3\n")
+
+            # Chapter 4
+            rynerBackstory18 = ("Ryner now had this annoying voice stuck in his head ever since that red lightning appeared "
+                                "back at the Garden, who called itself Nova. He explained what the strange power, Electron "
+                                "Lightning, was and how to use it. Though Ryner wasn't very interested in how to use it. "
+                                "He could use it well enough already. It was just a stronger version of his own lightning "
+                                "magic, with the added bonus of charring the air. For the next few years, Ryner tracked "
+                                "down the remainder of the gang that had taken Quill from him, using Electron Lightning "
+                                "to kill them on sight. Ryner was getting drunk on this new power, but one day he could "
+                                "no longer use it. Nova confronting him, saying he didn't approve how how violently he was "
+                                "using his power, and wouldn't allow him to use it as long as he continued to take lives "
+                                "for the sake of revenge.\n\n")
+            rynerBackstory19 = ("Ryner grew furious at this, screaming at Nova to return his power back to him. Nova countered "
+                                "saying it was never his power to begin with, which Ryner responded with a slap across his "
+                                "face. Ryner, using his spirit form and shadow magic, built a cage in his mind and threw "
+                                "Nova inside. Ryner began siphoning off Nova's power, which Nova tried, but failed, to "
+                                "resist. This distillation of power made the strength of Electron Lightning significantly "
+                                "weaker than before, but its original overwhelming power still made it a powerful threat. "
+                                "Ryner used this weakened magic to defeat the rest of the gang, and began searching for "
+                                "a place where he could hide and train in secret. Soon enough, he settled on *Trudawn "
+                                "Mountain*, a peak with a flat summit he could use as a training grounds, and a place high "
+                                "in Altaria where no one would bother him. Soon after arriving, Ryner began practicing with "
+                                "his new power, growing more and more hatred for Phalmasian lives, killing more and more "
+                                "whenever it so felt his fancy, for years, until the world feared him. Feared his power. "
+                                "As they should. They took everything he loved away. Now, he was just taking his turn."
+                                "\n\nEnd of Chapter 4\n")
 
             # Ryner Bio Search Commands
             rynerChapterPrompt = input(rynerProfile + "\n" + rynerLightningSpells + "\n" + rynerShadowSpells + "\n" + rynerElectronLightningSpells + "\nEnter 'Chapters' to view the chapters of Ryner's Backstory. Enter 'Back' to return to Character Selection.\n").lower().strip()
             while rynerChapterPrompt == "chapters":
                 rynerChapterPrompt = input("Ryner's Backstory\nPlease enter the chapter number to see a chapter ("
-                                           "Chapter 1)\n\n| Chapter 1: Corruption\n| Chapter 2: Anger "
-                                           "Overtaking\n\nPress 'Enter' to return to Ryner's Biography.\n").lower(
-
-                ).strip()
+                                           "Chapter 1)\n\n| Chapter 1: The Point of the Quill\n| Chapter 2: Nabuga's Garden"
+                                           "\n| Chapter 3: A Spirit Once Shared\n| Chapter 4: A Soul Twice Broken\n\nPress 'Enter' to return to Ryner's Biography.\n").lower().strip()
 
                 if rynerChapterPrompt == "":
                     break
-                if rynerChapterPrompt != "chapters" and rynerChapterPrompt != "chapter 1" and rynerChapterPrompt != "chapter one" and rynerChapterPrompt != "corruption" and rynerChapterPrompt != "chapter 2" and rynerChapterPrompt != "chapter two" and rynerChapterPrompt != "anger overtaking" and rynerChapterPrompt != "":
+                if rynerChapterPrompt != "chapters" and rynerChapterPrompt != "chapter 1" and rynerChapterPrompt != "chapter one" and rynerChapterPrompt != "point of the quill" and rynerChapterPrompt != "the point of the quill" and rynerChapterPrompt != "chapter 2" and rynerChapterPrompt != "chapter two" and rynerChapterPrompt != "nabugas garden" and rynerChapterPrompt != "nabuga's garden" and rynerChapterPrompt != "chapter 3" and rynerChapterPrompt != "chapter three" and rynerChapterPrompt != "spirit once shared" and rynerChapterPrompt != "a spirit once shared" and rynerChapterPrompt != "chapter 4" and rynerChapterPrompt != "chapter four" and rynerChapterPrompt != "spirit twice broken" and rynerChapterPrompt != "a spirit twice broken" and rynerChapterPrompt != "":
                     rynerChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
                 rynerChapterOne = ""
                 rynerChapterTwo = ""
-                if rynerChapterPrompt == "chapter 1" or rynerChapterPrompt == "chapter one" or rynerChapterPrompt == "corruption":
-                    rynerChapterOne = input("\033[1m" + "Chapter 1: Corruption" + "\033[0m\n" + rynerBackstory01 + "\n" + rynerBackstory02 + "\n" + rynerBackstory03 + "\n" + rynerBackstory04 + "\n" + rynerBackstory05 + "\n" + rynerBackstory06 + "\n" + rynerBackstory07 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
-                if rynerChapterPrompt == "chapter 2" or rynerChapterPrompt == "chapter two" or rynerChapterPrompt == "anger overtaking" or rynerChapterOne == "next":
-                    rynerChapterTwo = input("\033[1m" + "Chapter 2: Anger Overtaking" + "\033[0m\n" + rynerBackstory08 + "\n" + rynerBackstory09 + "\n" + rynerBackstory10 + "\n" + rynerBackstory11 + "\n" + rynerBackstory12 + "\n" + rynerBackstory13 + "\n\nThis is the end of Ryner's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
-                if rynerChapterOne == "" or rynerChapterTwo == "":
+                rynerChapterThree = ""
+                rynerChapterFour = ""
+
+                if rynerChapterPrompt == "chapter 1" or rynerChapterPrompt == "chapter one" or rynerChapterPrompt == "point of the quill" or rynerChapterPrompt == "the point of the quill":
+                    rynerChapterOne = input("\033[1m" + "Chapter 1: The Point of the Quill" + "\033[0m\n" + rynerBackstory01 + rynerBackstory02 + rynerBackstory03 + rynerBackstory04 + rynerBackstory05 + rynerBackstory06 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 2.\n").lower().strip()
+                if rynerChapterPrompt == "chapter 2" or rynerChapterPrompt == "chapter two" or rynerChapterPrompt == "nabugas garden" or rynerChapterPrompt == "nabuga's garden" or rynerChapterOne == "next":
+                    rynerChapterTwo = input("\033[1m" + "Chapter 2: Nabuga's Garden" + "\033[0m\n" + rynerBackstory07 + rynerBackstory08 + rynerBackstory09 + rynerBackstory10 + rynerBackstory11 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 3.\n").lower().strip()
+                if rynerChapterPrompt == "chapter 3" or rynerChapterPrompt == "chapter three" or rynerChapterPrompt == "spirit once shared" or rynerChapterPrompt == "a spirit once shared" or rynerChapterTwo == "next":
+                    rynerChapterThree = input("\033[1m" + "Chapter 3: A Spirit Once Shared" + "\033[0m\n" + rynerBackstory12 + rynerBackstory13 + rynerBackstory14 + rynerBackstory15 + rynerBackstory16 + rynerBackstory17 + "\n\nPress 'Enter' to return to chapter selection. Enter 'Next' to view Chapter 4.\n").lower().strip()
+                if rynerChapterPrompt == "chapter 4" or rynerChapterPrompt == "chapter four" or rynerChapterPrompt == "spirit twice broken" or rynerChapterPrompt == "a spirit twice broken" or rynerChapterThree == "next":
+                    rynerChapterFour = input("\033[1m" + "Chapter 3: A Soul Twice Broken" + "\033[0m\n" + rynerBackstory18 + rynerBackstory19 + "\n\nThis is the end of Ryner's Bio. Press 'Enter' to return to chapter selection.\n").lower().strip()
+
+                if rynerChapterOne == "" or rynerChapterTwo == "" or rynerChapterThree == "" or rynerChapterFour == "":
                     rynerChapterPrompt = "chapters"
-                if rynerChapterOne != "chapters" and rynerChapterOne != "" and rynerChapterTwo != "chapters" and rynerChapterTwo != "":
+                if rynerChapterOne != "chapters" and rynerChapterOne != "" and rynerChapterTwo != "chapters" and rynerChapterTwo != "" and rynerChapterThree != "chapters" and rynerChapterThree != "" and rynerChapterFour != "chapters" and rynerChapterFour != "":
                     rynerChapterOne = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
             if rynerChapterPrompt == "back":
                 break
             if rynerChapterPrompt != "continue" and rynerChapterPrompt != "bio" and rynerChapterPrompt != "back" and rynerChapterPrompt != "":
-                rynerChapterPrompt = input("\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
+                rynerChapterPrompt = input(
+                    "\nYou may have pressed enter on accident or misspelled your search. Please re-enter your search.").lower().strip()
 
         # Sereina Fynae Bio
         while characterBarrier == "sereina fynae" or characterBarrier == "sereina":
             # Sereina Bio Prompts
             sereinaProfile = "\033[1m" + "Sereina Fynae" + "\033[0m\n\nHometown: Meteora\nRace: Argen (Blue, Light Gray)\nBirthday: April 2, " \
-                            "4007\nGender: Female\nPronunciation: Se-REIGN-ah FAI-nay\nMagic Affinities\n| Fire\n| " \
-                            "Gravity\n\nItems\n| Mother's Horn Rings\n\n"
+                                                           "4007\nGender: Female\nPronunciation: Se-REIGN-ah FAI-nay\nMagic Affinities\n| Fire\n| " \
+                                                           "Gravity\n\nItems\n| Mother's Horn Rings\n\n"
             sereinaFireSpells = "Spells: Fire\n| Stunning Flash\n| Pyre Ray\n| Ember Spirit\n* Ember Spirit: Combat\n* " \
-                               "Ember Spirit: Heatwave\n| Fire Seal\n| Infernal Uprising\n| Ember Beads\n* Ember " \
-                               "Beads: Control\n* Ember Beads: Enhancement Ring\n| Fire Outburst\n| Detonation " \
-                               "Seeds\n* Detonation Seeds: Auto-Ignite\n\n"
+                                "Ember Spirit: Heatwave\n| Fire Seal\n| Infernal Uprising\n| Ember Beads\n* Ember " \
+                                "Beads: Control\n* Ember Beads: Enhancement Ring\n| Fire Outburst\n| Detonation " \
+                                "Seeds\n* Detonation Seeds: Auto-Ignite\n\n"
             sereinaGravitySpells = "Spells: Gravity\n| Augmented Gravity (Passive)\n| Place-Lock\n| Force Shield\n| " \
-                                  "Rift Palm\n| Control\n\n"
+                                   "Rift Palm\n| Control\n\n"
 
             # Sereina Bio Search Commands
             sereinaChapterPrompt = input(sereinaProfile + "\n" + sereinaFireSpells + "\n" + sereinaGravitySpells + "\nEnter 'Back' to return to Character Selection. Backstory to be written at a later date.\n").lower().strip()
@@ -1173,7 +1303,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "in Halgeis, which makes it relatively respected in the country. However, " \
                                       "most of the villagers prefer to keep to themselves and their community, " \
                                       "so the town doesn't get many visitors.\n\n"
-                halgeisLocation = input("\033[1m" + "Volquöla, Halgeis\n\n" + "\033[0m" + volquolaStats + volquolaDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n")
+                halgeisLocation = input(
+                    "\033[1m" + "Volquöla, Halgeis\n\n" + "\033[0m" + volquolaStats + volquolaDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n")
 
             # Ashford City Commands
             if halgeisLocations == "ashford":
@@ -1190,8 +1321,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "open place to train in solidarity. The town doesn't have any landmarks or " \
                                      "produce any products they trade commonly, so Ashford is mostly a quiet settling " \
                                      "place for terrians to live a peaceful life with their families.\n\n"
-                halgeisLocation = input("\033[1m" + "Ashford, Halgeis\n\n" + "\033[0m" + ashfordStats + ashfordDescription + "Go "
-                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Ashford, Halgeis\n\n" + "\033[0m" + ashfordStats + ashfordDescription + "Go "
+                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Oshborne City Commands
             if halgeisLocations == "oshborne":
@@ -1205,8 +1337,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "extravagant in their own right.\n\nThe town doesn't act as a tourist " \
                                       "attraction since there aren't many things to do there, but the town will " \
                                       "openly accept any travelers who happen to be passing through.\n\n"
-                halgeisLocation = input("\033[1m" + "Oshborne, Halgeis\n\n" + "\033[0m" + oshborneStats + oshborneDescription + "Go "
-                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Oshborne, Halgeis\n\n" + "\033[0m" + oshborneStats + oshborneDescription + "Go "
+                                                                                                            "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Cilfier City Commands
             if halgeisLocations == "cilfier":
@@ -1222,8 +1355,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "the lakes. The lakes of Cilfier draw in travellers from across Halgeis to " \
                                      "admire them. The citizens of Cilfier don't allow anyone to take water out of or " \
                                      "polluting the lakes to both respect the lakes and nature.\n\n"
-                halgeisLocation = input("\033[1m" + "Cilfier, Halgeis\n\n" + "\033[0m" + cilfierStats + cilfierDescription + "Go "
-                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Cilfier, Halgeis\n\n" + "\033[0m" + cilfierStats + cilfierDescription + "Go "
+                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Skykumo City Commands
             if halgeisLocations == "skykumo":
@@ -1240,8 +1374,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "its proximity to the clouds. Most don't come to see this, however, because the " \
                                      "thin air in Skykumo makes breathing extremely labor-intensive and is dangerous " \
                                      "to most without protective gear or wind magic.\n\n"
-                halgeisLocation = input("\033[1m" + "Skykumo, Halgeis\n\n" + "\033[0m" + skykumoStats + skykumoDescription + "Go "
-                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Skykumo, Halgeis\n\n" + "\033[0m" + skykumoStats + skykumoDescription + "Go "
+                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Swalubu City Commands
             if halgeisLocations == "swalubu":
@@ -1257,8 +1392,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "weaponry skills and fighting styles. It is extremely popular, and those without " \
                                      "magic often come here seeking mentorship if they still wish to help defend or " \
                                      "protect others (as guardians or not).\n\n"
-                halgeisLocation = input("\033[1m" + "Swalubu, Halgeis\n\n" + "\033[0m" + swalubuStats + swalubuDescription + "Go "
-                                        "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Swalubu, Halgeis\n\n" + "\033[0m" + swalubuStats + swalubuDescription + "Go "
+                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Nulvali City Commands
             if halgeisLocations == "nulvali":
@@ -1274,8 +1410,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "potential wind users for legalized flight, and give out Flyers Licenses. Though " \
                                      "there are other locations, due to Kytegrove Forest being in such a close " \
                                      "vicinity, it is the largest center in Halgeis.\n\n"
-                halgeisLocation = input("\033[1m" + "Nulvali, Halgeis\n\n" + "\033[0m" + nulvaliStats + nulvaliDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Nulvali, Halgeis\n\n" + "\033[0m" + nulvaliStats + nulvaliDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Starkiepe City Commands
             if halgeisLocations == "starkiepe":
@@ -1299,8 +1436,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "be attempted alone, or with a team, in which case the team name and members " \
                                        "must all be registered as such. It is a great place to go to watch some " \
                                        "action.\n\n"
-                halgeisLocation = input("\033[1m" + "Starkiepe, Halgeis\n\n" + "\033[0m" + starkiepeStats + starkiepeDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Starkiepe, Halgeis\n\n" + "\033[0m" + starkiepeStats + starkiepeDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Grand Elise City Commands
             if halgeisLocations == "grand elise":
@@ -1322,8 +1460,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "Forest, the largest forest in Halgeis, is also present withing walking " \
                                         "distance of the city's borders and is easily accessible to residents and " \
                                         "visitors.\n\n"
-                halgeisLocation = input("\033[1m" + "Grand Elise, Halgeis\n\n" + "\033[0m" + grandEliseStats + grandEliseDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Grand Elise, Halgeis\n\n" + "\033[0m" + grandEliseStats + grandEliseDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Drəklife City Commands
             if halgeisLocations == "dreklife":
@@ -1341,8 +1480,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "down. Their work has done almost nothing to the health of the forest, " \
                                       "but their care has actually improved it. Those who live in Drəklife have " \
                                       "learned to care for the environment and others.\n\n"
-                halgeisLocation = input("\033[1m" + "Drəklife, Halgeis\n\n" + "\033[0m" + dreklifeStats + dreklifeDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Drəklife, Halgeis\n\n" + "\033[0m" + dreklifeStats + dreklifeDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Mezolune City Commands
             if halgeisLocations == "mezolune":
@@ -1359,8 +1499,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "village. Small markets are found on most days, and many people call this place " \
                                       "their home. Those who live here have a great affinity for life and plants " \
                                       "alike.\n\n"
-                halgeisLocation = input("\033[1m" + "Mezolune, Halgeis\n\n" + "\033[0m" + mezoluneStats + mezoluneDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Mezolune, Halgeis\n\n" + "\033[0m" + mezoluneStats + mezoluneDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Piquaron City Commands
             if halgeisLocations == "piquaron":
@@ -1380,8 +1521,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "the students to figure out spells on their own which increases their " \
                                       "understanding of their magic, but it also teaches them to find ways to use " \
                                       "them more efficiently and in a way that is comfortable for them.\n\n"
-                halgeisLocation = input("\033[1m" + "Piquaron, Halgeis\n\n" + "\033[0m" + piquaronStats + piquaronDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Piquaron, Halgeis\n\n" + "\033[0m" + piquaronStats + piquaronDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Elendraye City Commands
             if halgeisLocations == "elendraye":
@@ -1400,8 +1542,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "known to: defensively. This influences the magic styles of many magic users " \
                                        "who live here. A common pastime for children is to practice their magics with " \
                                        "and against each other.\n\n"
-                halgeisLocation = input("\033[1m" + "Elendraye, Halgeis\n\n" + "\033[0m" + elendrayeStats + elendrayeDescription +
-                                        "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input(
+                    "\033[1m" + "Elendraye, Halgeis\n\n" + "\033[0m" + elendrayeStats + elendrayeDescription +
+                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Halgeis Exit Command
             if halgeisLocations == "back":
@@ -1448,8 +1591,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "here, it is a producer of high-quality argenian clothing, though it isn't a " \
                                       "major producer. They do sell their products to all of Mu'karr, but due to the " \
                                       "size of Trefaeli, they can't afford to create high supplies.\n\n"
-                mukarrLocation = input("\033[1m" + "Trefaeli, Mu'karr\n\n" + "\033[0m" + trefaeliStats + trefaeliDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Trefaeli, Mu'karr\n\n" + "\033[0m" + trefaeliStats + trefaeliDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Andromita City Commands
             if mukarrLocations == "andromita":
@@ -1466,8 +1610,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "the small size of the grove), guardians don't need to have a post in the " \
                                        "town, and it rarely ever receives any problems. It is a nice place to visit, " \
                                        "even if you are just passing through.\n\n"
-                mukarrLocation = input("\033[1m" + "Andromita, Mu'karr\n\n" + "\033[0m" + andromitaStats + andromitaDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Andromita, Mu'karr\n\n" + "\033[0m" + andromitaStats + andromitaDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dragolyne City Commands
             if mukarrLocations == "dragolyne":
@@ -1483,8 +1628,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "a sister academy of the one in Halgeis. Though they are the same academy, " \
                                        "their curriculums are tailored to argens. The school has made Dragolyne a " \
                                        "more lively place for residents, visitors, and their incoming students.\n\n"
-                mukarrLocation = input("\033[1m" + "Dragolyne, Mu'karr\n\n" + "\033[0m" + dragolyneStats + dragolyneDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Dragolyne, Mu'karr\n\n" + "\033[0m" + dragolyneStats + dragolyneDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Meteora City Commands
             if mukarrLocations == "meteora":
@@ -1502,8 +1648,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "Though the impact of the meteor was cushioned, the Black Sun still caused a " \
                                      "large crater in the middle of the town. Many people visit the crater, " \
                                      "though the public isn't aware of whether or not the Cosmic Wind User existed.\n\n"
-                mukarrLocation = input("\033[1m" + "Meteora, Mu'karr\n\n" + "\033[0m" + meteoraStats + meteoraDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Meteora, Mu'karr\n\n" + "\033[0m" + meteoraStats + meteoraDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Forécyør City Commands
             if mukarrLocations == "forecyor":
@@ -1524,8 +1671,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "tree in the city, and even continues underground. Residents of Forécyør use " \
                                       "the library on a daily basis for a multitude of reasons, and everyone does " \
                                       "what they can to preserve the natural beauty of their city.\n\n"
-                mukarrLocation = input("\033[1m" + "Forécyør, Mu'karr\n\n" + "\033[0m" + forecyorStats + forecyorDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Forécyør, Mu'karr\n\n" + "\033[0m" + forecyorStats + forecyorDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dendraiye City Commands
             if mukarrLocations == "dendraiye":
@@ -1542,8 +1690,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "have ice affinities are usually stationed there to protect the towns below. " \
                                        "Sereina Fynae has made her home deep into these mountains, using the dangerous " \
                                        "terrain as a training regimen for her own magic.\n\n"
-                mukarrLocation = input("\033[1m" + "Dendraiye, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Dendraiye, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Petalford City Commands
             if mukarrLocations == "petalford":
@@ -1564,8 +1713,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "doesn't rival the size or outreach of St. Guardia's, the training that it " \
                                        "provides is on par with the school, and many argens who don't get accepted " \
                                        "into St. Guardia's choose to apply here instead.\n\n"
-                mukarrLocation = input("\033[1m" + "Petalford, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
-                                       "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Petalford, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
+                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr: Mythic Location Commands
             # Aurora Grotto Commands
@@ -1592,8 +1742,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                           "actually experiences a higher rate of natural auroras that last longer " \
                                           "than the average. This makes it the ideal location for Xaeyz to train and " \
                                           "relax due to the boost that the auroras give to his Cosmic Wind.\n\n"
-                mukarrLocation = input("\033[1m" + "Mythic Location: Aurora Grotto, Mu'karr\n\n" + "\033[0m" + auroraGrottoStats + \
-                                       auroraGrottoDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Mythic Location: Aurora Grotto, Mu'karr\n\n" + "\033[0m" + auroraGrottoStats +
+                    auroraGrottoDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Sundrop Valley Commands
             if mukarrLocations == "sundrop valley":
@@ -1627,8 +1778,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "quantities, mimicking the properties of a solar storm during times of " \
                                            "intense violence on the sun's surface. This happens to be Mirago's power " \
                                            "event, and makes his Onyx Fire stronger.\n\n"
-                mukarrLocation = input("\033[1m" + "Mythic Location: Sundrop Valley, Mu'karr\n\n" + "\033[0m" + sundropValleyStats +
-                                       sundropValleyDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                mukarrLocation = input(
+                    "\033[1m" + "Mythic Location: Sundrop Valley, Mu'karr\n\n" + "\033[0m" + sundropValleyStats +
+                    sundropValleyDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr Exit Command
             if mukarrLocations == "back":
@@ -1683,8 +1835,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "are mountain homes in the cliffs of nearby mountains. Though visitation is " \
                                      "limited due to the crown's presence, Entrype is still a beautiful village to " \
                                      "live in.\n\n"
-                altariaLocation = input("\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + entrypeStats + entrypeDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + entrypeStats + entrypeDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Soraikai City Commands
             if altariaLocations == "soraikai":
@@ -1708,8 +1861,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "Service (AMS); since mail deliverers have such a high starting point, " \
                                       "they can use wind magic to glide to other towns without using much mana to " \
                                       "gain altitude.\n\n"
-                altariaLocation = input("\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + soraikaiStats + soraikaiDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Entrype, Altaria\n\n" + "\033[0m" + soraikaiStats + soraikaiDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Cerulaine City Commands
             if altariaLocations == "cerulaine":
@@ -1729,8 +1883,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "also popular due to the aquatic surroundings of the city. Because it is so " \
                                        "close to the ocean, it has the ability to host water-based events and " \
                                        "activities, which also adds to the tourist attraction of the city.\n\n"
-                altariaLocation = input("\033[1m" + "Cerulaine, Altaria\n\n" + "\033[0m" + cerulaineStats + cerulaineDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Cerulaine, Altaria\n\n" + "\033[0m" + cerulaineStats + cerulaineDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Luminour City Commands
             if altariaLocations == "luminour":
@@ -1754,8 +1909,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "looking at where the sun is in the sky, they have a bell tower that rings on " \
                                       "the hour. They are also a big research town since the natural light hours are " \
                                       "so constant.\n\n"
-                altariaLocation = input("\033[1m" + "Luminour, Altaria\n\n" + "\033[0m" + luminourStats + luminourDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Luminour, Altaria\n\n" + "\033[0m" + luminourStats + luminourDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Keravine City Commands
             if altariaLocations == "keravine":
@@ -1774,8 +1930,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "the height, the colors, or the unique sap the tree produces. All of these " \
                                       "natural elements liven up the area and make it a popular place for Avats to " \
                                       "live and for people to visit.\n\n"
-                altariaLocation = input("\033[1m" + "Keravine, Altaria\n\n" + "\033[0m" + keravineStats + keravineDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Keravine, Altaria\n\n" + "\033[0m" + keravineStats + keravineDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Thornhaven City Commands
             if altariaLocations == "thornhaven":
@@ -1795,8 +1952,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "as well as a beautiful location for visitors to see. The gardens also help " \
                                         "support Thornhaven by growing fruits and vegetables that the locals are able " \
                                         "to help grow and pick for themselves.\n\n"
-                altariaLocation = input("\033[1m" + "Thornhaven, Altaria\n\n" + "\033[0m" + thornhavenStats + thornhavenDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Thornhaven, Altaria\n\n" + "\033[0m" + thornhavenStats + thornhavenDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Manafield City Commands
             if altariaLocations == "manafield":
@@ -1819,8 +1977,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                        "built on a mountainside. Because of the large size of Manafield, the amount " \
                                        "of land that Altaria's St. Guardia's has is far greater than those of the " \
                                        "other branches.\n\n"
-                altariaLocation = input("\033[1m" + "Manafield, Altaria\n\n" + "\033[0m" + manafieldStats + manafieldDescription +
-                                        "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
+                altariaLocation = input(
+                    "\033[1m" + "Manafield, Altaria\n\n" + "\033[0m" + manafieldStats + manafieldDescription +
+                    "Go back to the other cities of Altaria by pressing 'Enter'.\n").lower().strip()
 
             # Altaria Exit Command
             if altariaLocations == "back":
@@ -1916,8 +2075,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "and a far lower acceptance rate. However, this also leads to high dropout " \
                                         "rates, since many of those applying don't intend to become guardians and " \
                                         "simply want magic or combat training.\n\n"
-                xhiaLocation = input("\033[1m" + "Clorohfyll, Xhia\n\n" + "\033[0m" + clorohfyllStats + clorohfyllDescription +
-                                     "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
+                xhiaLocation = input(
+                    "\033[1m" + "Clorohfyll, Xhia\n\n" + "\033[0m" + clorohfyllStats + clorohfyllDescription +
+                    "Go back to the other cities of Xhia by pressing 'Enter'.\n").lower().strip()
 
             # Mengoro City Commands
             if xhiaLocations == "mengoro":
@@ -1990,7 +2150,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Korfu Island Commands
             if nohlaLocations == "korfu":
                 korfuStats = "Primary Resident Race: Terrian\nPronunciation: CORE-foo\nLocation: Western " \
-                            "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Tropics Grove\n\n"
+                             "Nohla\nVisitor Friendly: Yes\nSub-Locations:\n| Tropics Grove\n\n"
                 korfuDescription = "Korfu is a short island on the western side of Nohla that lies close to sea level. " \
                                    "This means that it is naturally surrounded by beaches, and has a very tropical climate. " \
                                    "The seawater is also very clear near the shores, and many resorts line the beaches " \
@@ -2011,21 +2171,22 @@ while infoBarrier == "" or infoBarrier == "return":
                 hartledgeStats = "Primary Resident Race: Argen\nPronunciation: HEART-ledge\nLocation: " \
                                  "Northern Nohla\nVisitor Friendly: No\nSub-Locations:\n| Hornscale Caves\n| Whispering Forest\n\n"
                 hartledgeDescription = "Hartledge is an island covered in trees similar to Mu'karr, which is why its population " \
-                                   "mainly consists of argens. Most of these argens, however, are archaeologists and " \
-                                   "proficient scholars in history and magic. This is because Hartledge hosts the Hornscale" \
-                                   "Caves, one of the oldest recorded cave systems in Phalmasia. Not much is known about " \
-                                   "the caves, however the walls give off a strange magical signature that is difficult " \
-                                   "to notice, but seems to have been there since its inception thousands of years ago. " \
-                                   "The caves go deep into the heart of the islands, and the researchers believe that " \
-                                   "discovering the secrets of the caves may lead to a deeper understanding of magic as " \
-                                   "a whole.\n\nDue to the caves being actively under research, the island isn't open " \
-                                   "for visitation. However, the Whispering Forest can be seen from other nearby islands " \
-                                   "of Nohla, as their pink leaves and silver trunks are very vibrant. The island is high " \
-                                   "enough that there is a breeze constantly flowing throughout the forest, and the trunks " \
-                                   "of these hardened sakura trees whistle in the wind, which is why the forest has been " \
-                                   "dubbed the 'Whispering Forest'.\n\n"
-                nohlaLocation = input("\033[1m" + "Hartledge, Nohla\n\n" + "\033[0m" + hartledgeStats + hartledgeDescription +
-                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                                       "mainly consists of argens. Most of these argens, however, are archaeologists and " \
+                                       "proficient scholars in history and magic. This is because Hartledge hosts the Hornscale" \
+                                       "Caves, one of the oldest recorded cave systems in Phalmasia. Not much is known about " \
+                                       "the caves, however the walls give off a strange magical signature that is difficult " \
+                                       "to notice, but seems to have been there since its inception thousands of years ago. " \
+                                       "The caves go deep into the heart of the islands, and the researchers believe that " \
+                                       "discovering the secrets of the caves may lead to a deeper understanding of magic as " \
+                                       "a whole.\n\nDue to the caves being actively under research, the island isn't open " \
+                                       "for visitation. However, the Whispering Forest can be seen from other nearby islands " \
+                                       "of Nohla, as their pink leaves and silver trunks are very vibrant. The island is high " \
+                                       "enough that there is a breeze constantly flowing throughout the forest, and the trunks " \
+                                       "of these hardened sakura trees whistle in the wind, which is why the forest has been " \
+                                       "dubbed the 'Whispering Forest'.\n\n"
+                nohlaLocation = input(
+                    "\033[1m" + "Hartledge, Nohla\n\n" + "\033[0m" + hartledgeStats + hartledgeDescription +
+                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Eklyptil Island Commands
             if nohlaLocations == "eklyptil":
@@ -2061,13 +2222,14 @@ while infoBarrier == "" or infoBarrier == "return":
                                     "Starrgem River to Solaro, and a dirt path also spans across the inner curve of the " \
                                     "moon to sea level. It is much longer than the one in Solaro, however, due to Lunaro " \
                                     "being closer to 550 feet above sea level.\n\n"
-                nohlaLocation = input("\033[1m" + "Eklyptil, Nohla\n\n" + "\033[0m" + eklyptilStats + eklyptilDescription +
-                                      solaroDescription + lunaroDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                nohlaLocation = input(
+                    "\033[1m" + "Eklyptil, Nohla\n\n" + "\033[0m" + eklyptilStats + eklyptilDescription +
+                    solaroDescription + lunaroDescription + "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Dullus Island Commands
             if nohlaLocations == "dullus":
                 dullusStats = "Primary Resident Race: Majuu\nPronunciation: DULL-loos\nLocation: " \
-                                 "Southwestern Nohla\nVisitor Friendly: Yes\n\n"
+                              "Southwestern Nohla\nVisitor Friendly: Yes\n\n"
                 dullusDescription = "Dullus is a small island separated from the rest of Nohla. Though it is still part " \
                                     "of the continent, the island isn't part of the group of islands that make up the " \
                                     "rest of Nohla. The populace is mostly made up of majuu who have been thrown from " \
@@ -2085,13 +2247,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                     "nature, up to the point where if they all left, then the island would easily be reclaimed " \
                                     "by nature.\n\n"
                 nohlaLocation = input("\033[1m" + "Dullus, Nohla\n\n" + "\033[0m" + dullusStats + dullusDescription +
-                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Cingrigh Island Commands
             if nohlaLocations == "cingrigh":
                 cingrighStats = "Primary Resident Race: Majuu\nPronunciation: CIN-gree\nLocation: " \
-                              "Northeastern Nohla\nVisitor Friendly: Yes\n\nTown Trade:\n| Weapons\n| Armor\n" \
-                              "Sub-Locations:\n| Magmatic Cavern\n  * Hellheat Forge\n\n"
+                                "Northeastern Nohla\nVisitor Friendly: Yes\n\nTown Trade:\n| Weapons\n| Armor\n" \
+                                "Sub-Locations:\n| Magmatic Cavern\n  * Hellheat Forge\n\n"
                 cingrighDescription = "Cingrigh is a mountainous island with a deep magmatic cavern in the center. " \
                                       "This, in addition to Nohla's tropical location, causes the climate to be " \
                                       "extremely hot nearly all the time. Majuu who originate from warmer climates " \
@@ -2108,13 +2270,14 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "with fire affinities because of the insane temperatures within the forge. Only the " \
                                       "best blacksmiths may use it to prevent any fatal accidents, which serves to increase " \
                                       "the average quality of anything leaving the forge as well.\n\n"
-                nohlaLocation = input("\033[1m" + "Cingrigh, Nohla\n\n" + "\033[0m" + cingrighStats + cingrighDescription +
+                nohlaLocation = input(
+                    "\033[1m" + "Cingrigh, Nohla\n\n" + "\033[0m" + cingrighStats + cingrighDescription +
                     "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Talen Island Commands
             if nohlaLocations == "talen":
-                talenStats = "Primary Resident Race: Majuu\nPronunciation: TAL-en\nLocation: " \
-                                "Eastern Nohla\nVisitor Friendly: Yes\n\nSub-Locations:\n| Eagle's Beach\n| Skyward " \
+                talenStats = "Primary Resident Race: Avats\nPronunciation: TAL-en\nLocation: " \
+                             "Eastern Nohla\nVisitor Friendly: Yes\n\nSub-Locations:\n| Eagle's Beach\n| Skyward " \
                              "Tower\n\n"
                 talenDescription = "Talen is a flat island that somewhat resembles the talon of an eagle. The island rests " \
                                    "at sea level, and constantly has a cool sea breeze blowing across its landscape. " \
@@ -2128,12 +2291,12 @@ while infoBarrier == "" or infoBarrier == "return":
                                    "attract many tourists to Talen to spend time at the beautiful beaches and admire the " \
                                    "continent from above.\n\n"
                 nohlaLocation = input("\033[1m" + "Talen, Nohla\n\n" + "\033[0m" + talenStats + talenDescription +
-                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Talen Island Commands
             if nohlaLocations == "skyhaven":
                 skyhavenStats = "Primary Resident Race: Human\nPronunciation: SKY-hay-ven\nLocation: " \
-                             "Southeastern Nohla\nVisitor Friendly: Yes\n\n"
+                                "Southeastern Nohla\nVisitor Friendly: Yes\n\n"
                 skyhavenDescription = "Skyhaven is the highest island in Nohla, but despite this, mostly humans made " \
                                       "their homes here. Despite not having magic and thereby not having any natural " \
                                       "resistances to the cold weather, they have made do by building heavily insulated " \
@@ -2145,8 +2308,9 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "Being so close to the stars makes for a beautiful view of the night sky, and " \
                                       "visitors commonly gather on the undeveloped edge of the island where light " \
                                       "pollution is lowest to view space.\n\n"
-                nohlaLocation = input("\033[1m" + "Skyhaven, Nohla\n\n" + "\033[0m" + skyhavenStats + skyhavenDescription +
-                                      "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
+                nohlaLocation = input(
+                    "\033[1m" + "Skyhaven, Nohla\n\n" + "\033[0m" + skyhavenStats + skyhavenDescription +
+                    "Go back to the other islands of Nohla by pressing 'Enter'.\n").lower().strip()
 
             # Nohla Exit Command
             if nohlaLocations == "back":
@@ -2202,7 +2366,8 @@ while infoBarrier == "" or infoBarrier == "return":
                              "boosts their jump height.\n| Combustion Spells: A ranged application of fire magic that " \
                              "allows the user to concentrate their mana at a distance and cause an explosion."
                 fireUsers = "Notable Users:\n| Mirago Fynae\n| Kimiko Quintai\n| Kinto Vareli\n| Sereina Fynae"
-                fireMagic = input("\033[1m" + "Fire, the Element of Ambition" + "\033[0m\nSigil Color Representation: Red\n" + fireExplanation + "\n\n" + fireSpells + "\n\n" + fireUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                fireMagic = input(
+                    "\033[1m" + "Fire, the Element of Ambition" + "\033[0m\nSigil Color Representation: Red\n" + fireExplanation + "\n\n" + fireSpells + "\n\n" + fireUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Water Magic Commands
             if elementalBarrier == "water":
@@ -2222,7 +2387,8 @@ while infoBarrier == "" or infoBarrier == "return":
                               "the other magics, and aren't around it at all times, either. This spell allows them to " \
                               "take water from the air and plants in the surroundings to use."
                 waterUsers = "Notable Users:\n| Mimi Seiran\n| Amiru Soaren"
-                waterMagic = input("\033[1m" + "Water, the Element of Flow" + "\033[0m\nSigil Color Representation: Blue\n" + waterExplanation + "\n\n" + waterSpells + "\n\n" + waterUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                waterMagic = input(
+                    "\033[1m" + "Water, the Element of Flow" + "\033[0m\nSigil Color Representation: Blue\n" + waterExplanation + "\n\n" + waterSpells + "\n\n" + waterUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Lightning Magic Commands
             if elementalBarrier == "lightning":
@@ -2239,7 +2405,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                   "Spells: The caster releases a quick bolt from their hands, dealing damage and " \
                                   "possibly stunning the target."
                 lightningUsers = "Notable Users:\n| Cidelli Reimora\n| Ryner Khabunago"
-                lightningMagic = input("\033[1m" + "Lightning, the Element of Precision" + "\033[0m\nSigil Color Representation: Yellow\n" + lightningExplanation + "\n\n" + lightningSpells + "\n\n" + lightningUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                lightningMagic = input(
+                    "\033[1m" + "Lightning, the Element of Precision" + "\033[0m\nSigil Color Representation: Yellow\n" + lightningExplanation + "\n\n" + lightningSpells + "\n\n" + lightningUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Wind Magic Commands
             if elementalBarrier == "wind":
@@ -2261,7 +2428,8 @@ while infoBarrier == "" or infoBarrier == "return":
                              "sword-like extension. The size, speed, and cutting power of these blasts are dependent " \
                              "on the strength of the caster."
                 windUsers = "Notable Users:\n| Xaeyz Kai\n| Yggdrasil Aensyll\n| Yumeizu Artilux"
-                windMagic = input("\033[1m" + "Wind, the Element of Free Paths" + "\033[0m\nSigil Color Representation: Teal\n" + windExplanation + "\n\n" + windSpells + "\n\n" + windUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                windMagic = input(
+                    "\033[1m" + "Wind, the Element of Free Paths" + "\033[0m\nSigil Color Representation: Teal\n" + windExplanation + "\n\n" + windSpells + "\n\n" + windUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Ice Magic Commands
             if elementalBarrier == "ice":
@@ -2282,7 +2450,8 @@ while infoBarrier == "" or infoBarrier == "return":
                             "they deal a lot of piercing damage. The speed, durability, and size of these projectiles " \
                             "scale with the user's strength."
                 iceUsers = "Notable Users:\n| Aeiyou Drefael"
-                iceMagic = input("\033[1m" + "Ice, the Element of Resistance" + "\033[0m\nSigil Color Representation: Light Blue\n" + iceExplanation + "\n\n" + iceSpells + "\n\n" + iceUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                iceMagic = input(
+                    "\033[1m" + "Ice, the Element of Resistance" + "\033[0m\nSigil Color Representation: Light Blue\n" + iceExplanation + "\n\n" + iceSpells + "\n\n" + iceUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Earth Magic Commands
             if elementalBarrier == "earth":
@@ -2306,7 +2475,8 @@ while infoBarrier == "" or infoBarrier == "return":
                               "strong casters can sink opponents down to their shoulders. It is impossible to use " \
                               "this spell to sink someone completely."
                 earthUsers = "Notable Users:\n| Aeiyou Drefael\n| Kinto Vareli\n| Turcobé Sentai"
-                earthMagic = input("\033[1m" + "Earth, the Element of Nature" + "\033[0m\nSigil Color Representation: Brown\n" + earthExplanation + "\n\n" + earthSpells + "\n\n" + earthUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                earthMagic = input(
+                    "\033[1m" + "Earth, the Element of Nature" + "\033[0m\nSigil Color Representation: Brown\n" + earthExplanation + "\n\n" + earthSpells + "\n\n" + earthUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Elemental Magic Exit Command
             if elementalBarrier == "back":
@@ -2351,7 +2521,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                "strangle themselves, cutting off the target's flow of mana and preventing them from " \
                                "casting spells for a short time."
                 shadowUsers = "Notable Users:\n| Ryner Khabunago"
-                shadowMagic = input("\033[1m" + "Shadow, the Element of Reflection" + "\033[0m\nSigil Color Representation: Black\n" + shadowExplanation + "\n\n" + shadowSpells + "\n\n" + shadowUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                shadowMagic = input(
+                    "\033[1m" + "Shadow, the Element of Reflection" + "\033[0m\nSigil Color Representation: Black\n" + shadowExplanation + "\n\n" + shadowSpells + "\n\n" + shadowUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Nature Magic Commands
             if lostBarrier == "nature":
@@ -2373,7 +2544,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                "their properties, allowing them to emit spores with effects of the caster's choice. " \
                                "The larger the plant, the larger the mana cost."
                 natureUsers = "Notable Users: None"
-                natureMagic = input("\033[1m" + "Nature, the Element of Harvest" + "\033[0m\nSigil Color Representation: Dark Green\n" + natureExplanation + "\n\n" + natureSpells + "\n\n" + natureUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                natureMagic = input(
+                    "\033[1m" + "Nature, the Element of Harvest" + "\033[0m\nSigil Color Representation: Dark Green\n" + natureExplanation + "\n\n" + natureSpells + "\n\n" + natureUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Life Magic Commands
             if lostBarrier == "life":
@@ -2395,7 +2567,8 @@ while infoBarrier == "" or infoBarrier == "return":
                              "spell through the opposite arm. This, however, takes mana, and the caster must expend " \
                              "mana equal to the amount of mana used to cast the original spell."
                 lifeUsers = "Notable Users:\n| Mirago Fynae"
-                lifeMagic = input("\033[1m" + "Life, the Element of Sacrifice" + "\033[0m\nSigil Color Representation: Green\n" + lifeExplanation + "\n\n" + lifeSpells + "\n\n" + lifeUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                lifeMagic = input(
+                    "\033[1m" + "Life, the Element of Sacrifice" + "\033[0m\nSigil Color Representation: Green\n" + lifeExplanation + "\n\n" + lifeSpells + "\n\n" + lifeUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Gravity Magic Commands
             if lostBarrier == "gravity":
@@ -2422,7 +2595,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                 "damage and sends the target flying backward. This can also be used to create " \
                                 "shockwaves when striking the air."
                 gravityUsers = "Notable Users:\n| Xaeyz Kai\n| Sereina Fynae"
-                gravityMagic = input("\033[1m" + "Gravity, the Element of Control" + "\033[0m\nSigil Color Representation: Gray\n" + gravityExplanation + "\n\n" + gravitySpells + "\n\n" + gravityUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                gravityMagic = input(
+                    "\033[1m" + "Gravity, the Element of Control" + "\033[0m\nSigil Color Representation: Gray\n" + gravityExplanation + "\n\n" + gravitySpells + "\n\n" + gravityUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Lost Magic Exit Command
             if lostBarrier == "back":
@@ -2446,75 +2620,77 @@ while infoBarrier == "" or infoBarrier == "return":
             # About Sigils Commands
             if sigilBarrier == "about sigils" or sigilBarrier == "sigils":
                 sigilExplanation = "\033[1m" + "About Sigils" + "\033[0m\n\nSigils are unique magic mechanics that are only available to " \
-                                   "those with two magics. Once a user masters both elements, a symbol shaped of " \
-                                   "either a circle, triangle, square, or diamond will manifest itself on the back, " \
-                                   "neck, chest, or stomach of the user. This sigil begins passively storing the " \
-                                   "user's mana, increasing the maximum amount the user can hold at once. It can hold " \
-                                   "up to 30% of the maximum mana capacity of the user.\n\nThough the user can use " \
-                                   "this stored mana normally, when full, the user can tap into the power of the " \
-                                   "sigil, spreading the power across their body. This is shown by streams of mana " \
-                                   "extending over their limbs. This floods the body with the previously stored mana, " \
-                                   "increasing the damage of spells casted. However, this boost lasts proportionally " \
-                                   "long to the amount of mana stored, meaning those with higher base mana capacities " \
-                                   "can use sigil boosts for longer periods of time.\n\nIf the user has a *mythical " \
-                                   "element*, however, this time limit is doubled, as it drains from both the user " \
-                                   "and their *mythical* spirit, though it doesn't increase the power of *mythical " \
-                                   "elements* any. Though *mythical elements* do not get boosted by sigils, " \
-                                   "they do force them to function differently. Those with sectional sigils and " \
-                                   "mythical elements can use each section of the sigil as if it was a full one. That " \
-                                   "is to say, if you have an fire and water sigil, you would have the base 30% mana " \
-                                   "storage capacity, splitting it between the two elements. However, if you had " \
-                                   "fire, water, and onyx fire, you would have each section store 30% mana, " \
-                                   "leading to a 90% total mana storage."
+                                                                "those with two magics. Once a user masters both elements, a symbol shaped of " \
+                                                                "either a circle, triangle, square, or diamond will manifest itself on the back, " \
+                                                                "neck, chest, or stomach of the user. This sigil begins passively storing the " \
+                                                                "user's mana, increasing the maximum amount the user can hold at once. It can hold " \
+                                                                "up to 30% of the maximum mana capacity of the user.\n\nThough the user can use " \
+                                                                "this stored mana normally, when full, the user can tap into the power of the " \
+                                                                "sigil, spreading the power across their body. This is shown by streams of mana " \
+                                                                "extending over their limbs. This floods the body with the previously stored mana, " \
+                                                                "increasing the damage of spells casted. However, this boost lasts proportionally " \
+                                                                "long to the amount of mana stored, meaning those with higher base mana capacities " \
+                                                                "can use sigil boosts for longer periods of time.\n\nIf the user has a *mythical " \
+                                                                "element*, however, this time limit is doubled, as it drains from both the user " \
+                                                                "and their *mythical* spirit, though it doesn't increase the power of *mythical " \
+                                                                "elements* any. Though *mythical elements* do not get boosted by sigils, " \
+                                                                "they do force them to function differently. Those with sectional sigils and " \
+                                                                "mythical elements can use each section of the sigil as if it was a full one. That " \
+                                                                "is to say, if you have an fire and water sigil, you would have the base 30% mana " \
+                                                                "storage capacity, splitting it between the two elements. However, if you had " \
+                                                                "fire, water, and onyx fire, you would have each section store 30% mana, " \
+                                                                "leading to a 90% total mana storage."
                 sigils = input(sigilExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
             # Unity Sigil Commands
             if sigilBarrier == "unity sigils" or sigilBarrier == "unity":
                 unityExplanation = "\033[1m" + "Unity Sigils" + "\033[0m\n\nUnity Sigils are base sigils, and the ones that awaken for all their users. Unity " \
-                                   "sigils blend the colors of the two magics the user controls, then uses that " \
-                                   "swirled color to make up the sigil. Utilizing this sigil, the user can use the " \
-                                   "entirety of the sigil's stored power for one magic, or a balance of the two. For " \
-                                   "instance, the user can use 100% of the stored energy for one of their magics or " \
-                                   "some balance of the stored energy on each of their two magics.\n\nIt gives the " \
-                                   "user added versatility as it acts as an extension of the user's magic pool. When " \
-                                   "activated completely, the streams that surround the user take on the swirled " \
-                                   "color of the sigil. When in this state, you can use both magic types freely and " \
-                                   "get the increased power from the sigil, and the time limit remains the same."
-                unitySigil = input("Unity Sigils\n\n" + unityExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                                                                "sigils blend the colors of the two magics the user controls, then uses that " \
+                                                                "swirled color to make up the sigil. Utilizing this sigil, the user can use the " \
+                                                                "entirety of the sigil's stored power for one magic, or a balance of the two. For " \
+                                                                "instance, the user can use 100% of the stored energy for one of their magics or " \
+                                                                "some balance of the stored energy on each of their two magics.\n\nIt gives the " \
+                                                                "user added versatility as it acts as an extension of the user's magic pool. When " \
+                                                                "activated completely, the streams that surround the user take on the swirled " \
+                                                                "color of the sigil. When in this state, you can use both magic types freely and " \
+                                                                "get the increased power from the sigil, and the time limit remains the same."
+                unitySigil = input(
+                    "Unity Sigils\n\n" + unityExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Sectional Sigil Commands
             if sigilBarrier == "sectional sigils" or sigilBarrier == "sectional":
                 sectionalExplanation = "\033[1m" + "Sectional Sigils" + "\033[0m\n\nSectional Sigils, also known as Evolved Sigils, are attained by extreme mana " \
-                                       "control, and are completely up to the user's decision. A Unity Sigil will not " \
-                                       "evolve itself into a Sectional Sigil unless the user meets the requirements " \
-                                       "and wills the sigil to evolve. Once evolved into a Sectional Sigil, " \
-                                       "a user is completely unable to return to using a Unity Sigil.\n\nTo attain a " \
-                                       "Sectional Sigil, the user must have mastered use of the Unity Sigil, " \
-                                       "and have wielded it for at least one year. Once both of these requirements is " \
-                                       "met, the user must force all of their mana into the sigil. This causes the " \
-                                       "sigil to destabilize and shuts down the user's mana flow for one year, " \
-                                       "leaving the user physically weakened. On the final day, the user regains " \
-                                       "their mana, and in a spiritual battle, must best the sigil's magic, " \
-                                       "which has been charged to hold over four times the user's maximum mana " \
-                                       "capacity, using their own. The user will be unable to activate or utilize " \
-                                       "their sigil in any way, and only one chance to best the sigil is given. If " \
-                                       "the user emerges victorious, the sigil will evolve into a Sectional " \
-                                       "Sigil.\n\nThe power of the Sectional Sigil is relatively similar in function " \
-                                       "to the Unity Sigil. However, instead of the blended color, the sigil sections " \
-                                       "the magic by evenly splitting itself, leaving each half of the sigil to " \
-                                       "reflect one of the user's magics. This means that the user is limited to " \
-                                       "using up to 50% of the sigil's stored energy for each magic.\n\nWhile " \
-                                       "activated completely, the user can choose to activate half of their sigil. " \
-                                       "When this is done, the streams that cover the user's body take on the color " \
-                                       "of the chosen magic. Because the user is only activating half of the sigil, " \
-                                       "the sigil only lasts half as long as it did before. But, because the mana is " \
-                                       "more controlled due to the Sectional Sigil, the sigil gives double the power " \
-                                       "boost it did before. However, this only lasts for the chosen magic, " \
-                                       "meaning that the magic not associated with the activated sigil will get the " \
-                                       "normal power boost. Additionally, if both sides of the Sectional Sigil are " \
-                                       "used simultaneously, then the streams take on either one magic color of " \
-                                       "the two magic colors of the user, and the power boost given is quadrupled for " \
-                                       "both magics."
-                sectionalSigil = input("Sectional Sigils\n\n" + sectionalExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                                                                        "control, and are completely up to the user's decision. A Unity Sigil will not " \
+                                                                        "evolve itself into a Sectional Sigil unless the user meets the requirements " \
+                                                                        "and wills the sigil to evolve. Once evolved into a Sectional Sigil, " \
+                                                                        "a user is completely unable to return to using a Unity Sigil.\n\nTo attain a " \
+                                                                        "Sectional Sigil, the user must have mastered use of the Unity Sigil, " \
+                                                                        "and have wielded it for at least one year. Once both of these requirements is " \
+                                                                        "met, the user must force all of their mana into the sigil. This causes the " \
+                                                                        "sigil to destabilize and shuts down the user's mana flow for one year, " \
+                                                                        "leaving the user physically weakened. On the final day, the user regains " \
+                                                                        "their mana, and in a spiritual battle, must best the sigil's magic, " \
+                                                                        "which has been charged to hold over four times the user's maximum mana " \
+                                                                        "capacity, using their own. The user will be unable to activate or utilize " \
+                                                                        "their sigil in any way, and only one chance to best the sigil is given. If " \
+                                                                        "the user emerges victorious, the sigil will evolve into a Sectional " \
+                                                                        "Sigil.\n\nThe power of the Sectional Sigil is relatively similar in function " \
+                                                                        "to the Unity Sigil. However, instead of the blended color, the sigil sections " \
+                                                                        "the magic by evenly splitting itself, leaving each half of the sigil to " \
+                                                                        "reflect one of the user's magics. This means that the user is limited to " \
+                                                                        "using up to 50% of the sigil's stored energy for each magic.\n\nWhile " \
+                                                                        "activated completely, the user can choose to activate half of their sigil. " \
+                                                                        "When this is done, the streams that cover the user's body take on the color " \
+                                                                        "of the chosen magic. Because the user is only activating half of the sigil, " \
+                                                                        "the sigil only lasts half as long as it did before. But, because the mana is " \
+                                                                        "more controlled due to the Sectional Sigil, the sigil gives double the power " \
+                                                                        "boost it did before. However, this only lasts for the chosen magic, " \
+                                                                        "meaning that the magic not associated with the activated sigil will get the " \
+                                                                        "normal power boost. Additionally, if both sides of the Sectional Sigil are " \
+                                                                        "used simultaneously, then the streams take on either one magic color of " \
+                                                                        "the two magic colors of the user, and the power boost given is quadrupled for " \
+                                                                        "both magics."
+                sectionalSigil = input(
+                    "Sectional Sigils\n\n" + sectionalExplanation + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Sigil Exit Command
             if sigilBarrier == "back":
@@ -2540,9 +2716,9 @@ while infoBarrier == "" or infoBarrier == "return":
             # Dynamic Water Commands
             if mythicBarrier == "dynamic water":
                 mythicWaterStats = "\033[1m" + "Dynamic Water, the Mythical Element of the Sea" + "\033[0m\n\nMythical Spirit Name: " \
-                                   "Lumen\nSigil Color Representation: Dark Blue\nMythical Enhancement: Increased " \
-                                   "Water Pressure & Healing Factor\nMythical Beast: Sea Serpent\nPower Event: King " \
-                                   "Tides"
+                                                                                                  "Lumen\nSigil Color Representation: Dark Blue\nMythical Enhancement: Increased " \
+                                                                                                  "Water Pressure & Healing Factor\nMythical Beast: Sea Serpent\nPower Event: King " \
+                                                                                                  "Tides"
                 mythicWaterDescription = "Dynamic Water is the Mythical Element of the Sea, and Lumen is its spirit. " \
                                          "Lumen is a serene spirit; she rarely does anything to disturb others and " \
                                          "keeps to herself. She spends her time caring for the seas and its life. She " \
@@ -2555,14 +2731,15 @@ while infoBarrier == "" or infoBarrier == "return":
                                          "possible to compress the water far more than ordinary water, which leads to " \
                                          "increased water pressure. This creates a large boost in its destructive " \
                                          "capabilities. Dynamic Water also has bioluminescent properties."
-                mythicWater = input(mythicWaterStats + "\n\n" + mythicWaterDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                mythicWater = input(
+                    mythicWaterStats + "\n\n" + mythicWaterDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Zenith Earth Commands
             if mythicBarrier == "zenith earth":
                 zenithEarthStats = "\033[1m" + "Zenith Earth, the Mythical Element of the Terrain" + "\033[0m\n\nMythical Spirit Name: " \
-                                   "Chrono\nSigil Color Representation: Dark Gray\nMythical Enhancement: Increased " \
-                                   "Earthen Nutrients & Lava Manipulation\nMythical Beast: Golem\nPower Event: " \
-                                   "Volcanic Eruptions"
+                                                                                                     "Chrono\nSigil Color Representation: Dark Gray\nMythical Enhancement: Increased " \
+                                                                                                     "Earthen Nutrients & Lava Manipulation\nMythical Beast: Golem\nPower Event: " \
+                                                                                                     "Volcanic Eruptions"
                 zenithEarthDescription = "Zenith Earth is the Mythical Element of the Terrain, and Chrono is its " \
                                          "spirit. Chrono is an extremely determined and trustworthy spirit. He always " \
                                          "sticks up for those he cares about, as well as for the health of the " \
@@ -2577,14 +2754,15 @@ while infoBarrier == "" or infoBarrier == "return":
                                          "he uses, changing it into lava. He can then use this transmuted lava as if " \
                                          "it was earth and attack his target with it, making his attacks extremely " \
                                          "volatile."
-                zenithEarth = input(zenithEarthStats + "\n\n" + zenithEarthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                zenithEarth = input(
+                    zenithEarthStats + "\n\n" + zenithEarthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Cosmic Wind Commands
             if mythicBarrier == "cosmic wind":
                 cosmicWindStats = "\033[1m" + "Cosmic Wind, the Mythical Element of the Stars" + "\033[0m\n\nMythical Spirit Name: " \
-                                  "Aeon\nSigil Color Representation: Purple\nMythical Enhancement: Stardust " \
-                                  "Manipulation & Vacuum Override\nMythical Beast: Phoenix\nPower Event: Aurora " \
-                                  "Borealis"
+                                                                                                 "Aeon\nSigil Color Representation: Purple\nMythical Enhancement: Stardust " \
+                                                                                                 "Manipulation & Vacuum Override\nMythical Beast: Phoenix\nPower Event: Aurora " \
+                                                                                                 "Borealis"
                 cosmicWindDescription = "Cosmic Wind is the Mythical Element of the Stars, and Aeon is its spirit. " \
                                         "Aeon is a free soul and lives on trying to keep everyone around him safe " \
                                         "while being as free as possible. He does as he pleases most of the time, " \
@@ -2599,13 +2777,14 @@ while infoBarrier == "" or infoBarrier == "return":
                                         "being used within a vacuum, or a place with no air, like space. This also " \
                                         "gives it the capability of producing artificial auroras by shooting large " \
                                         "quantities of magic into the atmosphere."
-                cosmicWind = input(cosmicWindStats + "\n\n" + cosmicWindDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                cosmicWind = input(
+                    cosmicWindStats + "\n\n" + cosmicWindDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Onyx Fire Commands
             if mythicBarrier == "Onyx Fire" or mythicBarrier == "Onyx fire" or mythicBarrier == "onyx Fire" or mythicBarrier == "onyx fire":
                 onyxFireStats = "\033[1m" + "Onyx Fire, the Mythical Element of the Sun" + "\033[0m\n\nMythical Spirit Name: Arc\nSigil Color " \
-                                "Representation: Pure Black\nMythical Enhancement: Heat Amplification & Eternal " \
-                                "Flames\nMythical Beast: Dragon\nPower Event: Solar Storms"
+                                                                                           "Representation: Pure Black\nMythical Enhancement: Heat Amplification & Eternal " \
+                                                                                           "Flames\nMythical Beast: Dragon\nPower Event: Solar Storms"
                 onyxFireDescription = "Onyx Fire is the Mythical Element of the Sun, and Arc is its spirit.  Arc is " \
                                       "an ambitious and dedicated soul who tries to keep to those he trusts close and " \
                                       "always strives to become stronger with his friends. He is consistently aiming " \
@@ -2619,14 +2798,15 @@ while infoBarrier == "" or infoBarrier == "return":
                                       "physical interactions, like water or other fire extinguishers. It also has the " \
                                       "innate property to burn at a higher temperature than other flames, as well as " \
                                       "perfectly control flame temperature even on flames that have already been cast."
-                onyxFire = input(onyxFireStats + "\n\n" + onyxFireDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                onyxFire = input(
+                    onyxFireStats + "\n\n" + onyxFireDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Electron Lightning Commands
             if mythicBarrier == "electron lightning":
                 electronLightningStats = "\033[1m" + "Electron Lightning, the Mythical Element of the Skies" + "\033[0m\n\nMythical Spirit " \
-                                         "Name: Nova\nSigil Color Representation: Dark Red\nMythical Enhancement: " \
-                                         "Electron Destabilization & Silent Thunder\nMythical Beast: Raijū\nPower " \
-                                         "Event: Supercell Thunderstorms"
+                                                                                                               "Name: Nova\nSigil Color Representation: Dark Red\nMythical Enhancement: " \
+                                                                                                               "Electron Destabilization & Silent Thunder\nMythical Beast: Raijū\nPower " \
+                                                                                                               "Event: Supercell Thunderstorms"
                 electronLightningDescription = "Electron Lightning is the Mythical Element of the Skies, and Nova is " \
                                                "its spirit. Nova is an rational and precise soul. He thinks about how " \
                                                "his actions affect everyone and everything around him, and that makes " \
@@ -2645,13 +2825,14 @@ while infoBarrier == "" or infoBarrier == "return":
                                                "unbreathable air around the impact area. As a result of not " \
                                                "compressing but burning the air, the lightning does not create a " \
                                                "thunder sound, causing silent attacks until the moment of impact."
-                electronLightning = input(electronLightningStats + "\n\n" + electronLightningDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                electronLightning = input(
+                    electronLightningStats + "\n\n" + electronLightningDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Permafrost Ice Commands
             if mythicBarrier == "permafrost ice":
                 permafrostIceStats = "\033[1m" + "Permafrost Ice, the Mythical Element of the Moon" + "\033[0m\n\nMythical Spirit Name: " \
-                                     "Cryo\nSigil Color Representation: Light Purple\nMythical Enhancement: Dry Ice & " \
-                                     "Contact Freeze\nMythical Beast: Kitsune\nPower Event: Whiteouts"
+                                                                                                      "Cryo\nSigil Color Representation: Light Purple\nMythical Enhancement: Dry Ice & " \
+                                                                                                      "Contact Freeze\nMythical Beast: Kitsune\nPower Event: Whiteouts"
                 permafrostIceDescription = "Permafrost Ice is the Mythical Element of the Moon, and Cryo is its " \
                                            "spirit. Cryo is a closeted soul, choosing to keep to herself for the most " \
                                            "part. She is also extremely organized and likes to keep her surroundings " \
@@ -2666,12 +2847,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "contact freeze. This means that if any amount of Permafrost Ice comes " \
                                            "into contact with water, it freezes it starting from the point of contact " \
                                            "of the Permafrost Ice."
-                permafrostIce = input(permafrostIceStats + "\n\n" + permafrostIceDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                permafrostIce = input(
+                    permafrostIceStats + "\n\n" + permafrostIceDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Beasts Commands
             if mythicBarrier == "mythical beasts":
                 mythicalBeastStats = "\033[1m" + "Mythical Beast Manifestation" + "\033[0m\n\tMythical Tier Spell\n\n| Spell Style: " \
-                                     "Mode/Utility\n| Mastery: Extreme"
+                                                                                  "Mode/Utility\n| Mastery: Extreme"
                 mythicalBeastDescription = "A unique type of magic manipulation only capable by mythical element users. " \
                                            "The process of doing this is something that only the mythical elemental " \
                                            "know, and the casting of which something only their users can handle due " \
@@ -2686,12 +2868,13 @@ while infoBarrier == "" or infoBarrier == "return":
                                            "own mana and controlling them from within with their hybrid form. Both forms " \
                                            "increase magic utility and damage to an incredible degree, making it an " \
                                            "extremely useful part of any mythical elemental user's arsenal."
-                mythicalBeast = input(mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                mythicalBeast = input(
+                    mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Rebirth Commands
             if mythicBarrier == "rebirth":
                 rebirthStats = "\033[1m" + "Rebirth" + "\033[0m\n\tMythical Tier Spell\n\n| Spell Style: Conditional/Medicinal\n| " \
-                               "Mastery: Impossible"
+                                                       "Mastery: Impossible"
                 rebirthDescription = "Rebirth is an extremely powerful spell that no one but the mythical elementals " \
                                      "themselves can cast. Being a conditional spell, there are several requirements " \
                                      "that must be met before activation. The mythical elemental must be bonded to " \
@@ -2717,7 +2900,8 @@ while infoBarrier == "" or infoBarrier == "return":
                                      "could before. Because of the body's new reliance on mana, the user is also " \
                                      "extremely vulnerable to shadow attacks, as temporarily shutting off their mana " \
                                      "results in the user entering a severely weakened state similar to death."
-                rebirth = input(rebirthStats + "\n\n" + rebirthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                rebirth = input(
+                    rebirthStats + "\n\n" + rebirthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Elements Exit Command
             if mythicBarrier == "back":
@@ -2752,59 +2936,63 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Terrian Commands
         if raceBarrier == "terrians" or raceBarrier == "terrian":
-            terrianRace = input("\033[1m" + "Terrians" + "\033[0m\n\nRace Ability: Increased stamina. \n\nCommon Magic Affinities: Fire, Water, "
-                                "Earth, Lightning, Wind, "
-                                "Ice\nNative Continent: Halgeis\n\nA peaceful race that highly populates the Halgeis "
-                                "Region. Many terrians work as farmers, and have a long standing relationship with "
-                                "other races. They can be found living almost everywhere and can easily adapt to new "
-                                "environments. They originally built the city of Grand Elise as a way to bring all "
-                                "races together to live in harmony and peace, and established the Divina Royal Family "
-                                "that ruled for many generations.\n\nIt is said that the terrians evolved from their "
-                                "domesticated ancestors during the old age of the world's birth, taking on forms to "
-                                "better serve the one place they call home. Terrians are very diverse and come in all "
-                                "shapes and sizes.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            terrianRace = input(
+                "\033[1m" + "Terrians" + "\033[0m\n\nRace Ability: Increased stamina. \n\nCommon Magic Affinities: Fire, Water, "
+                                         "Earth, Lightning, Wind, "
+                                         "Ice\nNative Continent: Halgeis\n\nA peaceful race that highly populates the Halgeis "
+                                         "Region. Many terrians work as farmers, and have a long standing relationship with "
+                                         "other races. They can be found living almost everywhere and can easily adapt to new "
+                                         "environments. They originally built the city of Grand Elise as a way to bring all "
+                                         "races together to live in harmony and peace, and established the Divina Royal Family "
+                                         "that ruled for many generations.\n\nIt is said that the terrians evolved from their "
+                                         "domesticated ancestors during the old age of the world's birth, taking on forms to "
+                                         "better serve the one place they call home. Terrians are very diverse and come in all "
+                                         "shapes and sizes.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Argen Commands
         if raceBarrier == "argens" or raceBarrier == "argen":
-            argenRace = input("\033[1m" + "Argens" + "\033[0m\n\nRace Ability: Magic Proficiency & Scales slightly resist "
-                                                     "Magic-Based Attacks\n\nCommon Magic "
-                              "Affinities: Fire, Lightning, Earth\nNative Continent: Mu'karr\n\nA highly intelligent "
-                              "and curious race, argens populate the mountainous, forest-covered region of Mu'karr. "
-                              "Very in tune with nature and mana, they are people who have a strong thirst for "
-                              "knowledge, many becoming researchers or professors in school. Their lifestyle is "
-                              "simple and homely, many preferring to stay in Mu'karr as the climate fits perfectly "
-                              "for their preferred environment high in the mountains.\n\nArgens were the first of the "
-                              "new races to appear after terrians, when humans discovered and explored Mu'karr. They "
-                              "come in a variety of colors and patterns. They are also the only race capable of "
-                              "having an affinity for gravity magic.\n\nPress 'Enter' to return to race "
-                              "selection.\n").lower().strip()
+            argenRace = input(
+                "\033[1m" + "Argens" + "\033[0m\n\nRace Ability: Magic Proficiency & Scales slightly resist "
+                                       "Magic-Based Attacks\n\nCommon Magic "
+                                       "Affinities: Fire, Lightning, Earth\nNative Continent: Mu'karr\n\nA highly intelligent "
+                                       "and curious race, argens populate the mountainous, forest-covered region of Mu'karr. "
+                                       "Very in tune with nature and mana, they are people who have a strong thirst for "
+                                       "knowledge, many becoming researchers or professors in school. Their lifestyle is "
+                                       "simple and homely, many preferring to stay in Mu'karr as the climate fits perfectly "
+                                       "for their preferred environment high in the mountains.\n\nArgens were the first of the "
+                                       "new races to appear after terrians, when humans discovered and explored Mu'karr. They "
+                                       "come in a variety of colors and patterns. They are also the only race capable of "
+                                       "having an affinity for gravity magic.\n\nPress 'Enter' to return to race "
+                                       "selection.\n").lower().strip()
 
         # Avat Commands
         if raceBarrier == "avats" or raceBarrier == "avat":
-            avatRace = input("\033[1m" + "Avats" + "\033[0m\n\nRace Ability: Magic Proficiency & Increased speed\n\nCommon Magic Affinities: "
-                             "Wind, Lightning, Ice, Water\nNative Continent: Altaria\n\nAnother intelligent race, "
-                             "avats are theorists, and have just as much as a thirst for knowledge as argens do. They "
-                             "are highly respected philosophers. Along with other researchers, avats study the "
-                             "mysterious history of the world and the development and knowledge behind how magic is "
-                             "used, taking a careful look into each element. They've written many books on the "
-                             "subject, and are highly skilled in the use of magic due to their extensive "
-                             "knowledge.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            avatRace = input(
+                "\033[1m" + "Avats" + "\033[0m\n\nRace Ability: Magic Proficiency & Increased speed\n\nCommon Magic Affinities: "
+                                      "Wind, Lightning, Ice, Water\nNative Continent: Altaria\n\nAnother intelligent race, "
+                                      "avats are theorists, and have just as much as a thirst for knowledge as argens do. They "
+                                      "are highly respected philosophers. Along with other researchers, avats study the "
+                                      "mysterious history of the world and the development and knowledge behind how magic is "
+                                      "used, taking a careful look into each element. They've written many books on the "
+                                      "subject, and are highly skilled in the use of magic due to their extensive "
+                                      "knowledge.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Majuu Commands
         if raceBarrier == "majuu":
-            majuuRace = input("\033[1m" + "Majuu" + "\033[0m\n\nRace Ability: Increased resistance to physical attacks\n\nCommon Magic "
-                              "Affinities: Earth, Fire\nNative Continent: Xhia\n\nA race of large goat/bull like "
-                              "beasts that grow to a maximum of 9 to 10 feet tall, and originate from Xhia. Because "
-                              "of the Arduos War, the majuu people were divided amongst themselves, some living in a "
-                              "higher society away from the others who live on the outskirts. The war they started "
-                              "ran they friendly and kind reputation into the ground. Though most majuu are gentle "
-                              "giants, some are hostile due to their trust issues. Some even move to Halgeis in hopes "
-                              "of giving a better life for their families, though the prejudice proves to make that "
-                              "difficult.\n\nThe color of a majuu's fur is dependent on their climate. Bright colored "
-                              "majuu are from warmer areas, while darker colored majuu are from colder areas. They "
-                              "are also known to be very skilled blacksmiths, and have created many fearsome weapons "
-                              "and tools in the past. Majuu are the longest living species on Phalmasia, averaging a "
-                              "lifespan of 200 years.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            majuuRace = input(
+                "\033[1m" + "Majuu" + "\033[0m\n\nRace Ability: Increased resistance to physical attacks\n\nCommon Magic "
+                                      "Affinities: Earth, Fire\nNative Continent: Xhia\n\nA race of large goat/bull like "
+                                      "beasts that grow to a maximum of 9 to 10 feet tall, and originate from Xhia. Because "
+                                      "of the Arduos War, the majuu people were divided amongst themselves, some living in a "
+                                      "higher society away from the others who live on the outskirts. The war they started "
+                                      "ran they friendly and kind reputation into the ground. Though most majuu are gentle "
+                                      "giants, some are hostile due to their trust issues. Some even move to Halgeis in hopes "
+                                      "of giving a better life for their families, though the prejudice proves to make that "
+                                      "difficult.\n\nThe color of a majuu's fur is dependent on their climate. Bright colored "
+                                      "majuu are from warmer areas, while darker colored majuu are from colder areas. They "
+                                      "are also known to be very skilled blacksmiths, and have created many fearsome weapons "
+                                      "and tools in the past. Majuu are the longest living species on Phalmasia, averaging a "
+                                      "lifespan of 200 years.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Races Exit Command
         if raceBarrier == "back":
@@ -2840,11 +3028,11 @@ while infoBarrier == "" or infoBarrier == "return":
         # Before Divine's Gift
         if historyBarrier == "before divine's gift" or historyBarrier == "bdg" or historyBarrier == "before divines gift":
             bdgHistory1 = "\033[1m" + "Before Divine's Gift" + "\033[0m\n| 4557 BDG - 0 BDG\n\nWhen the terrians, argens, avats, and majuu " \
-                          "first emerged on Phalmasia over 4500 years ago, the earth was barren and tough. With no " \
-                          "way to sculpt their terrain, the population found it difficult to survive. Shelters were " \
-                          "constructed with much difficulty, but most could not withstand the strength of the " \
-                          "weather. The races split themselves among the four main sections of land on the planet " \
-                          "where they could live most comfortably.\n\n"
+                                                               "first emerged on Phalmasia over 4500 years ago, the earth was barren and tough. With no " \
+                                                               "way to sculpt their terrain, the population found it difficult to survive. Shelters were " \
+                                                               "constructed with much difficulty, but most could not withstand the strength of the " \
+                                                               "weather. The races split themselves among the four main sections of land on the planet " \
+                                                               "where they could live most comfortably.\n\n"
             bdgHistory2 = "Argens chose the natural forests and mountains of the east, naming it Mu'karr. The avats " \
                           "took the high cliffs of the island away from the mainland seeking peace and serenity. They " \
                           "called it Altaria, a powerful spirit of the sky and clouds. The majuu took the smaller " \
@@ -2865,16 +3053,17 @@ while infoBarrier == "" or infoBarrier == "return":
                           "the avats had built there. By 1 BDG, they had nothing of their developments. They had " \
                           "prospered for centuries, and soon every race was back to how they were eons ago. They were " \
                           "forced to start over.\n\n"
-            bdgHistory = input(bdgHistory1 + bdgHistory2 + bdgHistory3 + bdgHistory4 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            bdgHistory = input(
+                bdgHistory1 + bdgHistory2 + bdgHistory3 + bdgHistory4 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # Post Divine's Gift
         if historyBarrier == "post divine's gift" or historyBarrier == "pdg" or historyBarrier == "post divines gift" or bdgHistory == "next":
             pdgHistory1 = "\033[1m" + "Post Divine's Gift" + "\033[0m\n| 0 BDG - Present\n\nGhurrado the All-Giver, the one who gave life and " \
-                          "being to Phalmasia and those who inhabit it, saw this and went to his children, " \
-                          "the other gods of the land, and asked them to lend their help to those below, " \
-                          "for they have suffered enough and need a way to lead a permanent life. So they did, " \
-                          "and they offered their gifts to the people of Phalmasia to assist them in building their " \
-                          "lives once again.\n\n"
+                                                             "being to Phalmasia and those who inhabit it, saw this and went to his children, " \
+                                                             "the other gods of the land, and asked them to lend their help to those below, " \
+                                                             "for they have suffered enough and need a way to lead a permanent life. So they did, " \
+                                                             "and they offered their gifts to the people of Phalmasia to assist them in building their " \
+                                                             "lives once again.\n\n"
             pdgHistory2 = "Aha'jitt, the Goddess of Arts, gifted her Element of Nature so that people could tame the " \
                           "land that stood against them, and work the land into their own image. Mahar'elles, " \
                           "Goddess of Ease, gifted her Element of Flow, so that people may soften the land and allow " \
@@ -2899,15 +3088,16 @@ while infoBarrier == "" or infoBarrier == "return":
                           "something to fear, as to test the will of their spirits. She then plagued the world with " \
                           "her Element of Reflection, forging darkness and evil into the world. When it was over, " \
                           "they admired their work, and began to watch from afar.\n\n"
-            pdgHistory = input(pdgHistory1 + pdgHistory2 + pdgHistory3 + pdgHistory4 + pdgHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            pdgHistory = input(
+                pdgHistory1 + pdgHistory2 + pdgHistory3 + pdgHistory4 + pdgHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # The Gifter's War & The Establishment of the Keepers
         if historyBarrier == "the gifter's war" or historyBarrier == "the gifters war" or pdgHistory == "next":
             tgwHistory1 = "\033[1m" + "The Gifter's War & The Establishment of the Keepers" + "\033[0m\n| 1064 PDG - 1076 PDG\n\nAs the " \
-                          "people were granted the gifts of their creators, they used all of the gifts together and " \
-                          "made the land beautiful. They established life in large fields, high in the mountains, " \
-                          "through the trees, and much more. They crafted buildings to live in; villages, towns, " \
-                          "and cities rose from the ground up.\n\n"
+                                                                                              "people were granted the gifts of their creators, they used all of the gifts together and " \
+                                                                                              "made the land beautiful. They established life in large fields, high in the mountains, " \
+                                                                                              "through the trees, and much more. They crafted buildings to live in; villages, towns, " \
+                                                                                              "and cities rose from the ground up.\n\n"
             tgwHistory2 = "They built shrines and temples of worship to give thanks to the Creators as well, " \
                           "often giving them offerings so that they all may be pleased with their hard work, " \
                           "and to show appreciation for all that they had done for them during their time of " \
@@ -2937,15 +3127,16 @@ while infoBarrier == "" or infoBarrier == "return":
                           "years had passed, and The Six Keepers ended the warring of the people. They then went " \
                           "their separate ways, each of them finding their own homes and going into a deep slumber " \
                           "until they were needed again...\n\n"
-            tgwHistory = input(tgwHistory1 + tgwHistory2 + tgwHistory3 + tgwHistory4 + tgwHistory5 + tgwHistory6 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            tgwHistory = input(
+                tgwHistory1 + tgwHistory2 + tgwHistory3 + tgwHistory4 + tgwHistory5 + tgwHistory6 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # Nabuga's Banishment & The Creation of the After Palace
         if historyBarrier == "nabuga's banishment" or historyBarrier == "nabugas banishment" or tgwHistory == "next":
             nbapHistory1 = "\033[1m" + "Nabuga's Banishment & The Creation of the After Palace" + "\033[0m\n| 1077 - 1322 PDG\n\nAs more " \
-                           "years passed Ghurrado became pleased wth how things had changed. After seeing the errors " \
-                           "of their ways, people began to worship all creators equally, and gave them all praise in " \
-                           "respect to the elements they had been gifted with. Nabuga, however, was the only one who " \
-                           "received no recognition of any kind, and began to feel bitter.\n\n"
+                                                                                                  "years passed Ghurrado became pleased wth how things had changed. After seeing the errors " \
+                                                                                                  "of their ways, people began to worship all creators equally, and gave them all praise in " \
+                                                                                                  "respect to the elements they had been gifted with. Nabuga, however, was the only one who " \
+                                                                                                  "received no recognition of any kind, and began to feel bitter.\n\n"
             nbapHistory2 = "She had helped to build the world as well. If Ghurrado and her children were being " \
                            "praised for their efforts, she believed that she should as well. Conflict was important, " \
                            "after all. Without it, how do people grow? How do they learn to adapt? As time passed, " \
@@ -2969,16 +3160,17 @@ while infoBarrier == "" or infoBarrier == "return":
                            "power to watch over it. Those who passed on were sent to this world where Nabuga was god " \
                            "and was to be worshipped. As time passed on, rumor spread in the overworld that a wicked " \
                            "queen had come to watch over the dead from that point on.\n\n"
-            nbapHistory = input(nbapHistory1 + nbapHistory2 + nbapHistory3 + nbapHistory4 + nbapHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            nbapHistory = input(
+                nbapHistory1 + nbapHistory2 + nbapHistory3 + nbapHistory4 + nbapHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # The Arduos War
         if historyBarrier == "the arduos war" or historyBarrier == "arduos war" or nbapHistory == "next":
-            tawHistory1 = "\033[1m" + "The Arduos War" + "\033[0m\n| 3968 - 3971 PDG\n\nKing T'llas Arduos had been crowned as the ruler of " \
-                          "Xhia. His family had peacefully ruled for hundreds of years up until he had been crowned. " \
-                          "He was extremely powerful, wielding both earth and fire magics, but as a king he was " \
-                          "tyrannical. He believed that the Majuu were the superior race due to them having the " \
-                          "strongest magics, and the innate ability to smith powerful weapons. In 20 years, " \
-                          "he had overtaken the entire continent, and ruled over it for another 30.\n\n"
+            tawHistory1 = "\033[1m" + "The Arduos War" + "\033[0m\n| 3958 - 3961 PDG\n\nKing T'llas Arduos had been crowned as the ruler of " \
+                                                         "Xhia. His family had peacefully ruled for hundreds of years up until he had been crowned. " \
+                                                         "He was extremely powerful, wielding both earth and fire magics, but as a king he was " \
+                                                         "tyrannical. He believed that the Majuu were the superior race due to them having the " \
+                                                         "strongest magics, and the innate ability to smith powerful weapons. In 20 years, " \
+                                                         "he had overtaken the entire continent, and ruled over it for another 30.\n\n"
             tawHistory2 = "Due to his extreme power, Arduos drove himself insane. Seeking more power, he wished to " \
                           "expand his land even further into the other continents. He waged war on the other " \
                           "continents and immediately sent troops to overpower them. Innocent majuu who dissented " \
@@ -3010,16 +3202,17 @@ while infoBarrier == "" or infoBarrier == "return":
                           "continents to help in extinguishing the fire.\n\n"
             tawHistory7 = "After that, the majuu lost their reputation as a calm and peaceful race. The war bred " \
                           "contempt, and many still keep that hatred to this day.\n\n"
-            tawHistory = input(tawHistory1 + tawHistory2 + tawHistory3 + tawHistory4 + tawHistory5 + tawHistory6 + tawHistory7 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            tawHistory = input(
+                tawHistory1 + tawHistory2 + tawHistory3 + tawHistory4 + tawHistory5 + tawHistory6 + tawHistory7 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # Establishment of St. Guardia's
         if historyBarrier == "establishment of st. guardias" or historyBarrier == "establishment of st. guardia's" or historyBarrier == "the establishment of st. guardia's" or historyBarrier == "the establishment of st. guardias" or historyBarrier == "st. guardias" or historyBarrier == "st. guardia's" or tawHistory == "next":
-            esgHistory1 = "\033[1m" + "The Establishment of St. Guardia's Academy" + "\033[0m\n| 3962 - 3968 PDG\n\nBecause of the Arduos " \
-                          "War, the world began to understand the consequences of having only one person in a " \
-                          "position of power. The impromptu king of Xhia (the general who ended the war) called a " \
-                          "meeting with the king of the Terrians, the High Mage of the Argens, and the Head Crow of " \
-                          "the Avats to have a talk about solutions that they could work together on to fix the past " \
-                          "mistakes of his race, and to ensure it doesn't happen again.\n\n"
+            esgHistory1 = "\033[1m" + "The Establishment of St. Guardia's Academy" + "\033[0m\n| 3961 - 3963 PDG\n\nBecause of the Arduos " \
+                                                                                     "War, the world began to understand the consequences of having only one person in a " \
+                                                                                     "position of power. The impromptu king of Xhia (the general who ended the war) called a " \
+                                                                                     "meeting with the king of the Terrians, the High Mage of the Argens, and the Head Crow of " \
+                                                                                     "the Avats to have a talk about solutions that they could work together on to fix the past " \
+                                                                                     "mistakes of his race, and to ensure it doesn't happen again.\n\n"
             esgHistory2 = "Though skeptical of the request, all three leaders accepted the request and met in Xhia. " \
                           "The general apologized on behalf of his people for the trouble that they had caused and " \
                           "asked that any prejudice held against the Majuu people be targeted towards him directly " \
@@ -3043,16 +3236,17 @@ while infoBarrier == "" or infoBarrier == "return":
                           "ranger who preferred to use their abilities for espionage. Guardianship wasn't just a " \
                           "protection against the leaders having too much power anymore; it was the life-blood of " \
                           "most continent's protection force, and a dream for many young people across Phalmasia.\n\n"
-            esgHistory = input(esgHistory1 + esgHistory2 + esgHistory3 + esgHistory4 + esgHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            esgHistory = input(
+                esgHistory1 + esgHistory2 + esgHistory3 + esgHistory4 + esgHistory5 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # The Day of Black Sun
         if historyBarrier == "day of black sun" or historyBarrier == "the day of black sun" or esgHistory == "next":
             dbsHistory1 = "\033[1m" + "The Day of Black Sun" + "\033[0m\n| 4030 PDG\n\nThings in the world returned to somewhat normalcy " \
-                          "after the resolution of the Arduos war, albeit some new stigmas and biases towards the " \
-                          "populace of the majuu race. However, in 4022, those in the Mu'karr began reporting strange " \
-                          "weather patterns. Summers were hotter than the years before, and winters colder. " \
-                          "Thunderstorms were much more common, and blizzards brought much more snow than expected. " \
-                          "Most strangely, the aurora borealis was in the sky nearly every week.\n\n"
+                                                               "after the resolution of the Arduos war, albeit some new stigmas and biases towards the " \
+                                                               "populace of the majuu race. However, in 4022, those in the Mu'karr began reporting strange " \
+                                                               "weather patterns. Summers were hotter than the years before, and winters colder. " \
+                                                               "Thunderstorms were much more common, and blizzards brought much more snow than expected. " \
+                                                               "Most strangely, the aurora borealis was in the sky nearly every week.\n\n"
             dbsHistory2 = "The argens of Mu'karr couldn't understand why the weather had changed so drastically over " \
                           "such a short time, but they assumed it would pass after a year or two. The weather wasn't " \
                           "causing any major damage or problems, so life continued on as normal. However, one day, " \
@@ -3095,17 +3289,18 @@ while infoBarrier == "" or infoBarrier == "return":
                           "became a legend; some feared him for his power, some revered him for his actions. No one " \
                           "saw his face, so no one knew who he was, but they began to call him by his unique magic: " \
                           "The Boy of Cosmic Wind.\n\n"
-            dbsHistory = input(dbsHistory1 + dbsHistory2 + dbsHistory3 + dbsHistory4 + dbsHistory5 + dbsHistory6 + dbsHistory7 + dbsHistory8 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
+            dbsHistory = input(
+                dbsHistory1 + dbsHistory2 + dbsHistory3 + dbsHistory4 + dbsHistory5 + dbsHistory6 + dbsHistory7 + dbsHistory8 + "\nPress 'Enter' to return to history selection. Enter 'Next' to view the next historical event.\n").lower().strip()
 
         # Battle of Judgement
         if historyBarrier == "battle of judgement" or historyBarrier == "the battle of judgement" or dbsHistory == "next":
             bojHistory1 = "\033[1m" + "The Battle of Judgement" + "\033[0m\n| 4042 PDG\n\nOn the graduation day of St. Guardia's in Halgeis, " \
-                          "the Electron Lightning user Ryner made his first appearance. He threatened to destroy the " \
-                          "guardians and everything they worked for, and promised to defeat anyone that got in his " \
-                          "path. All the guardians, of course, rose up to stop him and told the students to evacuate. " \
-                          "In response, Ryner put up a ring of lightning around all of the students, trapping them " \
-                          "inside. Many of the students tried to break the cage, but they could barely do anything " \
-                          "against it.\n\n"
+                                                                  "the Electron Lightning user Ryner made his first appearance. He threatened to destroy the " \
+                                                                  "guardians and everything they worked for, and promised to defeat anyone that got in his " \
+                                                                  "path. All the guardians, of course, rose up to stop him and told the students to evacuate. " \
+                                                                  "In response, Ryner put up a ring of lightning around all of the students, trapping them " \
+                                                                  "inside. Many of the students tried to break the cage, but they could barely do anything " \
+                                                                  "against it.\n\n"
             bojHistory2 = "Ryner then sped towards the guardians, ready to attack when he was stopped by The Forest's " \
                           "Shadow and repelled backwards. The shadow then used this strange force to destabilize the " \
                           "cage of lightning freeing the students. It dropped his hood to reveal Xaeyz, the boy who " \
@@ -3146,7 +3341,8 @@ while infoBarrier == "" or infoBarrier == "return":
                           "Xaeyz said goodbye to his friends at St. Guardia's one last time, and went with Mirago to " \
                           "travel the world, looking for a worthy lightning user to be the new wielder of Electron " \
                           "Lightning.\n\n"
-            bojHistory = input(bojHistory1 + bojHistory2 + bojHistory3 + bojHistory4 + bojHistory5 + bojHistory6 + bojHistory7 + bojHistory8 + "\nPress 'Enter' to return to history selection.\n").lower().strip()
+            bojHistory = input(
+                bojHistory1 + bojHistory2 + bojHistory3 + bojHistory4 + bojHistory5 + bojHistory6 + bojHistory7 + bojHistory8 + "\nPress 'Enter' to return to history selection.\n").lower().strip()
 
         # History Exit Command
         if historyBarrier == "back":
