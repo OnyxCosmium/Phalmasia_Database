@@ -23,7 +23,7 @@ from os import system, name
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
-# Backstories for all main characters (those without tragedy, tell story of how they got magic)
+# Backstories [R] for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character option to Character Selection & Describe characters who don't get full pages
 # Home Command that Clears Output Window & Restarts Program
 

@@ -28,7 +28,7 @@ from os import system, name
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
-# Backstories for all main characters (those without tragedy, tell story of how they got magic)
+# Backstories [R] for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character Option to Character Selection & Describe characters who don't get full pages
 # Add Side Locations Options to Each Continent for Locations Not in Any Town
     # Nabuga's Garden, Halgeis

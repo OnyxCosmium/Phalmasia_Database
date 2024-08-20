@@ -24,7 +24,7 @@ import os
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
 # Correct All Spelling Errors & Long Line Errors
-# Backstories for all main characters (those without tragedy, tell story of how they got magic)
+# Backstories [R] for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character option to Character Selection & Describe characters who don't get full pages
 # Make a GitHub Repository for Saving & Updates
 
