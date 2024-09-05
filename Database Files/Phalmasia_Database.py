@@ -85,7 +85,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Xaeyz Kai Bio
             info_loc = []
             for i in range(3, 84, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -113,7 +113,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 1
                     info_loc = []
                     for i in range(4, 21, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -125,7 +125,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 2
                     info_loc = []
                     for i in range(24, 47, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -137,7 +137,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 3
                     info_loc = []
                     for i in range(50, 61, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -149,7 +149,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 4
                     info_loc = []
                     for i in range(64, 85, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -175,7 +175,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mirago Bio
             info_loc = []
             for i in range(88, 160, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -202,7 +202,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 1
                     info_loc = []
                     for i in range(90, 105, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -214,7 +214,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 2
                     info_loc = []
                     for i in range(108, 123, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -226,7 +226,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 3
                     info_loc = []
                     for i in range(126, 137, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -238,7 +238,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 4
                     info_loc = []
                     for i in range(140, 155, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -264,7 +264,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yggdra Bio
             info_loc = []
             for i in range(164, 197, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -292,7 +292,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 1
                     info_loc = []
                     for i in range(160, 179, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -304,7 +304,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 2
                     info_loc = []
                     for i in range(182, 195, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -316,7 +316,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 3
                     info_loc = []
                     for i in range(198, 209, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -328,7 +328,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 4
                     info_loc = []
                     for i in range(212, 225, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -354,7 +354,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Cid Bio
             info_loc = []
             for i in range(201, 231, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -377,7 +377,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mimi Bio
             info_loc = []
             for i in range(235, 258, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -400,7 +400,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kimiko Bio
             info_loc = []
             for i in range(262, 289, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -423,7 +423,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Aeiyou Bio
             info_loc = []
             for i in range(293, 336, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -446,7 +446,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kinto Bio
             info_loc = []
             for i in range(340, 382, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -469,7 +469,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Amiru Bio
             info_loc = []
             for i in range(386, 414, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -492,7 +492,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Turcobé Bio
             info_loc = []
             for i in range(418, 447, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -515,7 +515,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yumeizu Bio
             info_loc = []
             for i in range(451, 477, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -538,7 +538,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Ryner Bio
             info_loc = []
             for i in range(481, 551, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -564,7 +564,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 1
                     info_loc = []
                     for i in range(230, 245, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -576,7 +576,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 2
                     info_loc = []
                     for i in range(248, 261, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -588,7 +588,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 3
                     info_loc = []
                     for i in range(264, 285, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -600,7 +600,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 4
                     info_loc = []
                     for i in range(288, 295, 1): info_loc.append(i)
-                    with open('Character Info/Backstories', 'r') as file:
+                    with open('Characters/Backstories', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -624,7 +624,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Sereina Bio
             info_loc = []
             for i in range(557, 592, 1): info_loc.append(i)
-            with open('Character Info/Bios', 'r') as file:
+            with open('Characters/Bios', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -662,18 +662,21 @@ while infoBarrier == "" or infoBarrier == "return":
             locationBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
 
         # Halgeis Info & City Selection
+        # Halgeis Overview
         while locationBarrier == "halgeis":
-            halgeisLocations = input("Halgeis is the first, and currently only, continent where humans inhabit. "
-                                     "Terrians are the primary inhabitants of Halgeis, and are also the ones in power "
-                                     "in the continent. The humans and the terrians came together in piece relatively "
-                                     "quickly, but the argens, avats and majuu weren't so trustworthy. To help along "
-                                     "their relations, the terrians and humans constructed the city capital, "
-                                     "Grand Elise, the peace capital of the world. With time, all of the races now "
-                                     "reside in Grand Elise, and though relations are not perfect, they are still in "
-                                     "place.\n\nHalgeis Cities:\n| Volquöla\n| Ashford\n| Oshborne\n| Cilfier\n| "
-                                     "Skykumo\n| Swalubu\n| Nulvali\n| Starkiepe\n| Grand Elise\n| Drəklife\n| "
-                                     "Mezolune\n| Piquaron\n| Elendraye\n\nLeave the database by entering 'Leave'. Go "
-                                     "back to the continent selection by entering 'Back'.\n").lower().strip()
+            info_loc = []
+            for i in range(3, 19, 1): info_loc.append(i)
+            with open('Locations/Halgeis', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            halgeisLocations = input("\nLeave the database by entering 'Leave'. Go back to the continent selection by entering 'Back'.\n").lower().strip()
 
             while halgeisLocations == "":
                 halgeisLocations = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -682,264 +685,224 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Volquöla City Commands
             if halgeisLocations == "volquola" or halgeisLocations == "volquöla":
-                volquolaStats = "Primary Resident Race: Majuu\nPronunciation: " \
-                                "vol-KWOH-lah\nLocation: Northwestern Halgeis\nVisitor Friendly: No\nTown Trade:\n| " \
-                                "Weapons\n| Armor\nSub-Locations:\n| Voltoru Canyon\n| Pyrevault Ridge\nNotable " \
-                                "Residents:\n| Aeiyou Drefael\n| Kinto Verali\n\n"
-                volquolaDescription = "Volquöla is a peaceful town in Northwestern Halgeis and the home to many " \
-                                      "Majuu, including Aeiyou and Kinto. Volquöla is a town built on the side of " \
-                                      "Pyrevault Ridge, a volcano that has been inactive for decades. Despite this, " \
-                                      "it is still extremely hot there, and the average temperature is over 100 " \
-                                      "degrees Fahrenheit. It has a deep cavern down the side that runs around the " \
-                                      "northern and eastern side of the town facing towards Mu'karr called Voltoru " \
-                                      "Cavern, which hosts a calm and steady flow of magma into the volcano's " \
-                                      "chamber.\n\nMost majuu from Volquöla are light colors. It hosts many skilled " \
-                                      "blacksmiths, and it is among some of the main providers of armor and weaponry " \
-                                      "in Halgeis, which makes it relatively respected in the country. However, " \
-                                      "most of the villagers prefer to keep to themselves and their community, " \
-                                      "so the town doesn't get many visitors.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Volquöla, Halgeis\n\n" + "\033[0m" + volquolaStats + volquolaDescription + "Go back to the other cities of Halgeis by pressing 'Enter'.\n")
+                # Volquöla Overview
+                info_loc = []
+                for i in range(23, 42, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n")
 
             # Ashford City Commands
             if halgeisLocations == "ashford":
-                ashfordStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                               "ASH-ford\nLocation: Northern Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                               "Kytegrove Forest\n| Frinrir's Grave\nNotable Residents:\n| Yggdrasil Aensyll\n\n"
-                ashfordDescription = "Ashford is a peaceful town on the northern side of Halgeis. The town itself is " \
-                                     "larger than other common villages in Halgeis because of the regions of " \
-                                     "Kytegrove Forest it covers, as well as many nearby open fields. The townspeople " \
-                                     "are very close-knit and mostly all the residents knows each other, and because " \
-                                     "of this the residents are very supportive and welcoming to others in the " \
-                                     "community and outsiders stopping by. Those born with magical capabilities " \
-                                     "venture to the open fields to spar with one another or find a peaceful, " \
-                                     "open place to train in solidarity. The town doesn't have any landmarks or " \
-                                     "produce any products they trade commonly, so Ashford is mostly a quiet settling " \
-                                     "place for terrians to live a peaceful life with their families.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Ashford, Halgeis\n\n" + "\033[0m" + ashfordStats + ashfordDescription + "Go "
-                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Ashford Overview
+                info_loc = []
+                for i in range(46, 59, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Oshborne City Commands
             if halgeisLocations == "oshborne":
-                oshborneStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                                "OSH-born\nLocation: Western Halgeis\nVisitor Friendly: Yes\nNotable Residents:\n| " \
-                                "Cidelli Reimora\n\n"
-                oshborneDescription = "Oshborne is a small town in Western Halgeis and one of the many places in " \
-                                      "Halgeis that Terrians have made their home. This is also the location of the " \
-                                      "Reimora Family Bakery. It hosts a lot of open area that is used when the town " \
-                                      "commonly holds fairs for various occasions like holidays, which are " \
-                                      "extravagant in their own right.\n\nThe town doesn't act as a tourist " \
-                                      "attraction since there aren't many things to do there, but the town will " \
-                                      "openly accept any travelers who happen to be passing through.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Oshborne, Halgeis\n\n" + "\033[0m" + oshborneStats + oshborneDescription + "Go "
-                                                                                                            "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Oshborne Overview
+                info_loc = []
+                for i in range(63, 75, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Cilfier City Commands
             if halgeisLocations == "cilfier":
-                cilfierStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                               "SIL-fire\nLocation: Eastern Halgeis\nVisitor Friendly: Yes\nTown Trade:\n| " \
-                               "Fish\nSub-Locations:\n| Sapphire Lakes\nNotable Residents: Mimi Seiran\n\n"
-                cilfierDescription = "Cilfier is a city centered around the Sapphire Lakes, and is also where the " \
-                                     "town name originated from. They got their name because of their deep blue water " \
-                                     "that makes them look like sapphire gems. Because of these lakes, Cilfier is " \
-                                     "colder than other cities most of the year, but they also provide the town with " \
-                                     "seafood, as well as enabled the town to trade fish to the rest of " \
-                                     "Halgeis.\n\nResidents who use water magic enjoy practicing with the water in " \
-                                     "the lakes. The lakes of Cilfier draw in travellers from across Halgeis to " \
-                                     "admire them. The citizens of Cilfier don't allow anyone to take water out of or " \
-                                     "polluting the lakes to both respect the lakes and nature.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Cilfier, Halgeis\n\n" + "\033[0m" + cilfierStats + cilfierDescription + "Go "
-                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Cilfier Overview
+                info_loc = []
+                for i in range(79, 94, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Skykumo City Commands
             if halgeisLocations == "skykumo":
-                skykumoStats = "Primary Resident Race: Avat\nPronunciation: " \
-                               "SKY-coo-moh\nLocation: Northern Halgeis\nVisitor Friendly: No\nSub-Locations:\n| " \
-                               "Tengou Mountain\nNotable Residents: Kimiko Quintai\n\n"
-                skykumoDescription = "Skykumo is a mountainside village so high that it is near cloud height, " \
-                                     "which is how the town got its name. It is on Tengou Mountain, one of the " \
-                                     "tallest mountains in Halgeis. It is a village of avats, since only they can " \
-                                     "breathe clearly in such thin air. Despite avat's natural acceptance of all " \
-                                     "people, Skykumo is rather closed to visitors. It isn't the fact that avats do " \
-                                     "not welcome visitors, it is that many visitors simply do not come to " \
-                                     "Skykumo.\n\nIt is a simple town with the only attraction being its height and " \
-                                     "its proximity to the clouds. Most don't come to see this, however, because the " \
-                                     "thin air in Skykumo makes breathing extremely labor-intensive and is dangerous " \
-                                     "to most without protective gear or wind magic.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Skykumo, Halgeis\n\n" + "\033[0m" + skykumoStats + skykumoDescription + "Go "
-                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Skykumo Overview
+                info_loc = []
+                for i in range(98, 111, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Swalubu City Commands
             if halgeisLocations == "swalubu":
-                swalubuStats = "Primary Resident Race: Human\nPronunciation: " \
-                               "swa-LOO-boo\nLocation: Northeastern Halgeis\nVisitor Friendly: Yes\nTown Trade:\n| " \
-                               "Seafood\nSub-Locations:\n| Soshi Dojo\n| Borderline Beach\n\n"
-                swalubuDescription = "Swalubu is a seaside city in Halgeis that borders Mu'karr. It hosts both a " \
-                                     "beach and a large tackle shop due to its proximity to the ocean. Many fishermen " \
-                                     "make their homes here due to this, though not many others live here due to its " \
-                                     "summertime business. Due to the beach, the town is also a tourist spot for both " \
-                                     "those that live in Halgeis and those visiting from other continents.\n\nSwalubu " \
-                                     "also houses Soshi Dojo, a combat training school that specializes in honing " \
-                                     "weaponry skills and fighting styles. It is extremely popular, and those without " \
-                                     "magic often come here seeking mentorship if they still wish to help defend or " \
-                                     "protect others (as guardians or not).\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Swalubu, Halgeis\n\n" + "\033[0m" + swalubuStats + swalubuDescription + "Go "
-                                                                                                         "back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Swalubu Overview
+                info_loc = []
+                for i in range(115, 128, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Nulvali City Commands
             if halgeisLocations == "nulvali":
-                nulvaliStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                               "null-VAH-lee\nLocation: Northern Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                               "Nulvali Marketplace\n| Kytegrove Forest\n| Halgeian Flyers Department (HFD)\n\n"
-                nulvaliDescription = "Nulvali is a large town in northern Halgeis, and is the neighbor of Ashford. " \
-                                     "Nulvali is busy almost all days of they year, especially on weekends, " \
-                                     "due to the Nulvali marketplace; a bustling shopping center that hosts all types " \
-                                     "of stores. Many people from neighboring towns come to the market for produce " \
-                                     "and other wares. \n\nIt is also the location of several departmental businesses " \
-                                     "like the Halgeian Flyers Department, or HFD. They are responsible for testing " \
-                                     "potential wind users for legalized flight, and give out Flyers Licenses. Though " \
-                                     "there are other locations, due to Kytegrove Forest being in such a close " \
-                                     "vicinity, it is the largest center in Halgeis.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Nulvali, Halgeis\n\n" + "\033[0m" + nulvaliStats + nulvaliDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Nulvali Overview
+                info_loc = []
+                for i in range(132, 146, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Starkiepe City Commands
             if halgeisLocations == "starkiepe":
-                starkiepeStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                                 "STAR-keep\nLocation: Central Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                 "Steelpaige Mountains\n  * Briarfield Cliffs\n| Starkiepe Battle Frontier\n| Celeste " \
-                                 "Mall\n\n"
-                starkiepeDescription = "Starkiepe is a large city in the center of Halgeis. Starkiepe is a tourist " \
-                                       "attraction for all those in Halgeis. It is one of the core cities of the " \
-                                       "continent, and is filled with activities, food, and shopping centers that " \
-                                       "those from all over Halgeis come to use and enjoy. Just outside of the city, " \
-                                       "there is a small mountain range called Steelpaige Mountains which is also " \
-                                       "accessible to climb. If you reach the top, you will arrive at Briarfield " \
-                                       "Cliffs, a blooming plateau at the top of the highest mountain overlooking all " \
-                                       "of Starkiepe. It is very popular to tourists due to the photogenic nature of " \
-                                       "the city.\n\nOne of the highlights of the city, however, is the arena for the " \
-                                       "Starkiepe Battle Frontier. This is a location where magic users from Halgeis " \
-                                       "can come to compete in competitive matches and challenges. Those who want to " \
-                                       "compete must pass a trial exam to portray their skill, as well as follow " \
-                                       "certain guidelines to ensure the health of those competing. These matches may " \
-                                       "be attempted alone, or with a team, in which case the team name and members " \
-                                       "must all be registered as such. It is a great place to go to watch some " \
-                                       "action.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Starkiepe, Halgeis\n\n" + "\033[0m" + starkiepeStats + starkiepeDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Starkiepe Overview
+                info_loc = []
+                for i in range(150, 165, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Grand Elise City Commands
             if halgeisLocations == "grand elise":
-                grandEliseStats = "Primary Resident Race: Terrian\nPronunciation: Grand " \
-                                  "El-LEASE\nLocation: Central Halgeis\nVisitor Friendly: Yes\nSub-Locations:\n| St. " \
-                                  "Guardia's Academy\n| Enchanted Forest\n\n"
-                grandEliseDescription = "Grand Elise is the capital city of Halgeis, but is one of the continent's " \
-                                        "younger cities. When humans first emerged on Phalmasia hundreds of years " \
-                                        "ago, they bonded strongly with the terrians in Halgeis. Their ultimate goal " \
-                                        "was to unite all of the races as equals, and built the city with this in " \
-                                        "mind, welcoming any race that wanted to live in Halgeis a home. Grand Elise " \
-                                        "became the symbol of peace in the world, and the first official result of " \
-                                        "progression towards interracial acceptance. After St. Guardia's Academy was " \
-                                        "destroyed during the Arduos War, they decided to rebuild it in the center of " \
-                                        "Grand Elise.\n\nThough it hosts the schooling grounds for Guardians, " \
-                                        "it is still open to visitors year-round. Every year St. Guardia's sets off " \
-                                        "fireworks in celebration of the day that Grand Elise had officially finished " \
-                                        "construction and became open to visitors and residents. The Enchanted " \
-                                        "Forest, the largest forest in Halgeis, is also present withing walking " \
-                                        "distance of the city's borders and is easily accessible to residents and " \
-                                        "visitors.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Grand Elise, Halgeis\n\n" + "\033[0m" + grandEliseStats + grandEliseDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Grand Elise Overview
+                info_loc = []
+                for i in range(169, 182, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Drəklife City Commands
             if halgeisLocations == "dreklife":
-                dreklifeStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                                "DREEK-life\nLocation: Western Halgeis\nVisitor Friendly: No\nSub-Locations:\n| " \
-                                "Enchanted Forest\n\n"
-                dreklifeDescription = "Drəklife is a small village on the easternmost side of the Enchanted Forest. " \
-                                      "It has a small population, but the town acts more as a family than a village; " \
-                                      "everyone is close-knit, and though visitors are welcomed with open arms, " \
-                                      "many are unaware of its presence and don't stop by. Because of its seclusion, " \
-                                      "it is one of the few towns unprotected by a guardian post, which leaves it " \
-                                      "open to the attack from wrongdoers. But because it is so secluded, they rarely " \
-                                      "get attacked anyway. Drəklife harvests most of its resources from the nearby " \
-                                      "Enchanted Forest, but is still respectful enough to replant any trees it cuts " \
-                                      "down. Their work has done almost nothing to the health of the forest, " \
-                                      "but their care has actually improved it. Those who live in Drəklife have " \
-                                      "learned to care for the environment and others.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Drəklife, Halgeis\n\n" + "\033[0m" + dreklifeStats + dreklifeDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Drəklife Overview
+                info_loc = []
+                for i in range(186, 196, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Mezolune City Commands
             if halgeisLocations == "mezolune":
-                mezoluneStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                                "MEH-zo-loon\nLocation: Southeastern Halgeis\nVisitor Friendly: No\nTrade:\n| " \
-                                "Produce/Crops\nNotable Residents:\n| Amiru Soaren\n\n"
-                mezoluneDescription = "Mezolune is a village on the outskirts of Halgeis near the sea. The land there " \
-                                      "is very rich and good for growing basic produce like potatoes, carrots, " \
-                                      "and other common veggies. Though they don't have a large town, the area the " \
-                                      "village takes up is one of the largest in all of Halgeis due to the farmland. " \
-                                      "They distribute their crops all over Halgeis along with their neighboring " \
-                                      "towns, which provide the majority of the produce supply.\n\nDespite this, " \
-                                      "the town itself doesn't resemble typical farmland; it looks like a normal " \
-                                      "village. Small markets are found on most days, and many people call this place " \
-                                      "their home. Those who live here have a great affinity for life and plants " \
-                                      "alike.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Mezolune, Halgeis\n\n" + "\033[0m" + mezoluneStats + mezoluneDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Mezolune Overview
+                info_loc = []
+                for i in range(200, 214, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Piquaron City Commands
             if halgeisLocations == "piquaron":
-                piquaronStats = "Primary Resident Race: Avat\nPronunciation: " \
-                                "Pick-CWUAIR-ron\nLocation: Southwestern Halgeis\nVisitor Friendly: Yes\nNotable " \
-                                "Residents:\n| Turcobé Sentai\n\n"
-                piquaronDescription = "Piquaron is a small village in Halgeis inhabited by avats. There are few " \
-                                      "avat towns that are built at ground level, and Piquaron is one of those few. " \
-                                      "Piquaron is an average town that takes great pride in its village's magic " \
-                                      "ability. Usually, avats are born with ice or wind magics suitable for their " \
-                                      "usual home heights, but because of the low altitude, most avats here actually " \
-                                      "have a greater affinity for earth magic than ice.\n\nMagic affinity is taken " \
-                                      "very seriously, and all citizens here view magic as an extension of " \
-                                      "themselves, giving them faster mana regeneration and larger mana reserves than " \
-                                      "most. Piquaron schools teach students in a rather unconventional way; instead " \
-                                      "of teaching them spells, they teach them mana control. This not only leaves " \
-                                      "the students to figure out spells on their own which increases their " \
-                                      "understanding of their magic, but it also teaches them to find ways to use " \
-                                      "them more efficiently and in a way that is comfortable for them.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Piquaron, Halgeis\n\n" + "\033[0m" + piquaronStats + piquaronDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Piquaron Overview
+                info_loc = []
+                for i in range(218, 228, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Elendraye City Commands
             if halgeisLocations == "elendraye":
-                elendrayeStats = "Primary Resident Race: Terrian\nPronunciation: " \
-                                 "ELL-en-dray\nLocation: Southwestern Halgeis\nVisitor Friendly: No\nNotable " \
-                                 "Residents:\n| Yumeizu Artilux\n\n"
-                elendrayeDescription = "Elendraye is a large town that sits in a valley in Southwestern Halgeis. " \
-                                       "Though the town itself is a spectacle to see, not many visitors are welcomed " \
-                                       "here. Elendraye is a closed town, and many who were born there live there for " \
-                                       "their whole lives. A deep familial community is built in this town and has " \
-                                       "been that way for generations. The townsfolk maintain the health of the " \
-                                       "valley by using earth and water magic, as well as planting trees and flowers " \
-                                       "to liven the area.\n\nDespite this, the people of elendraye are quite adapt " \
-                                       "to their surroundings and know a lot about the history of Halgeis. Many of " \
-                                       "them do not believe in violence, so they use their magic like argens are " \
-                                       "known to: defensively. This influences the magic styles of many magic users " \
-                                       "who live here. A common pastime for children is to practice their magics with " \
-                                       "and against each other.\n\n"
-                halgeisLocation = input(
-                    "\033[1m" + "Elendraye, Halgeis\n\n" + "\033[0m" + elendrayeStats + elendrayeDescription +
-                    "Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                # Elendraye Overview
+                info_loc = []
+                for i in range(232, 244, 1): info_loc.append(i)
+                with open('Locations/Halgeis', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Halgeis Exit Command
             if halgeisLocations == "back":
