@@ -24,14 +24,13 @@ from os import system, name
 # Remove Mythical Elements from Sectional Sigils (Aren't User's Magic)
 # Sigil Descriptions in Character Sheets
 # Mythical Elemental Descriptions in Magic Core Command
-# Revamp Sigil Functionality
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
 # Backstories [R] for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character Option to Character Selection & Describe characters who don't get full pages
 # Add Side Locations Options to Each Continent for Locations Not in Any Town
-# Nabuga's Garden, Halgeis
+    # Nabuga's Garden, Halgeis
 # Home Command that Clears Output Window & Restarts Program
 
 # Current Update Notes
@@ -662,8 +661,8 @@ while infoBarrier == "" or infoBarrier == "return":
             locationBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
 
         # Halgeis Info & City Selection
-        # Halgeis Overview
         while locationBarrier == "halgeis":
+            # Halgeis Overview
             info_loc = []
             for i in range(3, 19, 1): info_loc.append(i)
             with open('Locations/Halgeis', 'r') as file:
@@ -732,7 +731,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Cilfier City Commands
             if halgeisLocations == "cilfier":
@@ -749,7 +748,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Skykumo City Commands
             if halgeisLocations == "skykumo":
@@ -766,7 +765,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Swalubu City Commands
             if halgeisLocations == "swalubu":
@@ -783,7 +782,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Nulvali City Commands
             if halgeisLocations == "nulvali":
@@ -800,7 +799,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Starkiepe City Commands
             if halgeisLocations == "starkiepe":
@@ -817,7 +816,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Grand Elise City Commands
             if halgeisLocations == "grand elise":
@@ -834,7 +833,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Drəklife City Commands
             if halgeisLocations == "dreklife":
@@ -851,7 +850,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Mezolune City Commands
             if halgeisLocations == "mezolune":
@@ -868,7 +867,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Piquaron City Commands
             if halgeisLocations == "piquaron":
@@ -885,7 +884,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Elendraye City Commands
             if halgeisLocations == "elendraye":
@@ -902,7 +901,7 @@ while infoBarrier == "" or infoBarrier == "return":
                             print(f"{line.strip()}")
                         line_number += 1
 
-                halgeisLocation = input("Go back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
+                halgeisLocation = input("\nGo back to the other cities of Halgeis by pressing 'Enter'.\n").lower().strip()
 
             # Halgeis Exit Command
             if halgeisLocations == "back":
@@ -913,23 +912,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Mu'karr Info & City Selection
         while locationBarrier == "mu'karr" or locationBarrier == "mukarr":
-            mukarrLocations = input("Mu'karr is the continent that rests in between Xhia and Halgeis. Mostly "
-                                    "consisting of forests and mountains, Mu'karr is a natural continent that "
-                                    "residents strive to preserve. The main race of Mu'karr are the Argens, "
-                                    "a dragon-like species. They built their cities around the forests instead of "
-                                    "cutting them down, leaving most of the large cities of Mu'karr with unusual "
-                                    "houses, like those in tree trunks or caves. Forécyør, the first established city "
-                                    "of Mu'karr, became the center of the continent and spurred its growth. Argens "
-                                    "are extremely friendly towards most outsiders and other races, so many towns in "
-                                    "Mu'karr are visitor-friendly. It is also home to the high majority of "
-                                    "bioluminescent plant life that Phalmasia has to offer. The result is Mu'karr "
-                                    "looking like something out of a fairy tale, which helps draw in tourists looking "
-                                    "to gaze in the natural beauty of the continent.\n\nMu'karr has two hidden "
-                                    "locations that can only be accessed by those who know their name. Hints have "
-                                    "been littered throughout the database. May the stars show you the "
-                                    "way.\n\nMu'karr Cities:\n| Trefaeli\n| Andromita\n| Dragolyne\n| Meteora\n| "
-                                    "Forécyør\n| Dendraiye\n| Petalford\n\nLeave the database by entering 'Leave'. Go "
-                                    "back to the continent selection by entering 'Back'.\n").lower().strip()
+            # Mu'karr Overview
+            info_loc = []
+            for i in range(3, 15, 1): info_loc.append(i)
+            with open('Locations/Mu\'karr', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            mukarrLocations = input("\nLeave the database by entering 'Leave'. Go back to the continent selection by entering 'Back'.\n").lower().strip()
 
             while mukarrLocations == "":
                 mukarrLocations = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -938,207 +934,157 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Trefaeli City Commands
             if mukarrLocations == "trefaeli":
-                trefaeliStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                "tree-FAIL-ee\nLocation: Southwestern Mu'karr\nVisitor Friendly: Yes\nTown Trade:\n| " \
-                                "Clothing\n\n"
-                trefaeliDescription = "Trefaeli is a peaceful village in Southeastern Mu'karr. Due to the hilly " \
-                                      "terrain of the city, the trees aren't able to grow their roots completely " \
-                                      "underground, and many burst through to the surface. This causes the trees to " \
-                                      "grow strangely sideways, creating many archways of trees throughout the town. " \
-                                      "This adds a natural beauty to the village.\n\nThough there isn't much to do " \
-                                      "here, it is a producer of high-quality argenian clothing, though it isn't a " \
-                                      "major producer. They do sell their products to all of Mu'karr, but due to the " \
-                                      "size of Trefaeli, they can't afford to create high supplies.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Trefaeli, Mu'karr\n\n" + "\033[0m" + trefaeliStats + trefaeliDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Trefaeli Overview
+                info_loc = []
+                for i in range(19, 31, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Andromita City Commands
             if mukarrLocations == "andromita":
-                andromitaStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                 "an-DROM-ita\nLocation: Western Mu'karr\nVisitor Friendly: Yes\n\n"
-                andromitaDescription = "Andromita is one of the few villages in Mu'karr that is in a clearing with " \
-                                       "very little forestry. Though forests do surround the clearing, " \
-                                       "there are minimal trees in the town itself. This leaves Andromita as one of " \
-                                       "the few towns with fully constructed houses that aren't integrated into the " \
-                                       "forest.\n\nArgens who live here wish to lead a quiet life; most find " \
-                                       "enjoyment in small activities like gardening or collecting. Magic is rarely " \
-                                       "used in this town for combat since most people agree to keep the town " \
-                                       "friendly. Since the town is very small (the population is around 400 due to " \
-                                       "the small size of the grove), guardians don't need to have a post in the " \
-                                       "town, and it rarely ever receives any problems. It is a nice place to visit, " \
-                                       "even if you are just passing through.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Andromita, Mu'karr\n\n" + "\033[0m" + andromitaStats + andromitaDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Andromita Overview
+                info_loc = []
+                for i in range(35, 45, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dragolyne City Commands
             if mukarrLocations == "dragolyne":
-                dragolyneStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                 "DRA-go-line\nLocation: Eastern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                 "St. Guardia's Academy\n\n"
-                dragolyneDescription = "Dragolyne is one of the largest cities in Mu'karr. It is an integration of " \
-                                       "both forestry and mountainous regions of Mu'karr, so the buildings and " \
-                                       "architecture throughout the town are varied depending on which region they " \
-                                       "reside in, adding a unique mix of personality into the town. This makes it a " \
-                                       "good place for visitors to want to come and learn about argenian " \
-                                       "culture.\n\nThis town also hosts the St. Guardia's Academy of Mu'karr, " \
-                                       "a sister academy of the one in Halgeis. Though they are the same academy, " \
-                                       "their curriculums are tailored to argens. The school has made Dragolyne a " \
-                                       "more lively place for residents, visitors, and their incoming students.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Dragolyne, Mu'karr\n\n" + "\033[0m" + dragolyneStats + dragolyneDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Dragolyne Overview
+                info_loc = []
+                for i in range(49, 61, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Meteora City Commands
             if mukarrLocations == "meteora":
-                meteoraStats = "Primary Resident Race: Argen\nPronunciation: " \
-                               "meet-ee-OR-ah\nLocation: Southeastern Mu'karr\nVisitor Friendly: Yes\nTown Trade:\n| " \
-                               "Weapons\n| Armor\nSub-Locations:\n| Black Sun Impact Site\nNotable Residents:\n| " \
-                               "Xaeyz Kai\n| Mirago Fynae\n\n"
-                meteoraDescription = "Meteora is a peaceful town. The community of the town is very close-knit, " \
-                                     "and most all residents know each other. This is also Xaeyz and Mirago's " \
-                                     "hometown. The town is also responsible for hosting the greatest smith-shop in " \
-                                     "the continent, which was originally run by Xaeyz's grandfather. They are well " \
-                                     "known throughout all of Mu'karr for their weaponry and armor forging.\n\nIn " \
-                                     "4030, the Black Sun emerged from the sky and came crashing towards Meteora, " \
-                                     "but it was stopped by Xaeyz and Mirago before it made a huge amount of damage. " \
-                                     "Though the impact of the meteor was cushioned, the Black Sun still caused a " \
-                                     "large crater in the middle of the town. Many people visit the crater, " \
-                                     "though the public isn't aware of whether or not the Cosmic Wind User existed.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Meteora, Mu'karr\n\n" + "\033[0m" + meteoraStats + meteoraDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Meteora Overview
+                info_loc = []
+                for i in range(65, 83, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Forécyør City Commands
             if mukarrLocations == "forecyor":
-                forecyorStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                "FOR-eh-CYORE\nLocation: Central Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                "Eden's Library\n| Dawndew Mall\n\n"
-                forecyorDescription = "Forécyør is the capitol city of Mu'karr, and happens to be the largest city in " \
-                                      "the continent, as well as the first city established in the continent. It is " \
-                                      "in the middle of the densest part of the forests in Mu'karr. It hosts Dawndew " \
-                                      "Mall, the main shopping center of the city and of Central Mu'karr. It hosts a " \
-                                      "large amount of stores, as well as a shipping hub that allows for large " \
-                                      "shipments of essentials like produce and intercontinental goods.\n\nThe town's " \
-                                      "houses are built into the several trees in and around the town, which creates " \
-                                      "a mystical setting in the town around the dirt and stone-paved paths of the " \
-                                      "city. Many of the trees grow a special type of fungus that produces random " \
-                                      "bioluminescent colors, lighting up the city nights. It also hosts the " \
-                                      "continents central library: Eden's Library. This is built into the largest " \
-                                      "tree in the city, and even continues underground. Residents of Forécyør use " \
-                                      "the library on a daily basis for a multitude of reasons, and everyone does " \
-                                      "what they can to preserve the natural beauty of their city.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Forécyør, Mu'karr\n\n" + "\033[0m" + forecyorStats + forecyorDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Forécyør Overview
+                info_loc = []
+                for i in range(87, 100, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Dendraiye City Commands
             if mukarrLocations == "dendraiye":
-                dendraiyeStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                 "DEN-dray\nLocation: Northern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                 "Cryonili Mountains\nNotable Residents:\n| Sereina Fynae\n\n"
-                dendraiyeDescription = "Dendraiye is a small town in Northern Mu'karr. It rests directly outside the " \
-                                       "Cryonili Mountains, the mountain range that spans as a border from Halgeis " \
-                                       "and Mu'karr. It hosts the safest entrance into the mountains for hikers via a " \
-                                       "series of magic-made paths over the years. This attracts many " \
-                                       "adventure-hungry visitors looking to climb the mountains.\n\nThe mountains " \
-                                       "are very cold, and the weather is extremely volatile. Snowstorms and " \
-                                       "avalanches roll down the hillside to the town very often, and guardians that " \
-                                       "have ice affinities are usually stationed there to protect the towns below. " \
-                                       "Sereina Fynae has made her home deep into these mountains, using the dangerous " \
-                                       "terrain as a training regimen for her own magic.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Dendraiye, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Dendraiye Overview
+                info_loc = []
+                for i in range(104, 118, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Petalford City Commands
             if mukarrLocations == "petalford":
-                dendraiyeStats = "Primary Resident Race: Argen\nPronunciation: " \
-                                 "PE-tal-ford\nLocation: Eastern Mu'karr\nVisitor Friendly: Yes\nSub-Locations:\n| " \
-                                 "Fewl Institute\nTown Trade:\n| Produce\n\n"
-                dendraiyeDescription = "Petalford is a large village in Eastern Mu'karr. It is mostly open fields " \
-                                       "that the residents use for gardening, primarily fruits and vegetables. While " \
-                                       "some residents here are farmers, there are still plenty of others who reside " \
-                                       "here as normal townsfolk with other professions. The fields that are grown " \
-                                       "here are extremely efficient due to the soil that they have nurtured with " \
-                                       "magic. They are able to farm very quickly in this soil, producing crops in " \
-                                       "less than half the time. The argens here have also figured out how to use " \
-                                       "their wind magic to yield the crops invulnerable to the seasons by keeping " \
-                                       "the climate standard.\n\nThe argens here are open to visitors, as most all " \
-                                       "argenian towns are, but they would rather keep to themselves. It is also one " \
-                                       "of the few villages that has an extremely good magic school. Though it " \
-                                       "doesn't rival the size or outreach of St. Guardia's, the training that it " \
-                                       "provides is on par with the school, and many argens who don't get accepted " \
-                                       "into St. Guardia's choose to apply here instead.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Petalford, Mu'karr\n\n" + "\033[0m" + dendraiyeStats + dendraiyeDescription +
-                    "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Petalford Overview
+                info_loc = []
+                for i in range(122, 136, 1): info_loc.append(i)
+                with open('Locations/Mu\'karr', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr: Mythic Location Commands
             # Aurora Grotto Commands
             if mukarrLocations == "aurora grotto":
-                auroraGrottoStats = "Location: Southeastern " \
-                                    "Mu'karr\nVisitor Friendly: N/A\nMythic Elemental: Aeon\nEnhanced Natural Event: " \
-                                    "Aurora Borealis\n\n"
-                auroraGrottoDescription = "\"It's strange, being from the stars. Everyone down here looks so odd, " \
-                                          "so weak, so different. You think that after living with one of them for " \
-                                          "years I would have gotten used to the sight of them. I guess I just never " \
-                                          "expected to see anyone but those two here. I don't know how you got here " \
-                                          "or why you know of this place, but welcome, traveller, to Aurora Grotto. " \
-                                          "Don't give me a reason to make you leave.\" - Aeon, Spirit of the Cosmic " \
-                                          "Wind\n\nAurora Grotto is a special location that only Xaeyz and Mirago " \
-                                          "know of. This is a grotto in the vast forests of Mu'karr near the sea. It " \
-                                          "is extremely serene, with waterfalls running into a lake with an island " \
-                                          "that Xaeyz and Mirago seem to have built a bridge to out of a fallen " \
-                                          "tree.\n\nThere are several fruit trees lining the grotto, and a cliff on " \
-                                          "the edge of the grotto hosts a beautiful view of the sea. Xaeyz and Mirago " \
-                                          "met each other in this grotto, and trained here nearly every day for two " \
-                                          "years before Mirago passed. It is also the location of Mirago's grave, " \
-                                          "which rests under the tree on the island in the lake.\n\nThe most " \
-                                          "important part of the grotto is the clear skies overhead. The grotto " \
-                                          "actually experiences a higher rate of natural auroras that last longer " \
-                                          "than the average. This makes it the ideal location for Xaeyz to train and " \
-                                          "relax due to the boost that the auroras give to his Cosmic Wind.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Mythic Location: Aurora Grotto, Mu'karr\n\n" + "\033[0m" + auroraGrottoStats +
-                    auroraGrottoDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Aurora Grotto Overview
+                info_loc = []
+                for i in range(4, 18, 1): info_loc.append(i)
+                with open('Locations/Mythic Locations', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Sundrop Valley Commands
             if mukarrLocations == "sundrop valley":
-                sundropValleyStats = "Location: Northwestern " \
-                                     "Mu'karr\nVisitor Friendly: N/A\nMythic Elemental: Arc\nEnhanced Natural Event: " \
-                                     "Solar Storm\n\n"
-                sundropValleyDescription = "\"The sun is such a simple place. Just elements fusing with each other to " \
-                                           "extend the system's life. It's beautiful, in a way; the ultimate " \
-                                           "precipice of teamwork. But this world is different. People fight each " \
-                                           "other, steal from each other, hurt each other, kill each other. But even " \
-                                           "in this world of wrong, there are still shining lights. Atoms that still " \
-                                           "want to work together for the betterment of the system. I don't know how " \
-                                           "you know of this place's existence, but welcome nonetheless. I hope that " \
-                                           "you're a good atom, or we are going to have a bit of a problem.\" - Arc, " \
-                                           "Spirit of the Onyx Fire\n\nSundrop Valley is a special location that " \
-                                           "Mirago alone discovered and knows of. It lies in the Cryonili Mountain " \
-                                           "range in a deep valley between the mountains. In this valley, there is a " \
-                                           "vast lake with an island in the center. There is also a decently large " \
-                                           "field in the valley, which Mirago uses to train. When Onyx Fire revived " \
-                                           "Mirago, he left Xaeyz's Grotto and went out to find a new secret place " \
-                                           "where he could be alone. In his search, he found this valley.\n\nThe " \
-                                           "valley is deep enough that the surrounding mountains actually provide " \
-                                           "decent shelter against the outside weather, so the valley is warm and " \
-                                           "naturally climate controlled. Being surrounded by mountains and " \
-                                           "undiscovered by people, the terrain is completely preserved from " \
-                                           "interaction and has retained its natural beauty. It is also closed off " \
-                                           "from the outside world, providing a peaceful and private environment for " \
-                                           "Mirago to train freely.\n\nThis valley, to Mirago's great surprise and " \
-                                           "pleasure, also rests above a natural small hole in the planet's " \
-                                           "atmosphere. This allows radiation from the sun to burst through in higher " \
-                                           "quantities, mimicking the properties of a solar storm during times of " \
-                                           "intense violence on the sun's surface. This happens to be Mirago's power " \
-                                           "event, and makes his Onyx Fire stronger.\n\n"
-                mukarrLocation = input(
-                    "\033[1m" + "Mythic Location: Sundrop Valley, Mu'karr\n\n" + "\033[0m" + sundropValleyStats +
-                    sundropValleyDescription + "Go back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
+                # Sundrop Valley Overview
+                info_loc = []
+                for i in range(21, 35, 1): info_loc.append(i)
+                with open('Locations/Mythic Locations', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mukarrLocation = input("\nGo back to the other cities of Mu'karr by pressing 'Enter'.\n").lower().strip()
 
             # Mu'karr Exit Command
             if mukarrLocations == "back":
