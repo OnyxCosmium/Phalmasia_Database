@@ -27,7 +27,7 @@ from os import system, name
 
 # Long-Term Projects
 # QoL Output Clear Commands (If Possible)
-# Backstories [R] for all main characters (those without tragedy, tell story of how they got magic)
+# Backstories for all main characters (those without tragedy, tell story of how they got magic)
 # Add Side Character Option to Character Selection & Describe characters who don't get full pages
 # Add Side Locations Options to Each Continent for Locations Not in Any Town
     # Nabuga's Garden, Halgeis
@@ -35,7 +35,7 @@ from os import system, name
 
 # Current Update Notes
 # Moved Large Text Blocks into Separate Files to Read From (Code Readability)
-# Added Readability Files With User-Friendly Indentation
+
 
 
 # Clear Command
@@ -84,7 +84,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Xaeyz Kai Bio
             info_loc = []
             for i in range(3, 84, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -112,7 +112,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 1
                     info_loc = []
                     for i in range(4, 21, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -124,7 +124,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 2
                     info_loc = []
                     for i in range(24, 47, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -136,7 +136,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 3
                     info_loc = []
                     for i in range(50, 61, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -148,7 +148,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 4
                     info_loc = []
                     for i in range(64, 85, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -174,7 +174,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mirago Bio
             info_loc = []
             for i in range(88, 160, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -201,7 +201,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 1
                     info_loc = []
                     for i in range(90, 105, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -213,7 +213,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 2
                     info_loc = []
                     for i in range(108, 123, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -225,7 +225,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 3
                     info_loc = []
                     for i in range(126, 137, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -237,7 +237,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 4
                     info_loc = []
                     for i in range(140, 155, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -263,7 +263,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yggdra Bio
             info_loc = []
             for i in range(164, 197, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -291,7 +291,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 1
                     info_loc = []
                     for i in range(160, 179, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -303,7 +303,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 2
                     info_loc = []
                     for i in range(182, 195, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -315,7 +315,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 3
                     info_loc = []
                     for i in range(198, 209, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -327,7 +327,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 4
                     info_loc = []
                     for i in range(212, 225, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -353,7 +353,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Cid Bio
             info_loc = []
             for i in range(201, 231, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -376,7 +376,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mimi Bio
             info_loc = []
             for i in range(235, 258, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -399,7 +399,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kimiko Bio
             info_loc = []
             for i in range(262, 289, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -422,7 +422,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Aeiyou Bio
             info_loc = []
             for i in range(293, 336, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -445,7 +445,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kinto Bio
             info_loc = []
             for i in range(340, 382, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -468,7 +468,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Amiru Bio
             info_loc = []
             for i in range(386, 414, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -491,7 +491,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Turcobé Bio
             info_loc = []
             for i in range(418, 447, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -514,7 +514,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yumeizu Bio
             info_loc = []
             for i in range(451, 477, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -537,7 +537,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Ryner Bio
             info_loc = []
             for i in range(481, 551, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -563,7 +563,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 1
                     info_loc = []
                     for i in range(230, 245, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -575,7 +575,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 2
                     info_loc = []
                     for i in range(248, 261, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -587,7 +587,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 3
                     info_loc = []
                     for i in range(264, 285, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -599,7 +599,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 4
                     info_loc = []
                     for i in range(288, 295, 1): info_loc.append(i)
-                    with open('Characters/Backstories', 'r') as file:
+                    with open('Characters/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -623,7 +623,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Sereina Bio
             info_loc = []
             for i in range(557, 592, 1): info_loc.append(i)
-            with open('Characters/Bios', 'r') as file:
+            with open('Characters/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -665,7 +665,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Halgeis Overview
             info_loc = []
             for i in range(3, 19, 1): info_loc.append(i)
-            with open('Locations/Halgeis', 'r') as file:
+            with open('Locations/Halgeis.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -687,7 +687,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Volquöla Overview
                 info_loc = []
                 for i in range(23, 42, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -704,7 +704,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Ashford Overview
                 info_loc = []
                 for i in range(46, 59, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -721,7 +721,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Oshborne Overview
                 info_loc = []
                 for i in range(63, 75, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -738,7 +738,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Cilfier Overview
                 info_loc = []
                 for i in range(79, 94, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -755,7 +755,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Skykumo Overview
                 info_loc = []
                 for i in range(98, 111, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -772,7 +772,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Swalubu Overview
                 info_loc = []
                 for i in range(115, 128, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -789,7 +789,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Nulvali Overview
                 info_loc = []
                 for i in range(132, 146, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -806,7 +806,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Starkiepe Overview
                 info_loc = []
                 for i in range(150, 165, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -823,7 +823,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Grand Elise Overview
                 info_loc = []
                 for i in range(169, 182, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -840,7 +840,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Drəklife Overview
                 info_loc = []
                 for i in range(186, 196, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -857,7 +857,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Mezolune Overview
                 info_loc = []
                 for i in range(200, 214, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -874,7 +874,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Piquaron Overview
                 info_loc = []
                 for i in range(218, 228, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -891,7 +891,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Elendraye Overview
                 info_loc = []
                 for i in range(232, 244, 1): info_loc.append(i)
-                with open('Locations/Halgeis', 'r') as file:
+                with open('Locations/Halgeis.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -915,7 +915,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mu'karr Overview
             info_loc = []
             for i in range(3, 15, 1): info_loc.append(i)
-            with open('Locations/Mu\'karr', 'r') as file:
+            with open('Locations/Mu\'karr.md.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -937,7 +937,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Trefaeli Overview
                 info_loc = []
                 for i in range(19, 31, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -954,7 +954,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Andromita Overview
                 info_loc = []
                 for i in range(35, 45, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -971,7 +971,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Dragolyne Overview
                 info_loc = []
                 for i in range(49, 61, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -988,7 +988,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Meteora Overview
                 info_loc = []
                 for i in range(65, 83, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1005,7 +1005,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Forécyør Overview
                 info_loc = []
                 for i in range(87, 100, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1022,7 +1022,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Dendraiye Overview
                 info_loc = []
                 for i in range(104, 118, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1039,7 +1039,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Petalford Overview
                 info_loc = []
                 for i in range(122, 136, 1): info_loc.append(i)
-                with open('Locations/Mu\'karr', 'r') as file:
+                with open('Locations/Mu\'karr.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1057,7 +1057,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Aurora Grotto Overview
                 info_loc = []
                 for i in range(4, 18, 1): info_loc.append(i)
-                with open('Locations/Mythic Locations', 'r') as file:
+                with open('Locations/Mythic Locations.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1074,7 +1074,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Sundrop Valley Overview
                 info_loc = []
                 for i in range(21, 35, 1): info_loc.append(i)
-                with open('Locations/Mythic Locations', 'r') as file:
+                with open('Locations/Mythic Locations.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1098,7 +1098,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Altaria Overview
             info_loc = []
             for i in range(3, 13, 1): info_loc.append(i)
-            with open('Locations/Altaria', 'r') as file:
+            with open('Locations/Altaria.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -1120,7 +1120,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Entrype Overview
                 info_loc = []
                 for i in range(17, 33, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1137,7 +1137,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Soraikai Overview
                 info_loc = []
                 for i in range(37, 49, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1154,7 +1154,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Cerulaine Overview
                 info_loc = []
                 for i in range(53, 63, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1171,7 +1171,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Luminour Overview
                 info_loc = []
                 for i in range(67, 79, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1188,7 +1188,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Keravine Overview
                 info_loc = []
                 for i in range(83, 95, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1205,7 +1205,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Thornhaven Overview
                 info_loc = []
                 for i in range(99, 112, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1222,7 +1222,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Manafield Overview
                 info_loc = []
                 for i in range(116, 130, 1): info_loc.append(i)
-                with open('Locations/Altaria', 'r') as file:
+                with open('Locations/Altaria.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1246,7 +1246,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Xhia Overview
             info_loc = []
             for i in range(3, 11, 1): info_loc.append(i)
-            with open('Locations/Xhia', 'r') as file:
+            with open('Locations/Xhia.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -1268,7 +1268,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Puls Overview
                 info_loc = []
                 for i in range(15, 23, 1): info_loc.append(i)
-                with open('Locations/Xhia', 'r') as file:
+                with open('Locations/Xhia.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1285,7 +1285,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Glouden Overview
                 info_loc = []
                 for i in range(27, 40, 1): info_loc.append(i)
-                with open('Locations/Xhia', 'r') as file:
+                with open('Locations/Xhia.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1302,7 +1302,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Clorohfyll Overview
                 info_loc = []
                 for i in range(44, 56, 1): info_loc.append(i)
-                with open('Locations/Xhia', 'r') as file:
+                with open('Locations/Xhia.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1319,7 +1319,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Mengoro Overview
                 info_loc = []
                 for i in range(60, 70, 1): info_loc.append(i)
-                with open('Locations/Xhia', 'r') as file:
+                with open('Locations/Xhia.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1336,7 +1336,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Zenorah Overview
                 info_loc = []
                 for i in range(74, 89, 1): info_loc.append(i)
-                with open('Locations/Xhia', 'r') as file:
+                with open('Locations/Xhia.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1360,7 +1360,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Nohla Overview
             info_loc = []
             for i in range(3, 13, 1): info_loc.append(i)
-            with open('Locations/Nohla', 'r') as file:
+            with open('Locations/Nohla.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -1383,7 +1383,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Korfu Overview
                 info_loc = []
                 for i in range(17, 29, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1400,7 +1400,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Hartledge Overview
                 info_loc = []
                 for i in range(33, 46, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1417,7 +1417,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Eklyptil Overview
                 info_loc = []
                 for i in range(50, 68, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1434,7 +1434,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Dullus Overview
                 info_loc = []
                 for i in range(72, 82, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1451,7 +1451,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Cingrigh Overview
                 info_loc = []
                 for i in range(86, 103, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1468,7 +1468,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Talen Overview
                 info_loc = []
                 for i in range(107, 119, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1485,7 +1485,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Nohla Overview
                 info_loc = []
                 for i in range(123, 131, 1): info_loc.append(i)
-                with open('Locations/Nohla', 'r') as file:
+                with open('Locations/Nohla.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1517,7 +1517,7 @@ while infoBarrier == "" or infoBarrier == "return":
         # Magic Overview
         info_loc = []
         for i in range(3, 12, 1): info_loc.append(i)
-        with open('Magic/Elemental', 'r') as file:
+        with open('Magic/Elemental.md', 'r') as file:
             # Initialize a counter
             line_number = 1
 
@@ -1539,7 +1539,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Elemental Magic Overview
             info_loc = []
             for i in range(16, 25, 1): info_loc.append(i)
-            with open('Magic/Elemental', 'r') as file:
+            with open('Magic/Elemental.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -1561,7 +1561,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Fire Overview
                 info_loc = []
                 for i in range(29, 45, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1578,7 +1578,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Water Overview
                 info_loc = []
                 for i in range(49, 63, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1595,7 +1595,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Lightning Overview
                 info_loc = []
                 for i in range(67, 80, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1612,7 +1612,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Wind Overview
                 info_loc = []
                 for i in range(84, 99, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1629,7 +1629,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Ice Overview
                 info_loc = []
                 for i in range(103, 115, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1646,7 +1646,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Earth Overview
                 info_loc = []
                 for i in range(119, 134, 1): info_loc.append(i)
-                with open('Magic/Elemental', 'r') as file:
+                with open('Magic/Elemental.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
