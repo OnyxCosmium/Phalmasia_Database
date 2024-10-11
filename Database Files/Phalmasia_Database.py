@@ -1514,10 +1514,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
     # Magic Input Commands
     while infoBarrier == "magic":
-        magicBarrier = input("There is one additional magic classification that can only be accessed by those who are "
-                             "strong enough to wield them. Hints have been littered throughout the database. May the "
-                             "stars guide your way.\n\nMagic:\n| Elemental Magic\n| Lost Magic\n| Sigils\n| Energy Elevage\n\nLeave the "
-                             "database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower().strip()
+        # Magic Overview
+        info_loc = []
+        for i in range(3, 12, 1): info_loc.append(i)
+        with open('Magic/Elemental', 'r') as file:
+            # Initialize a counter
+            line_number = 1
+
+            # Read and process each line
+            for line in file:
+                if line_number in info_loc:
+                    print(f"{line.strip()}")
+                line_number += 1
+
+        magicBarrier = input("\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower().strip()
 
         while magicBarrier == "":
             magicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -1526,9 +1536,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Elemental Magic Commands
         while magicBarrier == "elemental magic" or magicBarrier == "elemental":
-            elementalBarrier = input("Elemental Magic:\n| Fire\n| Water\n| Lightning\n| Wind\n| Ice\n| Earth\n\nLeave "
-                                     "the database by entering 'Leave'. Go back to magic selection prompt by entering"
-                                     " 'Back'.\n").lower().strip()
+            # Elemental Magic Overview
+            info_loc = []
+            for i in range(16, 25, 1): info_loc.append(i)
+            with open('Magic/Elemental', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            elementalBarrier = input("\nLeave the database by entering 'Leave'. Go back to magic selection prompt by entering 'Back'.\n").lower().strip()
 
             while elementalBarrier == "":
                 elementalBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -1537,131 +1558,105 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Fire Magic Commands
             if elementalBarrier == "fire":
-                fireExplanation = "Passive Ability: Resistance to non-magic flames & heat\n\nFire magic is a magic " \
-                                  "geared more towards offense, and the only magic that continue to grow without the " \
-                                  "caster's maintenance or mana. This also makes the magic difficult to control for " \
-                                  "new fire users. This magic is commonly associated with the caster's emotions, " \
-                                  "since it sometimes grows in power in accordance to them. Fire users are known to " \
-                                  "be determined, motivated, or obnoxious when accomplishing their goals."
-                fireSpells = "Basic Spells:\n| Ember Palm: The user covers their hands, and occasionally arms, " \
-                             "in fire magic. This both adds extra power in close-range fights, and allows for basic " \
-                             "ranged attacks.\n| Burst Step Spells: The user covers their feet, and occasionally " \
-                             "legs, in fire magic. This both adds extra power in close-range fights. Additionally, " \
-                             "it can be used to concentrate mana under the user's feet and create an explosion that " \
-                             "boosts their jump height.\n| Combustion Spells: A ranged application of fire magic that " \
-                             "allows the user to concentrate their mana at a distance and cause an explosion."
-                fireUsers = "Notable Users:\n| Mirago Fynae\n| Kimiko Quintai\n| Kinto Vareli\n| Sereina Fynae"
-                fireMagic = input(
-                    "\033[1m" + "Fire, the Element of Ambition" + "\033[0m\nSigil Color Representation: Red\n" + fireExplanation + "\n\n" + fireSpells + "\n\n" + fireUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Fire Overview
+                info_loc = []
+                for i in range(29, 45, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                fireMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Water Magic Commands
             if elementalBarrier == "water":
-                waterExplanation = "Passive Ability: Using mana to walk on water\n\nWater magic is a magic geared " \
-                                   "towards defense. Using this magic takes tact and planning. Users of water magic " \
-                                   "are able to alter the temperature of water by freezing and boiling it. Users of " \
-                                   "water magic are known to be relaxed and in tune with their surroundings, " \
-                                   "and are passive about their thoughts and opinions."
-                waterSpells = "Basic Spells:\n| Breath Spells: The user takes a large breath to increase their lung " \
-                              "capacity so they can stay underwater for longer periods of time. They do this by " \
-                              "surrounding their heads with an air bubble. The stronger the caster of the spell, " \
-                              "the larger the air bubble is, and the more people can fit in it.\n| Glow Spells: This " \
-                              "type of spell can only be used when the user's hands are covered in water. The caster " \
-                              "uses mana to make the water " \
-                              "around their hands glow to illuminate dark underwater areas. The brightness and " \
-                              "proximity of the glow is determined by the caster's strength.\n| Moisture Spells: This " \
-                              "spell is the basis of water magic. Users can't create their own element like many of " \
-                              "the other magics, and aren't around it at all times, either. This spell allows them to " \
-                              "take water from the air and plants in the surroundings to use."
-                waterUsers = "Notable Users:\n| Mimi Seiran\n| Amiru Soaren"
-                waterMagic = input(
-                    "\033[1m" + "Water, the Element of Flow" + "\033[0m\nSigil Color Representation: Blue\n" + waterExplanation + "\n\n" + waterSpells + "\n\n" + waterUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Water Overview
+                info_loc = []
+                for i in range(49, 63, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                waterMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Lightning Magic Commands
             if elementalBarrier == "lightning":
-                lightningExplanation = "Passive Ability: Short distance teleportation\n\nLightning is a magic that " \
-                                       "specializes in quick, precise attacks. If dealt with enough power, " \
-                                       "these attacks may inflict extra shock damage or even temporary paralysis. Due " \
-                                       "to the concentration of lightning magic, it can easily be used to penetrate a " \
-                                       "target's armor. Though the magic's overall power isn't substantial, " \
-                                       "it more than makes up for it in speed. Users of lighting magic are known to " \
-                                       "be excitable and confident."
-                lightningSpells = "Basic Spells:\n| Shock Step: The caster releases lightning from their feet, " \
-                                  "allowing for increased movement speed. High level casters will leave trails behind " \
-                                  "them as they move, which cause added shock damage and possible paralysis.\n| Dart " \
-                                  "Spells: The caster releases a quick bolt from their hands, dealing damage and " \
-                                  "possibly stunning the target."
-                lightningUsers = "Notable Users:\n| Cidelli Reimora\n| Ryner Khabunago"
-                lightningMagic = input(
-                    "\033[1m" + "Lightning, the Element of Precision" + "\033[0m\nSigil Color Representation: Yellow\n" + lightningExplanation + "\n\n" + lightningSpells + "\n\n" + lightningUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Lightning Overview
+                info_loc = []
+                for i in range(67, 80, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                lightningMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Wind Magic Commands
             if elementalBarrier == "wind":
-                windExplanation = "Passive Ability: Slight flight & Gliding\n\nWind, when used in high " \
-                                  "concentrations, can be used to slice objects or opponents at high speeds. " \
-                                  "Defensively, however, it must deflect most magic attacks and projectiles. This " \
-                                  "magic is preferred by those who use speed and agility in their combat. Using their " \
-                                  "magic, they are also able to use streams of wind to push and pull objects from a " \
-                                  "distance. Users of wind magic are known to be lone wolves who travel their own " \
-                                  "path and fight for what they think is right."
-                windSpells = "Basic Spells:\n| Lightfoot Spells: The caster channels mana into their feet which " \
-                             "allows them to increase their speed and jump height, cushion their landings, and, " \
-                             "along with the help of a glider, glide and even fly for a short period of time.\n| " \
-                             "Breath Spells: The caster gathers mana in their lungs to increase their lung capacity " \
-                             "to blow out winds of high speeds, increase their volume, and hold their breath for a " \
-                             "prolonged period of time. The more experienced the caster, the more air can be brought " \
-                             "into the lungs.\n| Sharp Spells: The caster presses mana together to create a sharp " \
-                             "blade of wind with which they can throw as a projectile or attach to their body as a " \
-                             "sword-like extension. The size, speed, and cutting power of these blasts are dependent " \
-                             "on the strength of the caster."
-                windUsers = "Notable Users:\n| Xaeyz Kai\n| Yggdrasil Aensyll\n| Yumeizu Artilux"
-                windMagic = input(
-                    "\033[1m" + "Wind, the Element of Free Paths" + "\033[0m\nSigil Color Representation: Teal\n" + windExplanation + "\n\n" + windSpells + "\n\n" + windUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Wind Overview
+                info_loc = []
+                for i in range(84, 99, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                windMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Ice Magic Commands
             if elementalBarrier == "ice":
-                iceExplanation = "Passive Ability: Resistance to non-magic based freezing temperatures.\n\nIce is a " \
-                                 "powerful magic for both offensive and defensive capabilities. This magic is " \
-                                 "extremely deadly to even the user at times, so using it with a pact for better " \
-                                 "control is highly recommended. This magic has the capability to penetrate a " \
-                                 "target's armor, but not with the level of proficiency of lightning. They can freeze " \
-                                 "the air, water or ground around them, which allows for an increased range of " \
-                                 "mobility on the battlefield and place-locking opponents. It is also the only magic " \
-                                 "with no distinguishing base shape, coming out in spikes if used in brute force."
-                iceSpells = "Basic Spells:\n| Frost Fire: The user conjures a freezing flame that shocks armor, " \
-                            "withering it away and making it easier to penetrate. This can cause serious damage if " \
-                            "use directly on a person's vitals with extreme intensity.\n| Spike Bullet: The user " \
-                            "creates multiple ice spikes that float behind the user's back until they call for them " \
-                            "to be fired. These can be shaped into any object, but spikes are most commonly used as " \
-                            "they deal a lot of piercing damage. The speed, durability, and size of these projectiles " \
-                            "scale with the user's strength."
-                iceUsers = "Notable Users:\n| Aeiyou Drefael"
-                iceMagic = input(
-                    "\033[1m" + "Ice, the Element of Resistance" + "\033[0m\nSigil Color Representation: Light Blue\n" + iceExplanation + "\n\n" + iceSpells + "\n\n" + iceUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Ice Overview
+                info_loc = []
+                for i in range(103, 115, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                iceMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Earth Magic Commands
             if elementalBarrier == "earth":
-                earthExplanation = "Passive Ability: Hardened resistance to magic based attacks.\n\nEarth is a magic " \
-                                   "that is both offensive and defensive. Earth magic relies on the ground beneath " \
-                                   "the user's feet, giving them free reign to control the battlefield at will. Being " \
-                                   "such a sturdy magic, earth can easily use their defense as offense and vice " \
-                                   "versa. Due to this, it has a lot of ways to counter other elements. Though earth " \
-                                   "magic uses the most magic energy to cast spells of all other elemental magics as " \
-                                   "well as the shortest casting range, its combat capability more than makes up for " \
-                                   "it. This magic is preferred by those who fight up close."
-                earthSpells = "Basic Spells:\n| Earth's Step: The user impacts the ground, creating a crack and " \
-                              "sending a wave of earth in the direction of their target. It is a good move to narrow " \
-                              "the opponent's line of sight, as well as throw them off their balance.The stronger the " \
-                              "caster, the larger the wave.\n| Pillar Spells: The user creates pillars of earth from " \
-                              "the ground, striking opponents or use as a defense. They can also be ripped from the " \
-                              "ground and float in midair for a while. The stronger the caster is, the larger the " \
-                              "pillars will be, and the faster they can create them.\n| Soft Sand Spells: The caster " \
-                              "concentrates their mana on a certain area on the ground and softens it, creating a " \
-                              "quicksand-like pit. This sinks the target down as far as their torso, and extremely " \
-                              "strong casters can sink opponents down to their shoulders. It is impossible to use " \
-                              "this spell to sink someone completely."
-                earthUsers = "Notable Users:\n| Aeiyou Drefael\n| Kinto Vareli\n| Turcobé Sentai"
-                earthMagic = input(
-                    "\033[1m" + "Earth, the Element of Nature" + "\033[0m\nSigil Color Representation: Brown\n" + earthExplanation + "\n\n" + earthSpells + "\n\n" + earthUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Earth Overview
+                info_loc = []
+                for i in range(119, 134, 1): info_loc.append(i)
+                with open('Magic/Elemental', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                earthMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Elemental Magic Exit Command
             if elementalBarrier == "back":
