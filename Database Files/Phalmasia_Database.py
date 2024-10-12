@@ -36,11 +36,8 @@ from os import system, name
 # Current Update Notes
 # Moved Large Text Blocks into Separate Files to Read From (Code Readability)
 
-
-
 # Clear Command
 os.putenv('TERM', 'xterm')
-
 
 def clear():
     # for windows
@@ -915,7 +912,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mu'karr Overview
             info_loc = []
             for i in range(3, 15, 1): info_loc.append(i)
-            with open('Locations/Mu\'karr.md.md', 'r') as file:
+            with open('Locations/Mu\'karr.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -1668,8 +1665,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Lost Magic Commands
         while magicBarrier == "lost magic" or magicBarrier == "lost":
-            lostBarrier = input("Lost Magic:\n| Shadow\n| Nature\n| Life\n| Gravity\n\nLeave the database by entering "
-                                "'Leave'. Go back to magic selection prompt by entering 'Back'.\n").lower().strip()
+            # Lost Magic Overview
+            info_loc = []
+            for i in range(3, 10, 1): info_loc.append(i)
+            with open('Magic/Lost.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            lostBarrier = input("\nLeave the database by entering 'Leave'. Go back to magic selection prompt by entering 'Back'.\n").lower().strip()
 
             while lostBarrier == "":
                 lostBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -1678,106 +1687,71 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Shadow Magic Commands
             if lostBarrier == "shadow":
-                shadowExplanation = "Passive Ability: Creating shadow copies. The mana cost increases with the number " \
-                                    "of clones.\n\nShadow is a magic that only the Khabunago Family is capable of; a " \
-                                    "family of spirits that use Sprite Pacts to gain mortal & physical forms. They " \
-                                    "are the spiritual protectors of graveyards, guarding them from any who wish to " \
-                                    "disturb the graves of those who are buried there. Shadow magic allows the user " \
-                                    "to create and manipulate darkness. It is possible to create solid shadows using " \
-                                    "this magic, which can be used to cause extreme damage. Many classify this as a " \
-                                    "dark magic, and can be easily dispelled with fire magic."
-                shadowSpells = "Basic Spells:\n| Cloak Spells: The caster hides their physical body in a nearby " \
-                               "shadow, increasing their movement speed and travel capabilities. They are able to be " \
-                               "damaged while in their shadow by attacking the shadow directly. The less mana you " \
-                               "have remaining, the slower you move, and the more you are pushed out of the " \
-                               "shadow.\n| Tendril Spells: The caster shapes the surrounding shadows into solid " \
-                               "spike-like structures that can grab or damage opponents. The more proficient the " \
-                               "caster, the more range and damage they can deal.\n| Dark Mana: The caster forms " \
-                               "projectiles from the surrounding shadows and throws them at the target. It can also " \
-                               "be used to lock the shadows of the target in place, restraining their movement. This, " \
-                               "however, is an active ability, and no other spells can be cast while restraining a " \
-                               "target. The stronger the caster, the longer the stun, and the stronger the " \
-                               "projectile.\n| Banish Spells: The caster concentrates the shadows of the target to " \
-                               "strangle themselves, cutting off the target's flow of mana and preventing them from " \
-                               "casting spells for a short time."
-                shadowUsers = "Notable Users:\n| Ryner Khabunago"
-                shadowMagic = input(
-                    "\033[1m" + "Shadow, the Element of Reflection" + "\033[0m\nSigil Color Representation: Black\n" + shadowExplanation + "\n\n" + shadowSpells + "\n\n" + shadowUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Shadow Overview
+                info_loc = []
+                for i in range(14, 28, 1): info_loc.append(i)
+                with open('Magic/Lost.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                shadowMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Nature Magic Commands
             if lostBarrier == "nature":
-                natureExplanation = "Passive Ability: Immunity to non-magic based poison & paralysis from " \
-                                    "plants.\n\nNature is a magic that works similarly to Earth; the only difference " \
-                                    "is it utilizes the plants instead of the ground itself. It can cause plants to " \
-                                    "grow at and extremely quick pace, as well as change their capabilities by making " \
-                                    "them poisonous. All poison created by a user's spells do not affect the caster. " \
-                                    "This also allows the user to create and manipulate wood, which creates strong " \
-                                    "and versatile defenses. This magic has an advantage against wind magic."
-                natureSpells = "Basic Spells:\n| Nurture Spells: The caster channels mana into wildlife around them " \
-                               "and increases their growth speed. It is the core of nature magic and the basis of all " \
-                               "its spells, as it also gives the caster control of all plants in the area. The more " \
-                               "proficient the caster, the faster the rate of growth becomes, and the more precise " \
-                               "the control gets.\n| Vine Spells: The user grows vines that can emerge from anywhere " \
-                               "on the battlefield within the caster's reach. They are used to attack and grab " \
-                               "targets. The stronger the caster, the faster and longer the vines can become.\n| " \
-                               "Property Spells: The caster concentrates mana into the surrounding plants and changes " \
-                               "their properties, allowing them to emit spores with effects of the caster's choice. " \
-                               "The larger the plant, the larger the mana cost."
-                natureUsers = "Notable Users: None"
-                natureMagic = input(
-                    "\033[1m" + "Nature, the Element of Harvest" + "\033[0m\nSigil Color Representation: Dark Green\n" + natureExplanation + "\n\n" + natureSpells + "\n\n" + natureUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Nature Overview
+                info_loc = []
+                for i in range(32, 44, 1): info_loc.append(i)
+                with open('Magic/Lost.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                natureMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Life Magic Commands
             if lostBarrier == "life":
-                lifeExplanation = "Passive Ability: Natural healing factor is enhanced.\n\nOf all magic, Life is the " \
-                                  "most risky and dangerous to use. It uses a visible stream of life energy to cast " \
-                                  "and use spells. Life magic can also heal targets, but at a high cost to the user."
-                lifeSpells = "Basic Spells:\n| Give & Take Spells: The caster channels a stream of life that takes " \
-                             "from one thing to give to another. This can be used to transfer resources from one " \
-                             "place to another, like water or nutrients. If the caster takes something from one thing " \
-                             "or person, it loses said status and the receiving end gains said status.\n| Sacrifice " \
-                             "Spells: A sub-genre of Give & Take Spells that specifically deals with human injury and " \
-                             "basic healing. This revolves around the caster taking injuries from one target and " \
-                             "giving them to another. This results in the healing of the initial target and the " \
-                             "injury of the post target, and requires both party's consent to work.\n| Absorb Spells: " \
-                             "The caster wraps their hand in a mana " \
-                             "stream that draws all mana-based attacks towards it and absorbs them. This replenishes " \
-                             "the caster's mana supply proportional to the amount of mana the target used to cast the " \
-                             "spell.\n| Mirror Spells: The caster surrounds both arms with streams of mana. This " \
-                             "absorbs a mana-based spell targeted at the caster with one hand, then releases the " \
-                             "spell through the opposite arm. This, however, takes mana, and the caster must expend " \
-                             "mana equal to the amount of mana used to cast the original spell."
-                lifeUsers = "Notable Users:\n| Mirago Fynae"
-                lifeMagic = input(
-                    "\033[1m" + "Life, the Element of Sacrifice" + "\033[0m\nSigil Color Representation: Green\n" + lifeExplanation + "\n\n" + lifeSpells + "\n\n" + lifeUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Life Magic Overview
+                info_loc = []
+                for i in range(48, 62, 1): info_loc.append(i)
+                with open('Magic/Lost.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                lifeMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Gravity Magic Commands
             if lostBarrier == "gravity":
-                gravityExplanation = "Passive Ability: A psychic-like ability that allows the user to lift and " \
-                                     "manipulate objects with their mana.\n\nGravity magic is the rarest of all " \
-                                     "magics. It can only be used by Argenian families who live in the mountainous " \
-                                     "regions of Mu'karr. Using this magic makes the controlling mana invisible to " \
-                                     "both the user and those around them, as well as the largest attack radius of " \
-                                     "all magics. It controls gravity in a spherical radius around the target of the " \
-                                     "spells, and works as a psychic ability would. Gravity can be used to move " \
-                                     "objects to the will of the user. However, due to its rarity, those who have it " \
-                                     "usually don't know how to control it. The user can choose whether or not the " \
-                                     "gravity they manipulate affects them or not."
-                gravitySpells = "Basic Spells:\n| Barrier Spells: The user emits an arc radius towards the casting " \
-                                "direction. This makes any target that enters that radius shoot towards the ground, " \
-                                "physical or mana based, before it can deal damage to the caster. Though it has never " \
-                                "been a recorded attempt, it may be possible to increase gravity to a degree that a " \
-                                "magic-based spell that enters the barrier is immediately dispelled.\n| Impulse " \
-                                "Spells: The caster compresses their mana into a sphere and sends it at a target " \
-                                "location. On either command or impact, the sphere disperses, releasing a powerful " \
-                                "impulse that forcefully pushes everything in the sphere's radius away from the " \
-                                "center of the sphere.\n| Push Spells: A melee based spell. The user concentrates " \
-                                "mana in their palm and strikes the target. This causes a blow that deals devastating " \
-                                "damage and sends the target flying backward. This can also be used to create " \
-                                "shockwaves when striking the air."
-                gravityUsers = "Notable Users:\n| Xaeyz Kai\n| Sereina Fynae"
-                gravityMagic = input(
-                    "\033[1m" + "Gravity, the Element of Control" + "\033[0m\nSigil Color Representation: Gray\n" + gravityExplanation + "\n\n" + gravitySpells + "\n\n" + gravityUsers + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Gravity Magic Overview
+                info_loc = []
+                for i in range(66, 80, 1): info_loc.append(i)
+                with open('Magic/Lost.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                gravityMagic = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Lost Magic Exit Command
             if lostBarrier == "back":
