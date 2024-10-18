@@ -1054,7 +1054,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Aurora Grotto Overview
                 info_loc = []
                 for i in range(4, 18, 1): info_loc.append(i)
-                with open('Locations/Mythic Locations.md', 'r') as file:
+                with open('Locations/Mythics.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1071,7 +1071,7 @@ while infoBarrier == "" or infoBarrier == "return":
                 # Sundrop Valley Overview
                 info_loc = []
                 for i in range(21, 35, 1): info_loc.append(i)
-                with open('Locations/Mythic Locations.md', 'r') as file:
+                with open('Locations/Mythics.md', 'r') as file:
                     # Initialize a counter
                     line_number = 1
 
@@ -1721,7 +1721,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Life Magic Commands
             if lostBarrier == "life":
-                # Life Magic Overview
+                # Life Overview
                 info_loc = []
                 for i in range(48, 62, 1): info_loc.append(i)
                 with open('Magic/Lost.md', 'r') as file:
@@ -1738,7 +1738,7 @@ while infoBarrier == "" or infoBarrier == "return":
 
             # Gravity Magic Commands
             if lostBarrier == "gravity":
-                # Gravity Magic Overview
+                # Gravity Overview
                 info_loc = []
                 for i in range(66, 80, 1): info_loc.append(i)
                 with open('Magic/Lost.md', 'r') as file:
@@ -1827,206 +1827,178 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Mythical Elemental Commands
         while magicBarrier == "mythical elements" or magicBarrier == "mythical element" or magicBarrier == "mythical" or magicBarrier == "mythic":
-            mythicBarrier = input("The secret powers of Phalmasia reveal themselves to you...\n\nMythical "
-                                  "Elements:\n| Dynamic Water\n| Zenith Earth\n| Cosmic Wind\n| Onyx Fire\n| Electron "
-                                  "Lightning\n| Permafrost Ice\n\nUnison Techniques:\n| Mythical Beasts\n| Rebirth"
-                                  "\n\nLeave the database by entering 'Leave'. Go back to "
-                                  "magic selection prompt by entering 'Back'.\n").lower().strip()
+            # Mythical Elements Overview
+            info_loc = []
+            for i in range(3, 18, 1): info_loc.append(i)
+            with open('Magic/Mythical.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            mythicBarrier = input("\nLeave the database by entering 'Leave'. Go back to magic selection prompt by entering 'Back'.\n").lower().strip()
 
             while mythicBarrier == "":
                 mythicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
-            while mythicBarrier != "dynamic water" and mythicBarrier != "zenith earth" and mythicBarrier != "cosmic wind" and mythicBarrier != "onyx fire" and mythicBarrier != "electron lightning" and mythicBarrier != "permafrost ice" and mythicBarrier != "mythical beasts" and mythicBarrier != "rebirth" and mythicBarrier != "back" and mythicBarrier != "leave":
+            while mythicBarrier != "dynamic water" and mythicBarrier != "zenith earth" and mythicBarrier != "cosmic wind" and mythicBarrier != "onyx fire" and mythicBarrier != "electron lightning" and mythicBarrier != "permafrost ice" and mythicBarrier != "mythical beasts" and mythicBarrier != "rebirth" and mythicBarrier != "mythical elements" and mythicBarrier != "about mythical elements" and mythicBarrier != "about" and mythicBarrier != "back" and mythicBarrier != "leave":
                 mythicBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
+
+            # About Mythical Elements
+            if mythicBarrier == "about mythical elements" or mythicBarrier == "mythical elements" or mythicBarrier == "about":
+                # About Mythical Elements
+                info_loc = []
+                for i in range(22, 29, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mythicElements = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Dynamic Water Commands
             if mythicBarrier == "dynamic water":
-                mythicWaterStats = "\033[1m" + "Dynamic Water, the Mythical Element of the Sea" + "\033[0m\n\nMythical Spirit Name: " \
-                                                                                                  "Lumen\nSigil Color Representation: Dark Blue\nMythical Enhancement: Increased " \
-                                                                                                  "Water Pressure & Healing Factor\nMythical Beast: Sea Serpent\nPower Event: King " \
-                                                                                                  "Tides"
-                mythicWaterDescription = "Dynamic Water is the Mythical Element of the Sea, and Lumen is its spirit. " \
-                                         "Lumen is a serene spirit; she rarely does anything to disturb others and " \
-                                         "keeps to herself. She spends her time caring for the seas and its life. She " \
-                                         "ensures that all sea creatures are being treated fairly, and uses her power " \
-                                         "to stop them from bullying or hurting each other unjustly.\n\nDynamic Water " \
-                                         "can heal diseases in the oceanic animals and purify the water from " \
-                                         "pollution. It can also be used to heal injuries to a greater degree than " \
-                                         "other mythical elements, but still doesn't hold a candle to the healing " \
-                                         "abilities of Life. It also has a unique compression factor that makes it " \
-                                         "possible to compress the water far more than ordinary water, which leads to " \
-                                         "increased water pressure. This creates a large boost in its destructive " \
-                                         "capabilities. Dynamic Water also has bioluminescent properties."
-                mythicWater = input(
-                    mythicWaterStats + "\n\n" + mythicWaterDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Dynamic Water Overview
+                info_loc = []
+                for i in range(33, 44, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mythicWater = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Zenith Earth Commands
             if mythicBarrier == "zenith earth":
-                zenithEarthStats = "\033[1m" + "Zenith Earth, the Mythical Element of the Terrain" + "\033[0m\n\nMythical Spirit Name: " \
-                                                                                                     "Chrono\nSigil Color Representation: Dark Gray\nMythical Enhancement: Increased " \
-                                                                                                     "Earthen Nutrients & Lava Manipulation\nMythical Beast: Golem\nPower Event: " \
-                                                                                                     "Volcanic Eruptions"
-                zenithEarthDescription = "Zenith Earth is the Mythical Element of the Terrain, and Chrono is its " \
-                                         "spirit. Chrono is an extremely determined and trustworthy spirit. He always " \
-                                         "sticks up for those he cares about, as well as for the health of the " \
-                                         "terrain. His steadfast nature is perfect for commanding the earth to his " \
-                                         "bidding, and makes him a reliable friend. Zenith Earth provides a boosted " \
-                                         "number of nutrients to the plant life in the area, increasing their life " \
-                                         "force and allowing them to grow faster and into more beautiful plants, " \
-                                         "acting as a pseudo-nature magic. It is, of course, inferior to the real " \
-                                         "thing since it cannot manipulate the plants it grows, and cannot grow plants " \
-                                         "as fast due to only providing nutrients and not direct magic.\n\nHowever, " \
-                                         "his main strength lies in the ability to manipulate the phase of the earth " \
-                                         "he uses, changing it into lava. He can then use this transmuted lava as if " \
-                                         "it was earth and attack his target with it, making his attacks extremely " \
-                                         "volatile."
-                zenithEarth = input(
-                    zenithEarthStats + "\n\n" + zenithEarthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Zenith Earth Overview
+                info_loc = []
+                for i in range(48, 59, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                zenithEarth = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Cosmic Wind Commands
             if mythicBarrier == "cosmic wind":
-                cosmicWindStats = "\033[1m" + "Cosmic Wind, the Mythical Element of the Stars" + "\033[0m\n\nMythical Spirit Name: " \
-                                                                                                 "Aeon\nSigil Color Representation: Purple\nMythical Enhancement: Stardust " \
-                                                                                                 "Manipulation & Vacuum Override\nMythical Beast: Phoenix\nPower Event: Aurora " \
-                                                                                                 "Borealis"
-                cosmicWindDescription = "Cosmic Wind is the Mythical Element of the Stars, and Aeon is its spirit. " \
-                                        "Aeon is a free soul and lives on trying to keep everyone around him safe " \
-                                        "while being as free as possible. He does as he pleases most of the time, " \
-                                        "but he is also responsible for guiding starlight to Phalmasia, as well as " \
-                                        "creating constellations. Essentially, he is responsible for all celestia " \
-                                        "visible from Phalmasia.\n\nCosmic Wind isn't composed of Phalmasian air; " \
-                                        "it's the manipulation of Solar Wind & Stardust. This gives cosmic wind " \
-                                        "control over stardust, which it can use for an assortment of tasks. Stardust " \
-                                        "can be used for the enhancement of attacks and revitalize the life force of " \
-                                        "those it chooses, increasing the effected's healing factor. Additionally, " \
-                                        "because Cosmic Wind is composed of Solar Wind, it has the versatility of " \
-                                        "being used within a vacuum, or a place with no air, like space. This also " \
-                                        "gives it the capability of producing artificial auroras by shooting large " \
-                                        "quantities of magic into the atmosphere."
-                cosmicWind = input(
-                    cosmicWindStats + "\n\n" + cosmicWindDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Cosmic Wind Overview
+                info_loc = []
+                for i in range(63, 74, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                cosmicWind = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Onyx Fire Commands
             if mythicBarrier == "Onyx Fire" or mythicBarrier == "Onyx fire" or mythicBarrier == "onyx Fire" or mythicBarrier == "onyx fire":
-                onyxFireStats = "\033[1m" + "Onyx Fire, the Mythical Element of the Sun" + "\033[0m\n\nMythical Spirit Name: Arc\nSigil Color " \
-                                                                                           "Representation: Pure Black\nMythical Enhancement: Heat Amplification & Eternal " \
-                                                                                           "Flames\nMythical Beast: Dragon\nPower Event: Solar Storms"
-                onyxFireDescription = "Onyx Fire is the Mythical Element of the Sun, and Arc is its spirit.  Arc is " \
-                                      "an ambitious and dedicated soul who tries to keep to those he trusts close and " \
-                                      "always strives to become stronger with his friends. He is consistently aiming " \
-                                      "to get better at everything he does and is extremely competitive when with " \
-                                      "those close to him. Arc is responsible for the maintenance of the sun. He " \
-                                      "keeps the balance of its intense power from radiating too far from its core " \
-                                      "and damaging the planets that orbit it (including Phalmasia).\n\nOnyx Fire " \
-                                      "burns with a dark black flame that has special properties. Unlike other " \
-                                      "flames, Onyx Fire can be eternal; it can't go out unless the user wants it to. " \
-                                      "This is because it doesn't depend on air to burn, and it is unaffected by " \
-                                      "physical interactions, like water or other fire extinguishers. It also has the " \
-                                      "innate property to burn at a higher temperature than other flames, as well as " \
-                                      "perfectly control flame temperature even on flames that have already been cast."
-                onyxFire = input(
-                    onyxFireStats + "\n\n" + onyxFireDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Onyx Fire Overview
+                info_loc = []
+                for i in range(78, 89, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                onyxFire = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Electron Lightning Commands
             if mythicBarrier == "electron lightning":
-                electronLightningStats = "\033[1m" + "Electron Lightning, the Mythical Element of the Skies" + "\033[0m\n\nMythical Spirit " \
-                                                                                                               "Name: Nova\nSigil Color Representation: Dark Red\nMythical Enhancement: " \
-                                                                                                               "Electron Destabilization & Silent Thunder\nMythical Beast: Raijū\nPower " \
-                                                                                                               "Event: Supercell Thunderstorms"
-                electronLightningDescription = "Electron Lightning is the Mythical Element of the Skies, and Nova is " \
-                                               "its spirit. Nova is an rational and precise soul. He thinks about how " \
-                                               "his actions affect everyone and everything around him, and that makes " \
-                                               "him a valuable spirit when in times of turmoil. He is also an " \
-                                               "energetic and excitable spirit who finds interest in magic, " \
-                                               "which gives him an aptitude of control over Electron " \
-                                               "Lightning.\n\nNova is responsible for maintaining the weather. He " \
-                                               "keeps the weather from becoming too destructive & disruptive to " \
-                                               "Phalmasia's life and terrain. He is also responsible for maintaining " \
-                                               "the strength and effectiveness of the atmosphere, as well as " \
-                                               "preventing its degradation.\n\nElectron Lightning has the ability of " \
-                                               "electron destabilization. This lightning is compressed so thin that " \
-                                               "the temperature increases far higher than that of normal lightning. " \
-                                               "This, instead of compressing the air around it, destabilizes the " \
-                                               "electrons of air and burns them. This creates a section of " \
-                                               "unbreathable air around the impact area. As a result of not " \
-                                               "compressing but burning the air, the lightning does not create a " \
-                                               "thunder sound, causing silent attacks until the moment of impact."
-                electronLightning = input(
-                    electronLightningStats + "\n\n" + electronLightningDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Electron Lightning Overview
+                info_loc = []
+                for i in range(93, 106, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                electronLightning = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Permafrost Ice Commands
             if mythicBarrier == "permafrost ice":
-                permafrostIceStats = "\033[1m" + "Permafrost Ice, the Mythical Element of the Moon" + "\033[0m\n\nMythical Spirit Name: " \
-                                                                                                      "Cryo\nSigil Color Representation: Light Purple\nMythical Enhancement: Dry Ice & " \
-                                                                                                      "Contact Freeze\nMythical Beast: Kitsune\nPower Event: Whiteouts"
-                permafrostIceDescription = "Permafrost Ice is the Mythical Element of the Moon, and Cryo is its " \
-                                           "spirit. Cryo is a closeted soul, choosing to keep to herself for the most " \
-                                           "part. She is also extremely organized and likes to keep her surroundings " \
-                                           "clean. Cryo is responsible for the maintenance of the moon. She is " \
-                                           "responsible for ensuring that the orbit of the moon is steady and " \
-                                           "continuous, and that it doesn't interfere with the sunlight " \
-                                           "often.\n\nPermafrost Ice is unlike normal ice in composition which is " \
-                                           "composed of frozen water; it is frozen carbon dioxide. Because it is a " \
-                                           "gas, as it is released it creates shrouds of the gas around it as the ice " \
-                                           "melts. This also allows for it to freeze at much lower temperatures than " \
-                                           "normal ice: absolute zero. Permafrost Ice also has the innate ability to " \
-                                           "contact freeze. This means that if any amount of Permafrost Ice comes " \
-                                           "into contact with water, it freezes it starting from the point of contact " \
-                                           "of the Permafrost Ice."
-                permafrostIce = input(
-                    permafrostIceStats + "\n\n" + permafrostIceDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Permafrost Ice Overview
+                info_loc = []
+                for i in range(110, 121, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                permafrostIce = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Beasts Commands
             if mythicBarrier == "mythical beasts":
-                mythicalBeastStats = "\033[1m" + "Mythical Beast Manifestation" + "\033[0m\n\tMythical Tier Spell\n\n| Spell Style: " \
-                                                                                  "Mode/Utility\n| Mastery: Extreme"
-                mythicalBeastDescription = "A unique type of magic manipulation only capable by mythical element users. " \
-                                           "The process of doing this is something that only the mythical elemental " \
-                                           "know, and the casting of which something only their users can handle due " \
-                                           "to their increased mana capacities and higher skill ceilings. The spell " \
-                                           "revolves around summoning the spirit of the mythical element's mythical " \
-                                           "beast around the user, giving the user the abilities of the beast, " \
-                                           "additional magical power, and specialized spells only usable in the beast " \
-                                           "form.\n\nThis spell has two forms. One is where the user transforms into a " \
-                                           "hybrid being, keeping their size but gaining magic appendages that resemble " \
-                                           "their mythical beasts, like wings, tails, and horns. The other is when the " \
-                                           "user transforms completely into their beast, constructing the body of their " \
-                                           "own mana and controlling them from within with their hybrid form. Both forms " \
-                                           "increase magic utility and damage to an incredible degree, making it an " \
-                                           "extremely useful part of any mythical elemental user's arsenal."
-                mythicalBeast = input(
-                    mythicalBeastStats + "\n\n" + mythicalBeastDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Mythical Beasts Overview
+                info_loc = []
+                for i in range(125, 134, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                mythicalBeast = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Rebirth Commands
             if mythicBarrier == "rebirth":
-                rebirthStats = "\033[1m" + "Rebirth" + "\033[0m\n\tMythical Tier Spell\n\n| Spell Style: Conditional/Medicinal\n| " \
-                                                       "Mastery: Impossible"
-                rebirthDescription = "Rebirth is an extremely powerful spell that no one but the mythical elementals " \
-                                     "themselves can cast. Being a conditional spell, there are several requirements " \
-                                     "that must be met before activation. The mythical elemental must be bonded to " \
-                                     "a living user for over a year, and the user must be on the brink of death or " \
-                                     "have died less than 10 minutes prior. If the spell is not cast during this " \
-                                     "time, the spell will fail. The mythical elemental must also want to revive " \
-                                     "their user, meaning that the user cannot cast this spell on themselves, both " \
-                                     "because they physically couldn't while on the brink of death, and the user " \
-                                     "requires consent from their elemental before the spell can be casted at all. " \
-                                     "Once Rebirth is casted, the end effect is that the " \
-                                     "previously vitally harmed host will return to a perfectly healthy state.\n\n" \
-                                     "This works by the mythical elemental using their own mana to pump energy " \
-                                     "through the host. This essentially means that the user now has mana running " \
-                                     "through their veins instead of blood, and their energy becomes more potent as " \
-                                     "a result. Their magic skyrockets in power upon waking up from rebirth, as " \
-                                     "well as changing the color of their fur, skin or scales (depending on the " \
-                                     "race of the mythical element user) to a pure white, pitch-black sclera, and well " \
-                                     "as giving their " \
-                                     "eyes the color of their primary magic.\n\nThe drawbacks to this technique are " \
-                                     "severe, however. By using their power to keep their user alive, the mythical " \
-                                     "elemental is significantly weakened by the endeavor, causing the user to be " \
-                                     "unable to call upon the force of their mythical element as strongly as they " \
-                                     "could before. Because of the body's new reliance on mana, the user is also " \
-                                     "extremely vulnerable to shadow attacks, as temporarily shutting off their mana " \
-                                     "results in the user entering a severely weakened state similar to death."
-                rebirth = input(
-                    rebirthStats + "\n\n" + rebirthDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+                # Rebirth Overview
+                info_loc = []
+                for i in range(138, 149, 1): info_loc.append(i)
+                with open('Magic/Mythical.md', 'r') as file:
+                    # Initialize a counter
+                    line_number = 1
+
+                    # Read and process each line
+                    for line in file:
+                        if line_number in info_loc:
+                            print(f"{line.strip()}")
+                        line_number += 1
+
+                rebirth = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
             # Mythical Elements Exit Command
             if mythicBarrier == "back":
@@ -2038,27 +2010,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Energy Elevage Commands
         if magicBarrier == "energy elevage" or magicBarrier == "elevage":
-            energyElevageDescription = (
-                "Energy Elevage is a process that boosts the user's power output by roughly 10%, though it takes "
-                "time, patience, and strength of will to complete successfully. In order to begin the process, "
-                "the user must first find their core: the place where their mana comes from. It varies from "
-                "person to person, but many common ones include the brain, the heart or the stomach. Once the "
-                "user locates their core, they must force every drop of mana in their body into it and hold "
-                "it there. This process normally takes a few minutes, and is very difficult, so many find it "
-                "useful to meditate through it. The core isn't built to withstand this much mana at once, and doing this will cause "
-                "it to shut itself off from the rest of your body to protect it from any forceful release of "
-                "energy. As a result, this locks off the user from their magical abilities completely while "
-                "the core gives itself time to adjust and heal, leaving the user physically weakened. "
-                "This can take anywhere from one month to nine. During this time, the user's mana undergoes "
-                "an evolution of sorts, and becomes more potent and pure.\n\nOnce the time is up, the user "
-                "will be tasked with retaining this strengthened mana from their core. This is a test "
-                "of mental and physical fortitude, as flooding the body with this much power can drive "
-                "the user insane and even cause bodily harm. If the user can retain their mind and calm "
-                "the flow of mana throughout their body, then the process is complete. Because of the "
-                "year spent with no mana, the user's body will become accustomed to the new potency of "
-                "the mana and begin producing mana at the new concentration from that point on.")
-            energyElevage = input(
-                "\033[1m" + "Energy Elevage" + "\033[0m\n\n" + energyElevageDescription + "\n\nPress 'Enter' to return to magic selection.\n").lower().strip()
+            # Sectional Sigils Overview
+            info_loc = []
+            for i in range(36, 41, 1): info_loc.append(i)
+            with open('Magic/Sigils.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            energyElevage = input("\nPress 'Enter' to return to magic selection.\n").lower().strip()
 
         # Magic Exit Command
         if magicBarrier == "back":
