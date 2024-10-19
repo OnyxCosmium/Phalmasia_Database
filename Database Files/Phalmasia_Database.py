@@ -81,7 +81,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Xaeyz Kai Bio
             info_loc = []
             for i in range(3, 84, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -109,7 +109,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 1
                     info_loc = []
                     for i in range(4, 21, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -121,7 +121,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 2
                     info_loc = []
                     for i in range(24, 47, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -133,7 +133,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 3
                     info_loc = []
                     for i in range(50, 61, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -145,7 +145,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Xaeyz Kai Backstory Chapter 4
                     info_loc = []
                     for i in range(64, 85, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -171,7 +171,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mirago Bio
             info_loc = []
             for i in range(88, 160, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -198,7 +198,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 1
                     info_loc = []
                     for i in range(90, 105, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -210,7 +210,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 2
                     info_loc = []
                     for i in range(108, 123, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -222,7 +222,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 3
                     info_loc = []
                     for i in range(126, 137, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -234,7 +234,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Mirago Backstory Chapter 4
                     info_loc = []
                     for i in range(140, 155, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -260,7 +260,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yggdra Bio
             info_loc = []
             for i in range(164, 197, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -288,7 +288,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 1
                     info_loc = []
                     for i in range(160, 179, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -300,7 +300,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 2
                     info_loc = []
                     for i in range(182, 195, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -312,7 +312,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 3
                     info_loc = []
                     for i in range(198, 209, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -324,7 +324,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Yggdra Backstory Chapter 4
                     info_loc = []
                     for i in range(212, 225, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -350,7 +350,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Cid Bio
             info_loc = []
             for i in range(201, 231, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -373,7 +373,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Mimi Bio
             info_loc = []
             for i in range(235, 258, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -396,7 +396,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kimiko Bio
             info_loc = []
             for i in range(262, 289, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -419,7 +419,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Aeiyou Bio
             info_loc = []
             for i in range(293, 336, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -442,7 +442,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Kinto Bio
             info_loc = []
             for i in range(340, 382, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -465,7 +465,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Amiru Bio
             info_loc = []
             for i in range(386, 414, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -488,7 +488,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Turcobé Bio
             info_loc = []
             for i in range(418, 447, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -511,7 +511,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Yumeizu Bio
             info_loc = []
             for i in range(451, 477, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -534,7 +534,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Ryner Bio
             info_loc = []
             for i in range(481, 551, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -560,7 +560,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 1
                     info_loc = []
                     for i in range(230, 245, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -572,7 +572,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 2
                     info_loc = []
                     for i in range(248, 261, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -584,7 +584,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 3
                     info_loc = []
                     for i in range(264, 285, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -596,7 +596,7 @@ while infoBarrier == "" or infoBarrier == "return":
                     # Ryner Backstory Chapter 4
                     info_loc = []
                     for i in range(288, 295, 1): info_loc.append(i)
-                    with open('Characters/Backstories.md', 'r') as file:
+                    with open('Characters+Races/Backstories.md', 'r') as file:
                         line_number = 1
                         for line in file:
                             if line_number in info_loc:
@@ -620,7 +620,7 @@ while infoBarrier == "" or infoBarrier == "return":
             # Sereina Bio
             info_loc = []
             for i in range(557, 592, 1): info_loc.append(i)
-            with open('Characters/Bios.md', 'r') as file:
+            with open('Characters+Races/Bios.md', 'r') as file:
                 # Initialize a counter
                 line_number = 1
 
@@ -2035,13 +2035,20 @@ while infoBarrier == "" or infoBarrier == "return":
 
     # Races Input Commands
     while infoBarrier == "races":
-        raceBarrier = input("Besides humans, there are four different races that inhabit Phalmasia: Terrians, Argens, "
-                            "Avats, and Majuu. Each of them primarily inhabit one continent of Phalmasia, "
-                            "and have different ways of life, as well as unique characteristics and magic options. It "
-                            "is possible for some of these races to learn magic that isn't in their common subset, "
-                            "but it is very uncommon. Humans, unfortunately, cannot learn magic. \n\nRaces:\n| "
-                            "Terrians\n| Argens\n| Avats\n| Majuu\n\nLeave the database by entering 'Leave'. Go back "
-                            "to the home prompt by entering 'Back'.\n").lower().strip()
+        # Races Overview
+        info_loc = []
+        for i in range(3, 10, 1): info_loc.append(i)
+        with open('Characters+Races/Races.md', 'r') as file:
+            # Initialize a counter
+            line_number = 1
+
+            # Read and process each line
+            for line in file:
+                if line_number in info_loc:
+                    print(f"{line.strip()}")
+                line_number += 1
+
+        raceBarrier = input("\nLeave the database by entering 'Leave'. Go back to the home prompt by entering 'Back'.\n").lower().strip()
 
         while raceBarrier == "":
             raceBarrier = input("Please Re-enter your database restriction.\n").lower().strip()
@@ -2050,63 +2057,71 @@ while infoBarrier == "" or infoBarrier == "return":
 
         # Terrian Commands
         if raceBarrier == "terrians" or raceBarrier == "terrian":
-            terrianRace = input(
-                "\033[1m" + "Terrians" + "\033[0m\n\nRace Ability: Increased stamina. \n\nCommon Magic Affinities: Fire, Water, "
-                                         "Earth, Lightning, Wind, "
-                                         "Ice\nNative Continent: Halgeis\n\nA peaceful race that highly populates the Halgeis "
-                                         "Region. Many terrians work as farmers, and have a long standing relationship with "
-                                         "other races. They can be found living almost everywhere and can easily adapt to new "
-                                         "environments. They originally built the city of Grand Elise as a way to bring all "
-                                         "races together to live in harmony and peace, and established the Divina Royal Family "
-                                         "that ruled for many generations.\n\nIt is said that the terrians evolved from their "
-                                         "domesticated ancestors during the old age of the world's birth, taking on forms to "
-                                         "better serve the one place they call home. Terrians are very diverse and come in all "
-                                         "shapes and sizes.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            # Terrian Overview
+            info_loc = []
+            for i in range(14, 24, 1): info_loc.append(i)
+            with open('Characters+Races/Races.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            terrianRace = input("\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Argen Commands
         if raceBarrier == "argens" or raceBarrier == "argen":
-            argenRace = input(
-                "\033[1m" + "Argens" + "\033[0m\n\nRace Ability: Magic Proficiency & Scales slightly resist "
-                                       "Magic-Based Attacks\n\nCommon Magic "
-                                       "Affinities: Fire, Lightning, Earth\nNative Continent: Mu'karr\n\nA highly intelligent "
-                                       "and curious race, argens populate the mountainous, forest-covered region of Mu'karr. "
-                                       "Very in tune with nature and mana, they are people who have a strong thirst for "
-                                       "knowledge, many becoming researchers or professors in school. Their lifestyle is "
-                                       "simple and homely, many preferring to stay in Mu'karr as the climate fits perfectly "
-                                       "for their preferred environment high in the mountains.\n\nArgens were the first of the "
-                                       "new races to appear after terrians, when humans discovered and explored Mu'karr. They "
-                                       "come in a variety of colors and patterns. They are also the only race capable of "
-                                       "having an affinity for gravity magic.\n\nPress 'Enter' to return to race "
-                                       "selection.\n").lower().strip()
+            # Argen Overview
+            info_loc = []
+            for i in range(28, 38, 1): info_loc.append(i)
+            with open('Characters+Races/Races.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            argenRace = input("\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Avat Commands
         if raceBarrier == "avats" or raceBarrier == "avat":
-            avatRace = input(
-                "\033[1m" + "Avats" + "\033[0m\n\nRace Ability: Magic Proficiency & Increased speed\n\nCommon Magic Affinities: "
-                                      "Wind, Lightning, Ice, Water\nNative Continent: Altaria\n\nAnother intelligent race, "
-                                      "avats are theorists, and have just as much as a thirst for knowledge as argens do. They "
-                                      "are highly respected philosophers. Along with other researchers, avats study the "
-                                      "mysterious history of the world and the development and knowledge behind how magic is "
-                                      "used, taking a careful look into each element. They've written many books on the "
-                                      "subject, and are highly skilled in the use of magic due to their extensive "
-                                      "knowledge.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            # Avat Overview
+            info_loc = []
+            for i in range(42, 50, 1): info_loc.append(i)
+            with open('Characters+Races/Races.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            avatRace = input("\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Majuu Commands
         if raceBarrier == "majuu":
-            majuuRace = input(
-                "\033[1m" + "Majuu" + "\033[0m\n\nRace Ability: Increased resistance to physical attacks\n\nCommon Magic "
-                                      "Affinities: Earth, Fire\nNative Continent: Xhia\n\nA race of large goat/bull like "
-                                      "beasts that grow to a maximum of 9 to 10 feet tall, and originate from Xhia. Because "
-                                      "of the Arduos War, the majuu people were divided amongst themselves, some living in a "
-                                      "higher society away from the others who live on the outskirts. The war they started "
-                                      "ran they friendly and kind reputation into the ground. Though most majuu are gentle "
-                                      "giants, some are hostile due to their trust issues. Some even move to Halgeis in hopes "
-                                      "of giving a better life for their families, though the prejudice proves to make that "
-                                      "difficult.\n\nThe color of a majuu's fur is dependent on their climate. Bright colored "
-                                      "majuu are from warmer areas, while darker colored majuu are from colder areas. They "
-                                      "are also known to be very skilled blacksmiths, and have created many fearsome weapons "
-                                      "and tools in the past. Majuu are the longest living species on Phalmasia, averaging a "
-                                      "lifespan of 200 years.\n\nPress 'Enter' to return to race selection.\n").lower().strip()
+            # Majuu Overview
+            info_loc = []
+            for i in range(54, 64, 1): info_loc.append(i)
+            with open('Characters+Races/Races.md', 'r') as file:
+                # Initialize a counter
+                line_number = 1
+
+                # Read and process each line
+                for line in file:
+                    if line_number in info_loc:
+                        print(f"{line.strip()}")
+                    line_number += 1
+
+            majuuRace = input("\nPress 'Enter' to return to race selection.\n").lower().strip()
 
         # Races Exit Command
         if raceBarrier == "back":
@@ -2441,7 +2456,7 @@ while infoBarrier == "" or infoBarrier == "return":
             bojHistory6 = "Xaeyz barraged Ryner with attacks from the sky where his kitsune could not reach, " \
                           "damaging him. The stardust from every wing flap of the phoenix landed on Mirago, " \
                           "and helped him to recover more quickly, enough so that he could fight for one last attack. " \
-                          "Xaeyz and Mirago merged their beasts to create something entirely new: a Dragonic Phoenix. " \
+                          "Xaeyz and Mirago merged their beasts to create something entirely new: a Draconic Phoenix. " \
                           "Using the same attack they had used years ago to stop the Black Sun, they blasted Ryner " \
                           "with everything they had. It worked, and Ryner fell defeated to the ground.\n\n"
             bojHistory7 = "Realizing they had won, Xaeyz and Mirago used their magic to absorb Nova, the spirit of " \
